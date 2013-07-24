@@ -29,6 +29,10 @@ class Home extends CI_Controller {
 	{
 		echo "Info : ".$index;
 	}
+	public function phpinfo()
+	{
+		echo phpinfo();
+	}
 }
 
 /* End of file welcome.php */
