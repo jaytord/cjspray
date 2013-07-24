@@ -21,7 +21,7 @@ class Home extends CI_Controller {
 	{
 		$url = base_url().config_item('data_xml_path');
 		$ch = curl_init('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']);
-		
+
  	 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
   		curl_setopt($ch, CURLOPT_HEADER, 0);
 		curl_setopt($ch, CURLOPT_URL, $url );
@@ -32,9 +32,11 @@ class Home extends CI_Controller {
 		$output = curl_exec($ch);
 		curl_close($ch);
 
-		$xml = simplexml_load_string($output);
+		echo $output;
 
-		$this->load->view('home_view',array("data_xml"=>$xml));
+		//$xml = simplexml_load_string($output);
+
+		//$this->load->view('home_view',array("data_xml"=>$xml));
 	}
 	public function info($index)
 	{
