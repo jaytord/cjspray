@@ -18,7 +18,6 @@ $config['base_url']			= '';
 $config['source_xml_path'] 	= 'ref/CJS_MobileRig_Config/bin-debug/assets/xml/mobile_rigs_new.xml';
 $config['data_xml_path'] 	= 'xml/main.xml';
 $config['image_dir_path']	= 'img/';
-
 /*
 |--------------------------------------------------------------------------
 | Index File

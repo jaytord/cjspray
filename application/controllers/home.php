@@ -19,8 +19,10 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data_xml = simplexml_load_file( base_url().config_item('data_xml_path') );
-		$this->load->view('home_view',array("data_xml"=>$data_xml));
+		//$data_xml = simplexml_load_file( base_url().config_item('data_xml_path') );
+		echo base_url().config_item('data_xml_path');
+
+		//$this->load->view('home_view',array("data_xml"=>$data_xml));
 	}
 	public function info($index)
 	{
