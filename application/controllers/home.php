@@ -19,11 +19,14 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$feed = base_url().config_item('data_xml_path');
-
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $feed);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$url = base_url().config_item('data_xml_path');
+		$ch = curl_init('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']);
+		
+ 	 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
+  		curl_setopt($ch, CURLOPT_HEADER, 0);
+		curl_setopt($ch, CURLOPT_URL, $url );
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
 
 		// get the result of http query
 		$output = curl_exec($ch);
