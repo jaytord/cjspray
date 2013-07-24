@@ -49,7 +49,7 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'staging':
-		case 'development':
+		case 'local':
 			error_reporting(E_ALL);
 		break;
 	
