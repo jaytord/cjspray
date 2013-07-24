@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/petsmart/!svn/ver/350/trunk/Flash/PetSmart_ECard/src/cfm/core/managers
+END
+CFM_CursorManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/petsmart/!svn/ver/350/trunk/Flash/PetSmart_ECard/src/cfm/core/managers/CFM_CursorManager.as
+END
+CFM_ResizeManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/petsmart/!svn/ver/17/trunk/Flash/PetSmart_ECard/src/cfm/core/managers/CFM_ResizeManager.as
+END
+CFM_ImageManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/petsmart/!svn/ver/17/trunk/Flash/PetSmart_ECard/src/cfm/core/managers/CFM_ImageManager.as
+END
+CFM_SoundManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/petsmart/!svn/ver/17/trunk/Flash/PetSmart_ECard/src/cfm/core/managers/CFM_SoundManager.as
+END
+CFM_ErrorManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/petsmart/!svn/ver/17/trunk/Flash/PetSmart_ECard/src/cfm/core/managers/CFM_ErrorManager.as
+END
+CFM_TooltipManager.as
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/petsmart/!svn/ver/341/trunk/Flash/PetSmart_ECard/src/cfm/core/managers/CFM_TooltipManager.as
+END
