@@ -1,0 +1,148 @@
+package cfm.core.factories
+{
+	import cfm.core.events.CFM_PageEvent;
+	import cfm.core.templates.CFM_PageTemplate;
+	
+	import flash.display.DisplayObjectContainer;
+	
+	import petsmart.model.AppModel;
+	import petsmart.pages.PageTemplate;
+	import petsmart.util.getPageDefinition;
+	import petsmart.util.getPageXML;
+	
+	public class CFM_PageFactory
+	{
+		protected var prevPage:CFM_PageTemplate;
+		protected var currPage:CFM_PageTemplate;
+		
+		protected var newPageId:String;
+		protected var pageChanging:Boolean = false;
+		protected var pageWaiting:String = "";
+		
+		protected var pageContainer:DisplayObjectContainer;
+		protected var pageList:XMLList;
+		
+		public function CFM_PageFactory(_pageContainer:DisplayObjectContainer, _pageList:XMLList)
+		{
+			pageList = _pageList;
+			pageContainer = _pageContainer;
+		}
+		
+		public function updateList(_list:XMLList, _removePage:Boolean = false):void{
+			pageList = _list;
+			if(_removePage) removeCurrentPage();
+		}
+		
+		public function removeCurrentPage(_tween:Boolean = true):void{
+			if(currPage){
+				prevPage = currPage;
+				
+				if(_tween){
+					prevPage.addEventListener(CFM_PageEvent.TRANSITION_OUT_COMPLETE, removeCurrentPageComplete);
+					prevPage.transitionOut();
+				} else {
+					removeCurrentPageComplete(null);
+				}
+			}
+		}
+		
+		public function removeCurrentPageComplete(e:CFM_PageEvent):void{
+			if(prevPage.hasEventListener(CFM_PageEvent.TRANSITION_OUT_COMPLETE)){
+				prevPage.removeEventListener(CFM_PageEvent.TRANSITION_OUT_COMPLETE, removeCurrentPageComplete);
+			}
+				
+			prevPage.remove();
+			prevPage = null;
+			currPage = null;
+		}
+		
+		public function changePage(_id:String):void{
+			trace("changePage :: " + _id);
+			
+			if(pageChanging){
+				pageWaiting = _id; 
+				return;
+			}
+			
+			if(currPage && currPage.id == _id){
+				return;
+			}
+			
+			pageChanging = true;
+			newPageId = _id;
+			
+			if(currPage){
+				prevPage = currPage;
+				prevPage.addEventListener(CFM_PageEvent.TRANSITION_OUT_COMPLETE, pageOutComplete);
+				prevPage.transitionOut();
+			} else {
+				newPage();
+			}
+		}
+		
+		public function nextPage():void{
+			var newIndex:Number = currPage ? (currPage.index+1) : 0;
+			if (newIndex > pageList.length()-1) newIndex = pageList.length()-1;
+			
+			changePage(pageList[newIndex].@id);
+		}
+		
+		public function previousPage():void{
+			var newIndex:Number = currPage.index-1;
+			if (newIndex < 0) newIndex = 0;
+			
+			changePage(pageList[newIndex].@id);
+		}
+		
+		private function pageOutComplete(e:CFM_PageEvent):void{
+			trace("pageOutComplete :: " + e.id);
+			
+			var page:CFM_PageTemplate = e.currentTarget as CFM_PageTemplate;
+			
+			page.removeEventListener(CFM_PageEvent.TRANSITION_OUT_COMPLETE, pageOutComplete);
+			page.addEventListener(CFM_PageEvent.DESTROY_COMPLETE, destroyPageComplete);
+			page.remove();
+			
+			newPage();
+		}
+		
+		public function initCurrentPageContent():void{
+			try{
+				currPage.initContent();
+			} catch(e:Error){
+				trace(e);
+			}
+		}
+		
+		private function destroyPageComplete(e:CFM_PageEvent):void{
+			trace("destroyPageComplete :: " + e.id);
+		}
+		
+		private function newPage():void{
+			trace("::::::::::::::newpage id ::::::::::::::::::::::::::::= " + newPageId);
+			
+			var pxml:XML = pageList.(@id == newPageId)[0];
+			var index:Number = pxml.childIndex();
+			
+			currPage = getPage(index, pxml);
+			currPage.addEventListener(CFM_PageEvent.TRANSITION_IN_COMPLETE, buildPageComplete);
+			currPage.renderTo(pageContainer);
+		}
+		
+		protected function getPage(_index:Number, _pxml:XML):CFM_PageTemplate{
+			return new CFM_PageTemplate(_index, _pxml);
+		}
+		
+		private function buildPageComplete(e:CFM_PageEvent):void{
+			trace("buildPageComplete :: " + e.id);
+			
+			currPage.removeEventListener(CFM_PageEvent.TRANSITION_IN_COMPLETE, buildPageComplete);
+			pageChanging = false;
+			
+			if(pageWaiting != ""){
+				changePage(pageWaiting);
+				pageWaiting = "";
+			}
+		}
+	}
+}
