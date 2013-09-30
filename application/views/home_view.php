@@ -13,8 +13,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap.min.css">
         <style>
             body {
-                padding-top: 80px;
-                padding-bottom: 40px;
+                padding-top: 68px;
             }
         </style>
         <link rel="stylesheet" href="<?php echo base_url(); ?>css/bootstrap-responsive.min.css">
@@ -29,9 +28,9 @@
 
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
-                <div class="container">
+                <div class="container-fluid">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                        <span class="icon-bar"></span>
+                        <span class="icon-bar"><label>Dealer login</label></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </a>
@@ -39,6 +38,7 @@
 
                     <div class="nav-collapse collapse">
                         <form class="navbar-form pull-right">
+                            <label>Dealer login</label>
                             <input class="span2" type="text" placeholder="Email">
                             <input class="span2" type="password" placeholder="Password">
                             <button type="submit" class="btn">Sign in</button>
@@ -48,41 +48,28 @@
             </div>
         </div>
 
-        <div class="container">
-            <ul id="pageTabs" class="nav nav-tabs hide">
-                <li class="active"><a href="#home" data-toggle="tab">Start</a></li>
-                <li class=""><a href="#trailers" data-toggle="tab">Trailers</a></li>
+        <div class="container-fluid">
+            <ul id="pageTabs" class="nav nav-tabs">
+                <li class="active"><a href="#trailers" data-toggle="tab">Trailers</a></li>
                 <li class=""><a href="#options" data-toggle="tab">Options</a></li>
                 <li class=""><a href="#accessories" data-toggle="tab">Accessories</a></li>
-                <li class=""><a href="#complete" data-toggle="tab">Complete</a></li>
+                <li class=""><a href="#complete" data-toggle="tab">Finish</a></li>
             </ul>
         </div>
 
-        <div class="container">
-            <div class="row">
-                <div id="main-content" class="span12">
+        <div id="main-container" class="container-fluid">
+            <div class="row-fluid">
+                <div id="main-content" class="span8">
                     <div id="pageTabsContent" class="tab-content">
-                        <div class="tab-pane fade active in" id="home">
-                            <div class="hero-unit">
-                                <h1>Mobile Spray Rig Configurator</h1>
-                                <p>Self-Contained Systems for Foam and Coating Applications</p>
-                                <a class="btn btn-primary btn-large" onClick="main.activateTab('trailers')">Get Started &raquo;</a>
-                            </div>
-                            <hr>
-                        </div>
-
+                    
                         <!-- Trailers -->
-                        <div class="tab-pane fade in" id="trailers">
-                            <div class="hero-unit">
-                                <h2>Trailers</h2> 
-                            </div>
+                        <div class="tab-pane fade active in" id="trailers">
                             <ul class="thumbnails">
                                 <?php foreach($data_xml->options->option[1]->choice as $choice): ?>
-                                <li class="span4">
+
+                                <li class="trailer" onclick="main.addConfigurationItem('trailer','Trailer','<?= $choice->label; ?>')" >
                                     <div class="thumbnail">
-                                        <ul class="nav nav-pills">
-                                            <li><a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>">?</a></li>
-                                        </ul>
+                                        <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>"><i class="icon-info-sign icon-white"></i></a>
                                         <?php $image_url = base_url().config_item("image_dir_path").urldecode( $choice->attributes()->image ); ?>
                                         <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
                                         <h3><?php echo urldecode( $choice->label ); ?></h3>
@@ -91,18 +78,10 @@
                                 </li>
                                 <?php endforeach; ?>
                             </ul>
-                            <hr>
-                            <div class="btn-group">
-                                <button class="btn" onClick="main.activateTab('home')">Back</button>
-                                <button class="btn" onClick="main.activateTab('options')">Next</button>
-                            </div>
                         </div>
 
                         <!-- Options -->
                         <div class="tab-pane fade in" id="options">
-                            <div class="hero-unit">
-                                <h2>Options</h2> 
-                            </div>
                             <div class="accordion" id="options">
                             <?php foreach($data_xml->options->option as $option): if($option->attributes()->index > 2): ?>
                                 <div class="accordion-group">
@@ -115,10 +94,8 @@
                                         <div class="btn-group btn-group-vertical" data-toggle="buttons-radio">
                                             <?php foreach($option->choice as $choice): ?>
                                             <div>
-                                                <ul class="nav nav-pills">
-                                                    <li><a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>">?</a></li>
-                                                </ul>
-                                                <button type="button" class="btn">
+                                                <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>"><i class="icon-info-sign"></i></a>
+                                                <button type="button" class="btn" onclick="main.addConfigurationItem('<?= $option->label; ?>','<?= $option->label; ?>','<?= $choice->label ?>')">
                                                     <?php echo urldecode($choice->label); ?>
                                                 </button>
                                             </div>
@@ -128,58 +105,41 @@
                                 </div>
                             <?php endif; endforeach; ?>
                             </div>
-                            <hr>
-                            <div class="btn-group">
-                                <button class="btn" onClick="main.activateTab('trailers')">Back</button>
-                                <button class="btn" onClick="main.activateTab('accessories')">Next</button>
-                            </div>
                         </div>
 
                         <!-- Accessories -->
                         <div class="tab-pane fade in" id="accessories">
-                            <div class="hero-unit">
-                                <h2>Accessories</h2> 
-                            </div>
                             <div class="btn-group btn-group-vertical" data-toggle="buttons-checkbox">
                                 <?php foreach($data_xml->options->option[0]->choice as $choice): ?>
                                 <div>
-                                    <ul class="nav nav-pills">
-                                        <li><a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>">?</a></li>
-                                    </ul>
+                                    <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>"><i class="icon-info-sign"></i></a>
                                     <button type="button" class="btn"><?php echo urldecode($choice->label); ?></button>
                                 </div>
                                 <?php endforeach; ?>
-                            </div>
-                            <hr>
-                            <div class="btn-group">
-                                <button class="btn" onClick="main.activateTab('options')">Back</button>
-                                <button class="btn" onClick="main.activateTab('complete')">Finish</button>
                             </div>
                         </div>
 
                         <!-- Complete -->
                         <div class="tab-pane fade in" id="complete">
-                            <div class="hero-unit">
-                                <h2>Your Rig</h2> 
-                            </div>
-                            <hr>
-                            <div class="btn-group">
-                                <button class="btn" onClick="main.activateTab('accessories')">Back</button>
-                                <button class="btn" onClick="main.activateTab('home')">Start Over</button>
+                            <?php $image_url = base_url().config_item("image_dir_path")."B-A.jpg"; ?>
+                            <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
+                            <ul></ul>
+
+                            <div class="btn-group nav-buttons">
+                                <button class="btn" onClick="main.activateTab('trailers')">Start Over</button>
                             </div>
                         </div>
                     </div>
                 </div><!-- end page container -->
 
-                <div id="configuration-content" class="span4 hide">
-                    <div class="hero-unit">
-                        <h2>Current Configuration</h2>
-                    </div>
+                <div id="configuration-content" class="span4">
                     <div class="thumbnail">
                         <?php $image_url = base_url().config_item("image_dir_path")."B-A.jpg"; ?>
-                        <h3>Heading</h3>
+                        <h3>Configuration</h3>
                         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
                         <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
+                        <ul id="items"></ul>
+                        <ul id="part-number"></ul>
                     </div>
                 </div><!-- end config container -->
             </div>
