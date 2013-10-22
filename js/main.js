@@ -29,14 +29,19 @@ main.activateTab = function(_id){
 }
 
 main.optionSelected = function(){
-	_this 	= $(this).parent("div.thumbnail").parent("li.trailer");
+	_this 	= $(this);
+
+	console.log(_this.parent().hasClass("thumbnail"));
+
+	if(_this.parent().hasClass("thumbnail"))
+		_this 	= $(this).parent("div.thumbnail").parent("li.trailer");
 
 	_option_index 	= decodeURIComponent( _this.attr("data-option-index") );
 	_option_id 		= decodeURIComponent( _this.attr("data-option-id") );
 	_option_label	= decodeURIComponent( _this.attr("data-option-label") );
 	_id 			= decodeURIComponent( _this.attr("data-id") );
-	_price			= decodeURIComponent( _this.attr("data-price") );
-	_dealer_price	= decodeURIComponent( _this.attr("data-dealer-price") );
+	_price			= Number(_this.attr("data-price"));
+	_dealer_price	= Number(_this.attr("data-dealer-price"));
 	_label 			= decodeURIComponent( _this.attr("data-label") );
 
 	//update menu selection
