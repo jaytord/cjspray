@@ -20,7 +20,7 @@ jQuery( function($){
 
 	//click events
 	$("#options button").click( main.optionSelected );
-	$("#trailers li").click( main.optionSelected );
+	$("#trailers li img").click( main.optionSelected );
 	$("#accessories button").click( main.accessorySelected );
 });
 
@@ -29,7 +29,7 @@ main.activateTab = function(_id){
 }
 
 main.optionSelected = function(){
-	_this 	= $(this);
+	_this 	= $(this).parent("div.thumbnail").parent("li.trailer");
 
 	_option_index 	= decodeURIComponent( _this.attr("data-option-index") );
 	_option_id 		= decodeURIComponent( _this.attr("data-option-id") );
