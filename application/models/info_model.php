@@ -11,6 +11,7 @@ class Info_Model extends CJS_Model
 			'dealer_only'					=> array("type"=>"attribute","shown"=>true, "label"=>"Dealer Only"),
 			'description'					=> array("type"=>"child","shown"=>true, "label"=>"Description"),
 			'image'							=> array("type"=>"attribute","shown"=>true, "label"=>"Image"),
+			'title'							=> array("type"=>"child","shown"=>true, "label"=>"Title"),
 		);
 	}
 }

@@ -6,6 +6,7 @@
 body{
 	background:#004A80; 
 	padding: 68px 0 0 0 !important;
+	font-size: 12px;
 }
 input{
 	border: dotted 1px #ccc !important;
@@ -18,12 +19,12 @@ input{
 	padding: 0 !important;
 }
 .navbar-inner{
-	background:rgba(250,250,250,1);
-	padding: 0 20px !important;
+	background:#FFF;
+	padding: 0 20px 0 18px !important;
 }
 .navbar-inner img{
 	float:left;
-	margin:12px 0;
+	margin:12px 0 10px 0;
 }
 .navbar-form{
 	margin:12px 0;
@@ -39,7 +40,40 @@ input{
 .nav-tabs>li>a:hover{
 	background: none;
 }
+.heading-bar{
+	margin: 0;
+	padding:0px 20px;
+	background: #005c90;
 
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	margin-bottom: 0px !important;
+}
+.heading-bar h1{
+	line-height: 30px;
+	padding: 0 0 0 0;
+	display: inline-block;
+	margin: 0;
+	font-size: 18px;
+	color: #FFF;
+	font-weight: 100;
+	letter-spacing: .1em;
+}
+.heading-bar a{
+	cursor: pointer;
+	margin:5px 0 0 0;
+	float: right;
+	color: #FFF;
+	font-weight: 400;
+	display: inline-block;
+}
+.heading-bar a:hover{
+	text-decoration: none;
+}
+.heading-bar i{
+	margin: 0 4px 0 0;
+}
 #main-container{
 	-webkit-box-shadow: 0 5px 6px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 5px 6px rgba(0,0,0,0.2);
@@ -49,6 +83,15 @@ input{
 #main-content{
 	border-right: dotted 1px #ccc;
 	margin-bottom: 20px;
+	padding-left: 20px;
+}
+#main-container.complete #main-content,
+#main-container.no-selections #main-content{
+	width: 100% !important;
+}
+#main-container.complete #mini-configuration,
+#main-container.no-selections #mini-configuration{
+	display: none;
 }
 .container-fluid{
 	background: #FFF;
@@ -56,19 +99,28 @@ input{
 }
 
 #pageTabs{
-	padding-top:10px;
-	padding-left: 30px;
+	padding-top:38px;
 	background:#e4eeee;
 	border:none;
+	padding-left: 20px;
 }
 #pageTabs li a{
+	font-size: 12px;
 	border:none !important;
+	background: rgba(255,255,255,.4);
+}
+#pageTabs li.active a{
+	background: #FFF;
+	font-weight: 800;
 }
 #pageTabsContent{
-	margin:0 30px;
+	margin:0 auto;
 }
 .tab-pane{
 	overflow: hidden;
+}
+.tab-pane:not(#trailers){
+	padding-right: 20px;
 }
 .tab-pane .btn-group{
 	width:100%;
@@ -131,6 +183,13 @@ input{
 }
 .accordion-group:hover{
 	border: 1px dotted #BBB;
+}
+.accordion-group.selected 
+{
+	background: url('../img/checkmark.jpg') no-repeat right 8px;
+}
+.accordion-group.selected .selection{
+	color: #999;
 }
 .accordion-heading .accordion-toggle{
 	padding:10px 12px;
@@ -210,42 +269,65 @@ input{
 	float: right;
 	padding: 3px 8px 4px 8px;
 }
-#configuration-content{
-	padding-bottom: 20px;
+
+.configuration-content ul h4{
+	margin: 0 0 4px 3px;
+	padding: 0;
+	font-size: 13px;
+	color: #666;
 }
-#configuration-content .thumbnail{
+.configuration-content h3 span.price{
+	float: right;
+}
+
+.configuration-content .thumbnail{
 	background: none;
 	margin-top:0;
 }
-#configuration-content img{
+.configuration-content img{
 	margin-top:10px;
 }
-#configuration-content div.thumbnail{
-	padding:0 30px 0 0;
-}
-#configuration-content #items{
-	margin: 0;
+
+.configuration-content ul{
+	margin: 0 0 4px 0;
 	list-style: none;
-	padding: 10px;
+	padding: 6px;
 	background: #EEE;
 	border-radius: 4px;
 	border:dotted 1px #BBB;
 }
-#configuration-content #items li{
-	font-size: 12px;
+.configuration-content ul li{
 	background: #FFF;
-	padding: 4px 24px 4px 8px;
-	margin-bottom: 1px;
 	position: relative;
 	line-height: 14px;
+	padding: 4px 8px 4px 8px;
+	margin-bottom: 1px;
+	font-size: 12px;
 }
-#configuration-content #items li span:first-child{
+.configuration-content ul.part-number li{
+	display: inline-block;
+	margin-right: 1px;
+	margin-bottom: 0px;
+	padding: 4px;
+	text-transform: uppercase;
 	font-weight: 800;
 }
-#configuration-content #items li:not(:first-child){
-	font-size: 11px;
+.configuration-content ul.part-number li.inactive{
+	padding:4px 4px 4px 4px;
+	margin: 0 2px 0 2px;
+	background: #CCC;
 }
-#configuration-content #items li a{
+.configuration-content ul li span.lbl{
+	font-weight: 800;
+}
+.configuration-content ul li span.price{
+	color: #000;
+	float: right;
+}
+#mini-configuration ul li span.price{
+	display: none;
+}
+.configuration-content ul li a{
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -253,16 +335,35 @@ input{
 	cursor: pointer;
 	opacity: .5;
 }
-#configuration-content #items li a:hover{
+.configuration-content ul li a:hover{
 	opacity: 1;
 }
-#configuration-content #items li.trailer-item{
+.configuration-content ul li.trailer-item{
+	font-weight: 800;
 	background-color: #005c90;
-	color: #DDD;
-	padding: 14px 8px;
+	color: #FFF;
+	padding: 10px 8px;
+}
+.configuration-content p{
+	margin-bottom: 10px;
+}
+
+#mini-configuration{
+	padding-bottom: 20px;
+}
+
+#full-configuration img{
+	width:100%;
 }
 
 @media (min-width: 1200px) {
+	.trailer{
+		width: 33.333333%;
+	}
+	#pageTabsContent{
+		max-width: 1200px;
+	}
+
 	.btn-group-vertical div {
 		width: 33.333333333333%;
 	}
@@ -271,6 +372,10 @@ input{
 @media (max-width: 980px) {
 	.trailer{
 		width: 50%;
+	}
+
+	#pageTabsContent{
+		max-width: 800px;
 	}
 }
 
@@ -284,7 +389,7 @@ input{
 }
 
 @media (max-width: 768px) {
-	#configuration-content div.thumbnail{
+	#mini-configuration div.thumbnail{
 		padding:0 30px;
 	}
 	.navbar-form .btn{
@@ -293,7 +398,7 @@ input{
 	.navbar-form label{
 		display: none;
 	}
-	#configuration-content{
+	#mini-configuration{
 		border-top: 1px dotted #CCC;
 		padding-top: 20px;
 		background: rgba(240,240,240,1);
@@ -308,7 +413,6 @@ input{
 		width: 100%;
 	}
 	#pageTabs li a {
-		font-size: 12px !important;
 		padding:13px 8px !important;
 	}
 }

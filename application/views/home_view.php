@@ -44,7 +44,13 @@
                             <button type="submit" class="btn">Sign in</button>
                         </form>
                     </div><!--/.nav-collapse -->
+
                 </div>
+
+            </div>
+            <div class="heading-bar">
+                <h1>Mobile Spray Rigs</h1>
+                <a href="http://www.cjspray.com/pdfs/cjs_mobile_rigs.pdf"><i class="icon-download icon-white"></i>Catalog</a>
             </div>
         </div>
 
@@ -57,20 +63,27 @@
             </ul>
         </div>
 
-        <div id="main-container" class="container-fluid">
+        <div id="main-container" class="container-fluid no-selections">
             <div class="row-fluid">
                 <div id="main-content" class="span8">
                     <div id="pageTabsContent" class="tab-content">
                     
                         <!-- Trailers -->
-                        <div class="tab-pane fade active in" id="trailers">
+                        <div class="tab-pane active in" id="trailers">
                             <ul class="thumbnails">
-                                <?php foreach($data_xml->options->option[1]->choice as $choice): ?>
-
-                                <li class="trailer" onclick="main.addConfigurationItem('trailer','Trailer','<?= $choice->label; ?>')" >
+                                <?php $option = $options[1] ?>
+                                <?php foreach($option->choices as $choice): ?>
+                                <li class="trailer" 
+                                    data-id="<?= $choice->id; ?>" 
+                                    data-label="<?= $choice->label; ?>" 
+                                    data-option-index="<?= $option->index; ?>" 
+                                    data-option-id="<?= $option->id; ?>" 
+                                    data-option-label="<?= $option->label; ?>" 
+                                    data-price="<?= $choice->price; ?>" 
+                                    data-dealer-price="<?= $choice->dealer_price; ?>" >
                                     <div class="thumbnail">
-                                        <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>"><i class="icon-info-sign icon-white"></i></a>
-                                        <?php $image_url = base_url().config_item("image_dir_path").urldecode( $choice->attributes()->image ); ?>
+                                        <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->info_index; ?>/<?php echo $choice->label; ?>"><i class="icon-info-sign icon-white"></i></a>
+                                        <?php $image_url = base_url().config_item("image_dir_path").urldecode( $choice->image ); ?>
                                         <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
                                         <h3><?php echo urldecode( $choice->label ); ?></h3>
                                         <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo odio dui. </p>
@@ -83,19 +96,28 @@
                         <!-- Options -->
                         <div class="tab-pane fade in" id="options">
                             <div class="accordion" id="options">
-                            <?php foreach($data_xml->options->option as $option): if($option->attributes()->index > 2): ?>
-                                <div class="accordion-group">
+                            <?php foreach($options as $option): if(intval($option->index) > 2): ?>
+                                <div class="accordion-group" data-id="<?= $option->id; ?>" >
                                     <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#options" href="#option<?php echo $option->attributes()->index?>">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#options" href="#option<?php echo $option->index?>">
                                         <?php echo urldecode( $option->label ) ?>
                                         </a>
                                     </div>
-                                    <div id="option<?php echo $option->attributes()->index?>" class="accordion-body collapse">
+                                    <div id="option<?php echo $option->index?>" class="accordion-body collapse">
                                         <div class="btn-group btn-group-vertical" data-toggle="buttons-radio">
-                                            <?php foreach($option->choice as $choice): ?>
+                                            <?php foreach($option->choices as $choice): ?>
                                             <div>
-                                                <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>"><i class="icon-info-sign"></i></a>
-                                                <button type="button" class="btn" onclick="main.addConfigurationItem('<?= $option->label; ?>','<?= $option->label; ?>','<?= $choice->label ?>')">
+                                                <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->info_index; ?>/<?php echo $choice->label; ?>"><i class="icon-info-sign"></i></a>
+                                                <button 
+                                                    data-id="<?= $choice->id; ?>" 
+                                                    data-label="<?= $choice->label; ?>" 
+                                                    data-option-index="<?= $option->index; ?>" 
+                                                    data-option-id="<?= $option->id; ?>" 
+                                                    data-option-label="<?= $option->label; ?>" 
+                                                    data-price="<?= $choice->price; ?>" 
+                                                    data-dealer-price="<?= $choice->dealer_price; ?>" 
+                                                    type="button" 
+                                                    class="btn">
                                                     <?php echo urldecode($choice->label); ?>
                                                 </button>
                                             </div>
@@ -110,10 +132,22 @@
                         <!-- Accessories -->
                         <div class="tab-pane fade in" id="accessories">
                             <div class="btn-group btn-group-vertical" data-toggle="buttons-checkbox">
-                                <?php foreach($data_xml->options->option[0]->choice as $choice): ?>
+                                <?php $option = $options[0]; ?>
+                                <?php foreach($option->choices as $choice): ?>
                                 <div>
-                                    <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->attributes()->info_index; ?>"><i class="icon-info-sign"></i></a>
-                                    <button type="button" class="btn"><?php echo urldecode($choice->label); ?></button>
+                                    <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->info_index; ?>"><i class="icon-info-sign"></i></a>
+                                    <button 
+                                        data-id="<?= $choice->id; ?>" 
+                                        data-label="<?= $choice->label; ?>" 
+                                        data-option-index="<?= $option->index; ?>" 
+                                        data-option-id="<?= $option->id; ?>" 
+                                        data-option-label="<?= $option->label; ?>" 
+                                        data-price="<?= $choice->price; ?>" 
+                                        data-dealer-price="<?= $choice->dealer_price; ?>"
+                                        type="button" 
+                                        class="btn">
+                                        <?php echo rawurldecode($choice->label); ?>
+                                    </button>
                                 </div>
                                 <?php endforeach; ?>
                             </div>
@@ -121,25 +155,49 @@
 
                         <!-- Complete -->
                         <div class="tab-pane fade in" id="complete">
-                            <?php $image_url = base_url().config_item("image_dir_path")."B-A.jpg"; ?>
-                            <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
-                            <ul></ul>
-
+                            <div id="full-configuration" class="span12 configuration-content">
+                                
+                                <div class="container-fluid">
+                                    <div class="row-fluid">
+                                        <div class="span6">
+                                            <h3>My Rig <span class="price">$0</span></h3>
+                                            <ul class="part-number"><h4>Part Number:</h4>
+                                                <?php foreach($options as $option): if($option->index > 1): ?>
+                                                <li class="inactive" data-id="<?= $option->id; ?>" data-index="<?= $option->index; ?>"></li>
+                                                <?php endif; endforeach; ?>
+                                            </ul>
+                                            <ul class="items"><h4>Options:</h4></ul>
+                                            <ul class="accessories"><h4>Accessories:</h4></ul>
+                                        </div>
+                                        <div class="span6">
+                                            <?php $image_url = base_url().config_item("image_dir_path")."B-A.jpg"; ?>
+                                            <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!-- end config container -->
                             <div class="btn-group nav-buttons">
-                                <button class="btn" onClick="main.activateTab('trailers')">Start Over</button>
-                            </div>
+                                    <button class="btn" onClick="main.activateTab('trailers')">Download</button>
+                                    <button class="btn" onClick="main.activateTab('trailers')">Print</button>
+                                    <button class="btn" onClick="main.activateTab('trailers')">Start Over</button>
+                                </div>
+
                         </div>
                     </div>
                 </div><!-- end page container -->
 
-                <div id="configuration-content" class="span4">
+                <div id="mini-configuration" class="span4 configuration-content">
                     <div class="thumbnail">
                         <?php $image_url = base_url().config_item("image_dir_path")."B-A.jpg"; ?>
-                        <h3>Configuration</h3>
-                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                        <h3>My Rig <span class="price">$</span></h3>
+                        <ul class="part-number"><h4>Part Number:</h4>
+                            <?php foreach($options as $option): if($option->index > 1): ?>
+                            <li class="inactive" data-id="<?= $option->id; ?>" data-index="<?= $option->index; ?>"></li>
+                            <?php endif; endforeach; ?>
+                        </ul>
                         <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
-                        <ul id="items"></ul>
-                        <ul id="part-number"></ul>
+                        <ul class="items"><h4>Options:</h4></ul>
+                        <ul class="accessories"><h4>Accessories:</h4></ul>
                     </div>
                 </div><!-- end config container -->
             </div>

@@ -25,7 +25,11 @@ class Parser extends CI_Controller {
 		$this->load->model("option_choices_model");
 		$this->load->model("info_model");
 
+		//local
 		$this->main = simplexml_load_file( base_url().config_item('source_xml_path') );
+
+		//live
+		//$this->main = simplexml_load_file( base_url().config_item('http://www.cjspray.com/buildmyrig/assets/xml/mobile_rigs.xml') );
 	}
 
 	public function index()
@@ -89,10 +93,6 @@ class Parser extends CI_Controller {
 				$update_result = $this->options_model->update( array( "index"=>$option_index, "info_index"=>$info_index ) );
 			}
 		}
-	}
-
-	public function accessories(){
-
 	}
 }
 

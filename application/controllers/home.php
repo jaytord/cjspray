@@ -19,27 +19,40 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$url = base_url().config_item('data_xml_path');
-		$ch = curl_init('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']);
+		$this->load->model("options_model");
+		$this->load->model("option_choices_model");
 
- 	 	curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
-  		curl_setopt($ch, CURLOPT_HEADER, 0);
-		curl_setopt($ch, CURLOPT_URL, $url );
-	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+		$options 		= $this->options_model->get();
 
-		// get the result of http query
-		$output = curl_exec($ch);
-		curl_close($ch);
+		foreach ($options as $key => $value) {
+			$value->choices = $this->option_choices_model->get(array("option_index"=>$value->index));
+		}
 
-		$xml = simplexml_load_string($output);
+		// $url = base_url().config_item('data_xml_path');
+		// $ch = curl_init('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']);
 
-		$this->load->view('home_view',array("data_xml"=>$xml));
+	 	//curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
+	  	//curl_setopt($ch, CURLOPT_HEADER, 0);
+		//curl_setopt($ch, CURLOPT_URL, $url );
+	 	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	 	//curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+
+		//get the result of http query
+		//$output = curl_exec($ch);
+		//curl_close($ch);
+
+		//$xml = simplexml_load_string($output);
+
+		$this->load->view('home_view',array("options"=>$options));
 	}
 
-	public function info($index)
+	public function info($index,$title)
 	{
-		echo "Info : ".$index;
+		$this->load->model("info_model");
+		$info_data = $this->info_model->get(array("index"=>$index));
+		$info_data->title  = $title;
+
+		$this->load->view("info_view", array('data'=>$info_data));
 	}
 	
 	public function phpinfo()

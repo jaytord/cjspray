@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurator>
+	<options>
+		<option index="1" id="a" dealer_only="0" image="fpo-option-image.jpg" info_index="1">
+			<label>Accessories</label>
+			<choice index="1" id="inipt105" dealer_only="0" dealer_price="0" price="14" image="" option_index="1" option_id="a" info_index="2">
+				<label>Gloves%2C%20Nitrile%2C%20XL%20-%2050%20P</label>
+			</choice>
+			<choice index="2" id="ap71010" dealer_only="0" dealer_price="0" price="78" image="" option_index="1" option_id="a" info_index="3">
+				<label>Dynasolve%20CU-6%20Gun%20Cleaner%2C%201%</label>
+			</choice>
+			<choice index="3" id="ap71004" dealer_only="0" dealer_price="0" price="285" image="" option_index="1" option_id="a" info_index="4">
+				<label>Ecolink%20Gun%20Cleaner%2C%205%20Gal</label>
+			</choice>
+			<choice index="4" id="1202313" dealer_only="0" dealer_price="0" price="85" image="" option_index="1" option_id="a" info_index="5">
+				<label>Coverall%2C%20XL%2C%20WBP%2C%2025%2FCase</label>
+			</choice>
+			<choice index="5" id="41-1497" dealer_only="0" dealer_price="0" price="1" image="" option_index="1" option_id="a" info_index="6">
+				<label>Fabric%20Stretch%20Sock</label>
+			</choice>
+			<choice index="6" id="515010" dealer_only="0" dealer_price="0" price="9" image="" option_index="1" option_id="a" info_index="7">
+				<label>Soft%20Stretch%20Protective%20Hood%2C%20</label>
+			</choice>
+			<choice index="7" id="515050" dealer_only="0" dealer_price="0" price="39" image="" option_index="1" option_id="a" info_index="8">
+				<label>Soft%20Stretch%20Protective%20Hood%2C%20</label>
+			</choice>
+			<choice index="8" id="378002" dealer_only="0" dealer_price="0" price="155" image="" option_index="1" option_id="a" info_index="9">
+				<label>3M%206000%20Series%20Full%20Face%20Mask%</label>
+			</choice>
+			<choice index="9" id="7142" dealer_only="0" dealer_price="0" price="25" image="" option_index="1" option_id="a" info_index="10">
+				<label>Lense%20Covers%2C%2025%20Pack</label>
+			</choice>
+			<choice index="10" id="6001" dealer_only="0" dealer_price="0" price="8" image="" option_index="1" option_id="a" info_index="11">
+				<label>Organic%20Vapor%20Cartridge%2C%202%20Pac</label>
+			</choice>
+			<choice index="11" id="3ay71a" dealer_only="0" dealer_price="0" price="48" image="" option_index="1" option_id="a" info_index="12">
+				<label>Bung%20Wrench%2C%2055%20Gal</label>
+			</choice>
+			<choice index="12" id="206996" dealer_only="0" dealer_price="0" price="93" image="" option_index="1" option_id="a" info_index="13">
+				<label>Fluid%2C%20Graco%20TSL%2C1%20Gal</label>
+			</choice>
+			<choice index="13" id="515662" dealer_only="0" dealer_price="0" price="198" image="" option_index="1" option_id="a" info_index="14">
+				<label>Band%20Heater%2C%2055%20Gal%2C%20110%20V</label>
+			</choice>
+			<choice index="14" id="15c381" dealer_only="0" dealer_price="0" price="41" image="" option_index="1" option_id="a" info_index="15">
+				<label>Dryer%2C%20Desiccant%2C%20Replacement%20</label>
+			</choice>
+			<choice index="15" id="289103m" dealer_only="0" dealer_price="0" price="98" image="" option_index="1" option_id="a" info_index="16">
+				<label>3M%20Chemical%20Sorbent%20Spill%20Respon</label>
+			</choice>
+		</option>
+		<option index="2" id="b" dealer_only="0" image="fpo-option-image.jpg" info_index="17">
+			<label>Trailer</label>
+			<choice index="16" id="a" dealer_only="0" dealer_price="13531" price="15265.38" image="16BumperPull.jpg" option_index="2" option_id="b" info_index="18">
+				<label>16%27%20Bumper%20Pull</label>
+			</choice>
+			<choice index="17" id="b" dealer_only="0" dealer_price="21185" price="23901.28" image="20BumperPull.jpg" option_index="2" option_id="b" info_index="19">
+				<label>20%27%20Bumper%20Pull</label>
+			</choice>
+			<choice index="18" id="c" dealer_only="0" dealer_price="27200" price="30687.18" image="28Gooseneck.jpg" option_index="2" option_id="b" info_index="20">
+				<label>28%27%20Gooseneck</label>
+			</choice>
+			<choice index="19" id="d" dealer_only="0" dealer_price="12273" price="13846.15" image="BoxTruck.jpg" option_index="2" option_id="b" info_index="21">
+				<label>Custom%20Box%20Truck</label>
+			</choice>
+		</option>
+		<option index="3" id="cc" dealer_only="0" image="fpo-option-image.jpg" info_index="22">
+			<label>Reactor</label>
+			<choice index="20" id="14" dealer_only="1" dealer_price="915" price="0" image="" option_index="3" option_id="cc" info_index="37">
+				<label>Provided%20By%20Distributor%20%28Install</label>
+			</choice>
+			<choice index="21" id="0" dealer_only="1" dealer_price="0" price="0" image="" option_index="3" option_id="cc" info_index="23">
+				<label>None</label>
+			</choice>
+			<choice index="22" id="1" dealer_only="0" dealer_price="8673" price="9912" image="" option_index="3" option_id="cc" info_index="24">
+				<label>A-25%2C%206.0%20kW%20Heater</label>
+			</choice>
+			<choice index="23" id="2" dealer_only="0" dealer_price="11305" price="12920" image="" option_index="3" option_id="cc" info_index="25">
+				<label>E-20%2C%206.5%20kW%20Heater</label>
+			</choice>
+			<choice index="24" id="3" dealer_only="0" dealer_price="14119" price="16136" image="" option_index="3" option_id="cc" info_index="26">
+				<label>E-30%2C%2010.2%20kW%20Heater</label>
+			</choice>
+			<choice index="25" id="4" dealer_only="0" dealer_price="15064" price="17216" image="" option_index="3" option_id="cc" info_index="27">
+				<label>E-30%2C%2015.3%20kW%20Heater</label>
+			</choice>
+			<choice index="26" id="5" dealer_only="0" dealer_price="16002" price="18288" image="" option_index="3" option_id="cc" info_index="28">
+				<label>H-25%2C%208.0%20kW%20Heater</label>
+			</choice>
+			<choice index="27" id="6" dealer_only="0" dealer_price="16947" price="19368" image="" option_index="3" option_id="cc" info_index="29">
+				<label>H-25%2C%2015.3%20kW%20Heater</label>
+			</choice>
+			<choice index="28" id="7" dealer_only="0" dealer_price="23541" price="26904" image="" option_index="3" option_id="cc" info_index="30">
+				<label>H-40%2C%2012.0%20kW%20Heater</label>
+			</choice>
+			<choice index="29" id="8" dealer_only="0" dealer_price="23541" price="26904" image="" option_index="3" option_id="cc" info_index="31">
+				<label>H-40%2C%2015.3%20kW%20Heater</label>
+			</choice>
+			<choice index="30" id="9" dealer_only="0" dealer_price="23541" price="26904" image="" option_index="3" option_id="cc" info_index="32">
+				<label>H-40%2C%2020.4%20kW%20Heater</label>
+			</choice>
+			<choice index="31" id="10" dealer_only="0" dealer_price="11851" price="13544" image="" option_index="3" option_id="cc" info_index="33">
+				<label>E-XP1%2C%2010.2%20kW%20Heater</label>
+			</choice>
+			<choice index="32" id="11" dealer_only="0" dealer_price="15820" price="18080" image="" option_index="3" option_id="cc" info_index="34">
+				<label>E-XP2%2C%2015.3%20kW%20Heater</label>
+			</choice>
+			<choice index="33" id="12" dealer_only="0" dealer_price="17885" price="20440" image="" option_index="3" option_id="cc" info_index="35">
+				<label>H-XP2%2C%2015.3%20kW%20Heater</label>
+			</choice>
+			<choice index="34" id="13" dealer_only="0" dealer_price="23541" price="26904" image="" option_index="3" option_id="cc" info_index="36">
+				<label>H-XP3%2C%2020.4%20kW%20Heater</label>
+			</choice>
+		</option>
+		<option index="4" id="d" dealer_only="0" image="fpo-option-image.jpg" info_index="38">
+			<label>Heated%20Hose</label>
+			<choice index="35" id="0" dealer_only="1" dealer_price="1334" price="1524" image="" option_index="4" option_id="d" info_index="39">
+				<label>50%20ft%20Heated%20Hose%2C%202%2C000%20p</label>
+			</choice>
+			<choice index="36" id="1" dealer_only="1" dealer_price="1792" price="2048" image="" option_index="4" option_id="d" info_index="40">
+				<label>50%20ft%20Heated%20Hose%2C%203%2C500%20p</label>
+			</choice>
+			<choice index="37" id="2" dealer_only="0" dealer_price="3128" price="3574.40" image="" option_index="4" option_id="d" info_index="41">
+				<label>110%20ft%2C%202%2C000%20psi</label>
+			</choice>
+			<choice index="38" id="3" dealer_only="0" dealer_price="4226" price="4829.60" image="" option_index="4" option_id="d" info_index="42">
+				<label>110%20ft%2C%203%2C500%20psi</label>
+			</choice>
+			<choice index="39" id="4" dealer_only="0" dealer_price="4461" price="5098.40" image="" option_index="4" option_id="d" info_index="43">
+				<label>160%20ft%2C%202%2C000%20psi</label>
+			</choice>
+			<choice index="40" id="5" dealer_only="0" dealer_price="6018" price="6877.60" image="" option_index="4" option_id="d" info_index="44">
+				<label>160%20ft%2C%203%2C500%20psi</label>
+			</choice>
+			<choice index="41" id="6" dealer_only="0" dealer_price="5795" price="6622.40" image="" option_index="4" option_id="d" info_index="45">
+				<label>210%20ft%2C%202%2C000%20psi</label>
+			</choice>
+			<choice index="42" id="7" dealer_only="0" dealer_price="7810" price="8925.60" image="" option_index="4" option_id="d" info_index="46">
+				<label>210%20ft%2C%203%2C500%20psi</label>
+			</choice>
+			<choice index="43" id="8" dealer_only="0" dealer_price="7128" price="8146.40" image="" option_index="4" option_id="d" info_index="47">
+				<label>260%20ft%2C%202%2C000%20psi</label>
+			</choice>
+			<choice index="44" id="9" dealer_only="0" dealer_price="9602" price="10973.60" image="" option_index="4" option_id="d" info_index="48">
+				<label>260%20ft%2C%203%2C500%20psi</label>
+			</choice>
+			<choice index="45" id="10" dealer_only="0" dealer_price="8462" price="9670.40" image="" option_index="4" option_id="d" info_index="49">
+				<label>310%20ft%2C%202%2C000%20psi</label>
+			</choice>
+			<choice index="46" id="11" dealer_only="0" dealer_price="11394" price="13021.60" image="" option_index="4" option_id="d" info_index="50">
+				<label>310%20ft%2C%203%2C500%20psi</label>
+			</choice>
+			<choice index="47" id="12" dealer_only="0" dealer_price="9795" price="11194.40" image="" option_index="4" option_id="d" info_index="51">
+				<label>360%20ft%2C%202%2C000%20psi</label>
+			</choice>
+			<choice index="48" id="13" dealer_only="0" dealer_price="13186" price="15069.60" image="" option_index="4" option_id="d" info_index="52">
+				<label>360%20ft%2C%203%2C500%20psi</label>
+			</choice>
+			<choice index="49" id="14" dealer_only="0" dealer_price="11129" price="12718.40" image="" option_index="4" option_id="d" info_index="53">
+				<label>410%20ft%2C%202%2C00%20psi</label>
+			</choice>
+			<choice index="50" id="15" dealer_only="0" dealer_price="14978" price="17117.60" image="" option_index="4" option_id="d" info_index="54">
+				<label>410%20ft%2C%203%2C500%20psi</label>
+			</choice>
+		</option>
+		<option index="5" id="ee" dealer_only="0" image="fpo-option-image.jpg" info_index="55">
+			<label>Spray%20Gun</label>
+			<choice index="51" id="0" dealer_only="1" dealer_price="0" price="0" image="" option_index="5" option_id="ee" info_index="56">
+				<label>None</label>
+			</choice>
+			<choice index="52" id="1" dealer_only="0" dealer_price="1568" price="1792" image="" option_index="5" option_id="ee" info_index="57">
+				<label>Fusion%20Air%20Purge%2C%20one</label>
+			</choice>
+			<choice index="53" id="2" dealer_only="0" dealer_price="3136" price="3584" image="" option_index="5" option_id="ee" info_index="58">
+				<label>Fusion%20Air%20Purge%2C%20two</label>
+			</choice>
+			<choice index="54" id="3" dealer_only="0" dealer_price="1757" price="2008" image="" option_index="5" option_id="ee" info_index="59">
+				<label>Fusion%20Clear%20Shot%2C%20one</label>
+			</choice>
+			<choice index="55" id="4" dealer_only="0" dealer_price="3514" price="4016" image="" option_index="5" option_id="ee" info_index="60">
+				<label>Fusion%20Clear%20Shot%2C%20two</label>
+			</choice>
+			<choice index="56" id="5" dealer_only="0" dealer_price="1890" price="2160" image="" option_index="5" option_id="ee" info_index="61">
+				<label>Fusion%20Mechanical%20Purge%2C%20one</label>
+			</choice>
+			<choice index="57" id="6" dealer_only="0" dealer_price="3780" price="4320" image="" option_index="5" option_id="ee" info_index="62">
+				<label>Fusion%20Mechanical%20Purge%2C%20two</label>
+			</choice>
+			<choice index="58" id="7" dealer_only="0" dealer_price="1946" price="2224" image="" option_index="5" option_id="ee" info_index="63">
+				<label>Probler%20P2%2C%20one</label>
+			</choice>
+			<choice index="59" id="8" dealer_only="0" dealer_price="3892" price="4448" image="" option_index="5" option_id="ee" info_index="64">
+				<label>Probler%20P2%2C%20two</label>
+			</choice>
+		</option>
+		<option index="6" id="f" dealer_only="0" image="fpo-option-image.jpg" info_index="65">
+			<label>Feed%20Pumps</label>
+			<choice index="60" id="0" dealer_only="1" dealer_price="0" price="0" image="" option_index="6" option_id="f" info_index="66">
+				<label>None</label>
+			</choice>
+			<choice index="61" id="1" dealer_only="0" dealer_price="1575" price="1800" image="" option_index="6" option_id="f" info_index="67">
+				<label>T%3A1%20Feed%20Pumps</label>
+			</choice>
+			<choice index="62" id="2" dealer_only="0" dealer_price="2345" price="2680" image="" option_index="6" option_id="f" info_index="68">
+				<label>T%3A2%20Feed%20Pumps</label>
+			</choice>
+			<choice index="63" id="3" dealer_only="0" dealer_price="1897" price="2168" image="" option_index="6" option_id="f" info_index="69">
+				<label>Husky%201050%20Feed%20Pumps</label>
+			</choice>
+			<choice index="64" id="4" dealer_only="0" dealer_price="1368" price="1563.20" image="" option_index="6" option_id="f" info_index="70">
+				<label>Triton%20308%20Feed%20Pumps</label>
+			</choice>
+		</option>
+		<option index="7" id="gg" dealer_only="0" image="fpo-option-image.jpg" info_index="71">
+			<label>Circulation%20Kits</label>
+			<choice index="65" id="0" dealer_only="0" dealer_price="0" price="0" image="" option_index="7" option_id="gg" info_index="72">
+				<label>None</label>
+			</choice>
+			<choice index="66" id="1" dealer_only="0" dealer_price="416" price="469.23" image="" option_index="7" option_id="gg" info_index="73">
+				<label>Manifold%20Circulation%20Kit%20only</label>
+			</choice>
+			<choice index="67" id="2" dealer_only="0" dealer_price="770" price="869.23" image="" option_index="7" option_id="gg" info_index="74">
+				<label>Manifold%20AND%20Heated%20Hose%20Circula</label>
+			</choice>
+		</option>
+		<option index="8" id="h" dealer_only="0" image="fpo-option-image.jpg" info_index="75">
+			<label>Agitators</label>
+			<choice index="68" id="0" dealer_only="0" dealer_price="0" price="0" image="" option_index="8" option_id="h" info_index="76">
+				<label>None</label>
+			</choice>
+			<choice index="69" id="1" dealer_only="0" dealer_price="743" price="669" image="" option_index="8" option_id="h" info_index="77">
+				<label>Twistork%2C%20Graco%2C%20one</label>
+			</choice>
+			<choice index="70" id="2" dealer_only="0" dealer_price="1487" price="1338" image="" option_index="8" option_id="h" info_index="78">
+				<label>Twistork%2C%20Graco%2C%20two</label>
+			</choice>
+		</option>
+		<option index="9" id="ii" dealer_only="0" image="fpo-option-image.jpg" info_index="79">
+			<label>Generator</label>
+			<choice index="71" id="1" dealer_only="0" dealer_price="2727" price="3076.92" image="" option_index="9" option_id="ii" info_index="80">
+				<label>17.5%20kW%201-ph%20gas%20Portable%2C%20G</label>
+			</choice>
+			<choice index="72" id="2" dealer_only="0" dealer_price="11908" price="13434.62" image="" option_index="9" option_id="ii" info_index="81">
+				<label>20%20kW%201-ph%20diesel%2C%20Cummins</label>
+			</choice>
+			<choice index="73" id="3" dealer_only="0" dealer_price="13977" price="17170" image="" option_index="9" option_id="ii" info_index="82">
+				<label>40%20kW%203-ph%20diesel</label>
+			</choice>
+		</option>
+		<option index="10" id="j" dealer_only="0" image="fpo-option-image.jpg" info_index="83">
+			<label>Air%20Compressor</label>
+			<choice index="74" id="1" dealer_only="0" dealer_price="1585" price="1788.46" image="" option_index="10" option_id="j" info_index="84">
+				<label>3.5%20hp%20electric%2C%2060%20gal%20vert</label>
+			</choice>
+			<choice index="75" id="3" dealer_only="0" dealer_price="1818" price="2051.28" image="" option_index="10" option_id="j" info_index="85">
+				<label>5%20hp%20electric%2C%2060%20gal%20vertic</label>
+			</choice>
+			<choice index="76" id="4" dealer_only="0" dealer_price="2006" price="2262.82" image="" option_index="10" option_id="j" info_index="86">
+				<label>5%20hp%20electric%2C%2060%20gal%20horizo</label>
+			</choice>
+			<choice index="77" id="5" dealer_only="0" dealer_price="2725" price="3074.36" image="" option_index="10" option_id="j" info_index="87">
+				<label>7.5%20hp%20electric%2C%2060%20gal%20vert</label>
+			</choice>
+			<choice index="78" id="6" dealer_only="0" dealer_price="2839" price="3202.56" image="" option_index="10" option_id="j" info_index="88">
+				<label>7.5%20hp%20electric%2C%2060%20gal%20hori</label>
+			</choice>
+			<choice index="79" id="7" dealer_only="0" dealer_price="5682" price="6410.26" image="" option_index="10" option_id="j" info_index="89">
+				<label>Screw%20Compressor%2C%20mounted%20on%204</label>
+			</choice>
+			<choice index="80" id="8" dealer_only="0" dealer_price="1350" price="1690" image="" option_index="10" option_id="j" info_index="">
+				<label>3.5%20hp%20gas%2C%2060%20gal%20vertical</label>
+			</choice>
+		</option>
+		<option index="11" id="kk" dealer_only="0" image="fpo-option-image.jpg" info_index="90">
+			<label>Air%20Drying%20Equipment</label>
+			<choice index="81" id="1" dealer_only="0" dealer_price="477" price="538.46" image="" option_index="11" option_id="kk" info_index="91">
+				<label>3%20Stage%20Desiccant%20Dryaire%20System</label>
+			</choice>
+			<choice index="82" id="2" dealer_only="0" dealer_price="1063" price="1199.19" image="" option_index="11" option_id="kk" info_index="92">
+				<label>Electric%20Drier%20for%203.5%20hp%20comp</label>
+			</choice>
+			<choice index="83" id="3" dealer_only="0" dealer_price="1111" price="1253.27" image="" option_index="11" option_id="kk" info_index="93">
+				<label>Electric%20Drier%20for%205%20hp%20-%207.</label>
+			</choice>
+			<choice index="84" id="4" dealer_only="0" dealer_price="2614" price="2948.72" image="" option_index="11" option_id="kk" info_index="94">
+				<label>Electric%20Drier%20for%20Screw%20Compres</label>
+			</choice>
+		</option>
+		<option index="12" id="l" dealer_only="0" image="fpo-option-image.jpg" info_index="95">
+			<label>Breathable%20Air</label>
+			<choice index="85" id="0" dealer_only="0" dealer_price="0" price="0" image="" option_index="12" option_id="l" info_index="96">
+				<label>None</label>
+			</choice>
+			<choice index="86" id="1" dealer_only="0" dealer_price="2000" price="2256.41" image="" option_index="12" option_id="l" info_index="97">
+				<label>Marthech%20Grade%20D%20System</label>
+			</choice>
+			<choice index="87" id="2" dealer_only="0" dealer_price="1483" price="1673.08" image="" option_index="12" option_id="l" info_index="98">
+				<label>Allegro%20dual%20worker%20portable</label>
+			</choice>
+		</option>
+		<option index="13" id="mm" dealer_only="0" image="fpo-option-image.jpg" info_index="99">
+			<label>Heater</label>
+			<choice index="88" id="0" dealer_only="0" dealer_price="0" price="0" image="" option_index="13" option_id="mm" info_index="100">
+				<label>None</label>
+			</choice>
+			<choice index="89" id="1" dealer_only="0" dealer_price="194" price="219.23" image="" option_index="13" option_id="mm" info_index="101">
+				<label>110%20volt%20electric</label>
+			</choice>
+			<choice index="90" id="2" dealer_only="0" dealer_price="363" price="408.97" image="" option_index="13" option_id="mm" info_index="102">
+				<label>220%20volt%20electric</label>
+			</choice>
+			<choice index="91" id="3" dealer_only="0" dealer_price="3627" price="4695" image="" option_index="13" option_id="mm" info_index="103">
+				<label>AirTronic%20Heat%20System</label>
+			</choice>
+		</option>
+		<option index="14" id="n" dealer_only="0" image="fpo-option-image.jpg" info_index="104">
+			<label>Air%20Conditioner</label>
+			<choice index="92" id="0" dealer_only="0" dealer_price="0" price="0" image="" option_index="14" option_id="n" info_index="105">
+				<label>None</label>
+			</choice>
+			<choice index="93" id="1" dealer_only="0" dealer_price="739" price="833.33" image="" option_index="14" option_id="n" info_index="106">
+				<label>110%20volt%20roof%20mounted%20w%2F%20hea</label>
+			</choice>
+		</option>
+	</options>
+	<info>
+		<item index="1" dealer_only="0" image="">
+			<description>Optional%20accessories%20to%20make%20your%20job%20easier.%20%20These%20items%20can%20always%20be%20purchased%20separately%20later.</description>
+		</item>
+		<item index="2" dealer_only="0" image="info%2Fdermamedgloveimage_425_detail.jpg">
+			<description>Good%20balance%20of%20solvent%20resistance%20and%20feel.</description>
+		</item>
+		<item index="3" dealer_only="0" image="">
+			<description>Gun%20cleaner%20for%20quick%20cleans%20on%20the%20jobsite.</description>
+		</item>
+		<item index="4" dealer_only="0" image="">
+			<description>Gun%20cleaner%20for%20complete%20gun%20tear%20downs%20and%20soaks.</description>
+		</item>
+		<item index="5" dealer_only="0" image="info%2FCoverall.jpg">
+			<description>25%20Pack%20of%20coveralls.%20%20Elastic%20wrist%20and%20ankles.%20%20No%20hood.</description>
+		</item>
+		<item index="6" dealer_only="0" image="info%2FFarbic_Strech_Sock.jpg">
+			<description>Old%20fashioned%20stretch%20sock.</description>
+		</item>
+		<item index="7" dealer_only="0" image="info%2FP4150094.JPG">
+			<description>Foam%20sock%20is%20cool%20and%20inexpensive.</description>
+		</item>
+		<item index="8" dealer_only="0" image="info%2FP4150094.JPG">
+			<description>Foam%20sock%20is%20cool%20and%20inexpensive.</description>
+		</item>
+		<item index="9" dealer_only="0" image="info%2F3M_Full_Face_Mask.jpg">
+			<description>3M%20full%20face%20mask%20can%20be%20used%20with%20cartridges%20or%20hook-up%20to%20fresh%20air%20supply%20with%20additional%20back%20mounted%20%22Y%22%20adapter.</description>
+		</item>
+		<item index="10" dealer_only="0" image="info%2FTear_offs.jpg">
+			<description>3M%20tear-offs%20for%206000%20series%20mask.</description>
+		</item>
+		<item index="11" dealer_only="0" image="info%2F6001.jpg">
+			<description>3M%20Organic%20Vapor%20Cartridge%20of%206000%20and%207000%20series%20masks.</description>
+		</item>
+		<item index="12" dealer_only="0" image="info%2FBung_Wrench.jpg">
+			<description>Open%20bung%20plugs%20from%2055%20gallon%20drums%20with%20ease.</description>
+		</item>
+		<item index="13" dealer_only="0" image="info%2F206996_TSL_1gallon.jpg">
+			<description>Extra%20Throat%20Seal%20Liquid%20for%20wet%20cup%20of%20Reactors.</description>
+		</item>
+		<item index="14" dealer_only="0" image="info%2Fband_warmer.jpg">
+			<description>110%20Volt%20band%20warmers%20help%20heat%2055%20gallon%20drums%20in%20cool%20weather.</description>
+		</item>
+		<item index="15" dealer_only="0" image="info%2FP1070068.JPG">
+			<description>Replacement%20desiccant%20cartridges.</description>
+		</item>
+		<item index="16" dealer_only="0" image="info%2FChemical_Spill_Kit.jpg">
+			<description>Help%20contain%20spills%20with%20this%203M%20kit.</description>
+		</item>
+		<item index="17" dealer_only="0" image="info%2Fcover.jpg">
+			<description>Use%20this%20configurator%20tool%20to%20help%20build%20and%20price%20your%20own%20customized%20CJ%20Spray%20Mobile%20Spray%20Rig.%20For%20more%20detailed%20information%20see%20our%20Mobile%20Spray%20Rigs%20brochure.%20If%20you%20have%20any%20questions%20or%20need%20advice%20please%20call.%0A%0A1-888-CJSPRAY%20%28888-257-7729%29</description>
+		</item>
+		<item index="18" dealer_only="0" image="info%2FPC030203.jpg">
+			<description>16%20ft%20Spray%20foam%20starter%20rig%20with%20Graco%20Reactor%20E20.%20Plenty%20of%20power%20for%20residential%20insulation%2C%20without%20sacrificing%20performance%20or%20reliability.%20Standard%20features%20include%3A%0A%0A%3Cul%3E%3Cli%3E9%2C990%20lb%20gvw%3C%2Fli%3E%0A%3Cli%3EFully%20insulated%20walls%20and%20ceiling%20with%20SPF%3C%2Fli%3E%0A%3Cli%3EGenerator%20mounted%20in%20%22dog%20house%22%3C%2Fli%3E%0A%3Cli%3EGalvanized%20steel%20work%20bench%2C%20vise%2C%20blow%20gun%2C%20and%20overhead%20aluminum%20premium%20cabinet%3C%2Fli%3E%0A%3Cli%3EBarrel%20brace%20system%20for%20two%20sets%20of%20material%3C%2Fli%3E%0A%3Cli%3EHeated%20hose%20wrap%3C%2Fli%3E%0A%3Cli%3EEpoxy%20floor%20coating%2C%20white%20board%20walls%2C%20white%20ceiling%20board%2C%20and%20premium%20white%20aluminum%20trim%20throughout%20trailer%3C%2Fli%3E%0A%3Cli%3E48%20in.%20curbside%20door%20with%20hose%20hatch%3C%2Fli%3E%0A%3Cli%3ERear%20ramp%20door%3C%2Fli%3E%0A%3Cli%3EBogey%20wheels%20at%20rear%20of%20trailer%20to%20prevent%20damage%3C%2Fli%3E%0A%3Cli%3ELED%20lights%20and%20accents%3C%2Fli%3E%0A%3Cli%3ERV%20style%20locks%20and%20latches%3C%2Fli%3E%3C%2Ful%3E</description>
+		</item>
+		<item index="19" dealer_only="0" image="info%2FP1070126.jpg">
+			<description>20%20ft%20Premium%20Rigs%20for%20foam%20and%20coating%20applications%20offer%20high%20performance%20and%20a%20professional%20appearance.%20Compact%2020%20ft%20layout%20is%20manuverable%20and%20can%20be%20handled%20with%20smaller%20pick-up%20trucks.%20Standard%20features%20include%3A%0A%0A%3Cul%3E%3Cli%3E14%2C000%20lb%20gvw%3C%2Fli%3E%0A%3Cli%3EUrethane%20foam%20insulation%20sprayed%20in%20walls%2C%20ceiling%20and%20floor%3C%2Fli%3E%0A%3Cli%3EWhite%20board%20walls%20and%20ceiling%2C%20with%20white%20aluminum%20trim%20accent%20for%20a%20professional%20fit%20and%20finish%3C%2Fli%3E%0A%3Cli%3EGalvanized%20steel%20work%20bench%20with%20vise%2C%20blow%20gun%2C%20grinder%2C%20overhead%20aluminum%20cabinet%20with%20light%2C%20and%206-drawer%20tool%20box%3C%2Fli%3E%0A%3Cli%3EDiamond%20plate%20floor%20in%20spray%20room%3C%2Fli%3E%0A%3Cli%3EShore%20power%20hook-up%2C%20110%20volt%3C%2Fli%3E%0A%3Cli%3EBarrel%20brace%20system%20for%20two%20sets%20of%20material%3C%2Fli%3E%0A%3Cli%3EHeated%20hose%20wrap%3C%2Fli%3E%0A%3Cli%3ETwo%20fire%20extinguishers%2C%20eye%20wash%20station%20and%20first%20aid%20kit%3C%2Fli%3E%0A%3Cli%3EElectric%20brakes%3C%2Fli%3E%0A%3Cli%3EBogey%20wheels%20in%20rear%20of%20trailer%20to%20prevent%20damage%3C%2Fli%3E%0A%3Cli%3E48%20in%20curb%20side%20door%20with%20hose%20hatch%3C%2Fli%3E%0A%3Cli%3ERear%20swinging%20barn%20doors%3C%2Fli%3E%0A%3Cli%3ERV%20style%20locks%20and%20latches%3C%2Fli%3E%0A%3Cli%3ELED%20lights%20and%20accents%3C%2Fli%3E%0A%3Cli%3ESpare%20tire%20mounted%20on%20nose%3C%2Fli%3E%3C%2Ful%3E</description>
+		</item>
+		<item index="20" dealer_only="0" image="info%2FDSC_0107.jpg">
+			<description>The%2028%20ft%20Gooseneck%20trailer%20provides%20more%20room%20and%20has%20larger%20axels%20to%20carry%20more%20material.%20The%20gooseneck%20provides%20greater%20maneuverability%20at%20the%20job-site%20and%20easier%20towing%20down%20the%20road%0A%0A%3Cul%3E%3Cli%3E16%2C000%20lb%20gvw%3C%2Fli%3E%0A%3Cli%3EUrethane%20foam%20insulation%20sprayed%20in%20walls%2C%20ceiling%20and%20floor%3C%2Fli%3E%0A%3Cli%3EWhite%20board%20walls%20and%20ceiling%2C%20with%20white%20aluminum%20trim%20accent%20for%20a%20professional%20fit%20and%20finish%3C%2Fli%3E%0A%3Cli%3EGalvanized%20steel%20work%20bench%20with%20vise%2C%20blow%20gun%2C%20grinder%2C%20overhead%20aluminum%20cabinet%20with%20light%2C%20and%206-drawer%20tool%20box%3C%2Fli%3E%0A%3Cli%3EDiamond%20plate%20floor%20in%20spray%20room%3C%2Fli%3E%0A%3Cli%3EShore%20power%20hook-up%2C%20110%20volt%3C%2Fli%3E%0A%3Cli%3EBarrel%20brace%20system%20for%20three%20sets%20of%20material%3C%2Fli%3E%0A%3Cli%3EHeated%20hose%20wrap%3C%2Fli%3E%0A%3Cli%3ETwo%20fire%20extinguishers%2C%20eye%20wash%20station%2C%20and%20first%20aid%20kit%3C%2Fli%3E%0A%3Cli%3EElectric%20brakes%3C%2Fli%3E%0A%3Cli%3EBogey%20wheels%20in%20rear%20of%20trailer%20to%20prevent%20damage%3C%2Fli%3E%0A%3Cli%3E48%20in%20curb%20side%20door%3C%2Fli%3E%0A%3Cli%3ERear%20swinging%20barn%20doors%20with%20hose%20hatch%3C%2Fli%3E%0A%3Cli%3ERV%20style%20locks%20and%20latches%3C%2Fli%3E%0A%3Cli%3ELED%20lights%20and%20accents%3C%2Fli%3E%0A%3Cli%3ESpare%20tire%20mounted%20in%20cab%20over%3C%2Fli%3E%3C%2Ful%3E</description>
+		</item>
+		<item index="21" dealer_only="0" image="info%2FSprayer_Pics_018.jpg">
+			<description>Supply%20your%20own%20box%20truck%20and%20have%20CJ%20Spray%20customize%20it%20for%20your%20application.%20Box%20trucks%20are%20easy%20to%20maneuver%20and%20can%20reach%20areas%20in%20rugged%20job%20site%20that%20trailers%20cannot.%20They%20are%20capable%20of%20hauling%20heavy%20loads%20and%20are%20easy%20to%20park%20where%20space%20is%20limited.%20Contact%20CJ%20Spray%20for%20truck%20requirements.%20Standard%20installed%20features%20include%3A%0A%0A%3Cul%3E%3Cli%3EUrethane%20foam%20insulation%20sprayed%20in%20walls%2C%20ceiling%20and%20floor%3C%2Fli%3E%0A%3Cli%3EWhite%20board%20walls%20and%20ceiling%2C%20with%20white%20aluminum%20trim%20accent%20for%20a%20professional%20fit%20and%20finish%3C%2Fli%3E%0A%3Cli%3EGalvanized%20steel%20work%20bench%20with%20vise%2C%20blow%20gun%2C%20grinder%2C%20overhead%20aluminum%20cabinet%20with%20light%2C%20and%206-drawer%20tool%20box%3C%2Fli%3E%0A%3Cli%3EDiamond%20plate%20floor%20in%20spray%20room%3C%2Fli%3E%0A%3Cli%3EShore%20power%20hook-up%2C%20110%20volt%3C%2Fli%3E%0A%3Cli%3EBarrel%20brace%20system%20for%20two%20or%20three%20sets%20of%20material%3C%2Fli%3E%0A%3Cli%3EHeated%20hose%20wrap%3C%2Fli%3E%0A%3Cli%3ETwo%20fire%20extinguishers%2C%20eye%20wash%20station%2C%20and%20first%20aid%20kit%3C%2Fli%3E%3C%2Ful%3E</description>
+		</item>
+		<item index="22" dealer_only="0" image="info%2F3_reactors.jpg">
+			<description>What%20Graco%20Reactor%20is%20right%20for%20you%20depends%20on%20your%20application%20and%20plan.%20There%20are%20two%20main%20categories%20of%20Reactors%3A%20Foam%20and%20Coatings.%20They%20are%20both%20similar%20and%20do%20the%20same%20thing%2C%20but%20coating%20proportioners%20are%20capable%20of%20higher%20pressures%20to%20atomize%20heavier%20coatings.%20The%20additional%20pressure%20requires%20more%20horsepower%2C%20so%20Reactors%20for%20coatings%20cost%20more%20than%20Reactors%20for%20foam.%20%0A%09%0AWithin%20those%20two%20categories%20we%20also%20have%20three%20types%20of%20Reactors%3A%20Air%2C%20Electric%2C%20and%20Hydraulic%2C%20which%20refers%20to%20how%20the%20pumps%20are%20driven.%20Air%20operated%20Reactors%20use%20an%20air%20motor%20to%20drive%20the%20pump%20lowers%20which%20requires%20a%20large%20air%20compressor%20that%20makes%20them%20uncommon%20in%20mobile%20rig%20applications.%20Electric%20Reactors%20are%20a%20great%20balance%20of%20performance%20and%20price%20and%20have%20quickly%20become%20the%20most%20popular%20in%20the%20market%20place.%20Hydraulic%20Reactors%20have%20great%20durability%20and%20can%20have%20higher%20outputs%20than%20the%20electric%20series%20Reactors.%20Along%20with%20the%20hydraulics%20comes%20a%20higher%20price%20tag.</description>
+		</item>
+		<item index="23" dealer_only="0" image="">
+			<description>Graco%20distributors%20can%20order%20the%20trailer%20without%20a%20Reactor.%20CJ%20Spray%20will%20have%20the%20trailer%20completely%20ready%20for%20your%20installation%20of%20the%20Reactor.%20Wiring%2C%20fluid%20and%20air%20plumbing%20will%20all%20be%20terminated%20to%20the%20point%20of%20installation.%20Must%20specify%20what%20Reactor%20will%20be%20installed%20at%20time%20of%20order.</description>
+		</item>
+		<item index="24" dealer_only="0" image="info%2FReactorE_20.jpg">
+			<description>Air-Driven%20Reactor%20provides%2020%20lb%2Fmin%20output%20and%202%2C000%20psi.%20Great%20for%20residential%20foam%20applications%2C%20but%20has%20a%20high%20air%20consumption%20of%2027%20cfm.</description>
+		</item>
+		<item index="25" dealer_only="0" image="info%2FReactorE_20.jpg">
+			<description>Electric-Driven%20Reactor%20provides%2020%20lb%2Fmin%20output%20and%202%2C000%20psi.%20Great%20choice%20for%20residential%20foam%20applications.</description>
+		</item>
+		<item index="26" dealer_only="0" image="info%2FReactorE_30.jpg">
+			<description>Electric-Driven%20Reactor%20provides%2030%20lb%2Fmin%20output%20and%202%2C000%20psi.%20E30%E2%80%99s%20added%20output%20is%20noticeable%20on%20larger%20jobs.</description>
+		</item>
+		<item index="27" dealer_only="0" image="info%2FReactorE_30.jpg">
+			<description>Electric-Driven%20Reactor%20provides%2030%20lb%2Fmin%20output%20and%202%2C000%20psi.%20E30%E2%80%99s%20added%20output%20is%20noticeable%20on%20larger%20jobs.%20Larger%20heaters%20can%20be%20needed%20in%20cold%20environments%20or%20coating%20applications.</description>
+		</item>
+		<item index="28" dealer_only="0" image="info%2FReactor_H25.jpg">
+			<description>Hydraulic-Driven%20Reactor%20provides%2022%20lb%2Fmin%20output%20and%202%2C000%20psi.</description>
+		</item>
+		<item index="29" dealer_only="0" image="info%2FReactor_H25.jpg">
+			<description>Hydraulic-Driven%20Reactor%20provides%2022%20lb%2Fmin%20output%20and%202%2C000%20psi.%20Larger%20heaters%20can%20be%20needed%20in%20cold%20environments%20or%20coating%20applications.</description>
+		</item>
+		<item index="30" dealer_only="0" image="info%2FReactor_H40_Right.jpg">
+			<description>Hydraulic-Driven%20Reactor%20provides%2045%20lb%2Fmin%20output%20and%202%2C000%20psi.%20Single%20phase%20is%20not%20ideal%20for%20mobile%20trailers.</description>
+		</item>
+		<item index="31" dealer_only="0" image="info%2FReactor_H40_Right.jpg">
+			<description>Hydraulic-Driven%20Reactor%20provides%2045%20lb%2Fmin%20output%20and%202%2C000%20psi.%20Typically%20used%20in%20roofing%20and%20other%20high%20flow%20applications.</description>
+		</item>
+		<item index="32" dealer_only="0" image="info%2FReactor_H40_Right.jpg">
+			<description>Hydraulic-Driven%20Reactor%20provides%2045%20lb%2Fmin%20output%20and%202%2C000%20psi.%20Typically%20used%20in%20roofing%20and%20other%20high%20flow%20applications.%20Larger%20heaters%20can%20be%20needed%20in%20cold%20environments%20or%20coating%20applications.</description>
+		</item>
+		<item index="33" dealer_only="0" image="info%2FReactorE_XP1.jpg">
+			<description>Electric-Driven%20Reactor%20provides%201.0%20gpm%20and%202%2C500%20psi.%20Ideal%20for%20low%20output%20coating%20applications.</description>
+		</item>
+		<item index="34" dealer_only="0" image="info%2FReactorE_XP2.jpg">
+			<description>Electric-Driven%20Reactor%20provides%202.0%20gpm%20and%203%2C500%20psi.</description>
+		</item>
+		<item index="35" dealer_only="0" image="info%2FReactor_HXP2.jpg">
+			<description>Hydraulic-Driven%20Reactor%20provides%201.5%20gpm%20and%203%2C500%20psi.</description>
+		</item>
+		<item index="36" dealer_only="0" image="info%2FReactor_HXP3.jpg">
+			<description>Hydraulic-Driven%20Reactor%20provides%202.8%20gpm%20and%203%2C500%20psi.</description>
+		</item>
+		<item index="37" dealer_only="0" image="">
+			<description>Have%20CJ%20Spray%20install%20your%20Graco%20equipment.%20%20Price%20includes%20installing%20Reactor%2C%20Heated%20Hose%2C%20Feed%20Pumps%2C%20and%20Guns.</description>
+		</item>
+		<item index="38" dealer_only="0" image="info%2FP1070123.jpg">
+			<description>Graco%20heated%20hose%20is%20sold%20in%2050%20foot%20sections.%20Also%20included%20is%20the%2010%20ft%20whip%20hose%2C%20and%20fluid%20temperature%20sensor.%20The%20maximum%20hose%20length%20you%20can%20use%20depends%20on%20what%20Reactor%20you%20select.</description>
+		</item>
+		<item index="39" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>Graco%20distributors%20can%20order%20the%20trailer%20with%20only%2050%27%20of%20heated%20hose%2C%20which%20is%20installed%20in%20the%20trailer%20to%20run%20from%20the%20Reactor%20to%20the%20hose%20wrap.</description>
+		</item>
+		<item index="40" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>Graco%20distributors%20can%20order%20the%20trailer%20with%20only%2050%27%20of%20heated%20hose%2C%20which%20is%20installed%20in%20the%20trailer%20to%20run%20from%20the%20Reactor%20to%20the%20hose%20wrap.</description>
+		</item>
+		<item index="41" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>2%2C000%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable</description>
+		</item>
+		<item index="42" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>3%2C500%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="43" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>2%2C000%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="44" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>3%2C500%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="45" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>2%2C000%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="46" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>3%2C500%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="47" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>2%2C000%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="48" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>3%2C500%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="49" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>2%2C000%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="50" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>3%2C500%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="51" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>2%2C000%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="52" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>3%2C500%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="53" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>2%2C000%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="54" dealer_only="0" image="info%2FHeated_Hose.jpg">
+			<description>3%2C500%20psi%20rated%20heated%20hose%20with%20scuff%20jacket%20and%20DIN%20cable.</description>
+		</item>
+		<item index="55" dealer_only="0" image="info%2FFusionCS_Gopher136.jpg">
+			<description>Strongly%20recommend%20purchasing%20two%20identical%20spray%20guns.%20Choose%20which%20gun%20is%20best%20for%20you%2C%20but%20then%20buy%20TWO.%20When%20spraying%20products%20that%20set-up%20in%20seconds%20have%20a%20second%20gun%20is%20a%20must.%20It%20prevents%20down%20time%2C%20reduces%20wear%20and%20tear%2C%20and%20makes%20trouble%20shooting%20equipment%20much%20easier.</description>
+		</item>
+		<item index="56" dealer_only="0" image="">
+			<description>No%20additional%20information%20available%20for%20this%20selection%20at%20this%20time.</description>
+		</item>
+		<item index="57" dealer_only="0" image="info%2F11487.jpg">
+			<description>The%20Graco%20Fusion%20Air%20Purge%20Gun%20is%20the%20most%20common%202k%20gun%20sold%20today.%20Durable%2C%20easy%20to%20use%2C%20and%20quick%20to%20disassemble%20and%20repair%20have%20made%20this%20a%20good%20choice%20for%20any%20foam%20or%20coatings%20contractor.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="58" dealer_only="0" image="info%2FDouble_Fusion_Guns_rt.jpg">
+			<description>The%20Graco%20Fusion%20Air%20Purge%20Gun%20is%20the%20most%20common%202k%20gun%20sold%20today.%20Durable%2C%20easy%20to%20use%2C%20and%20quick%20to%20disassemble%20and%20repair%20have%20made%20this%20a%20good%20choice%20for%20any%20foam%20or%20coatings%20contractor.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="59" dealer_only="0" image="info%2FGraco_FusionCS_001.jpg">
+			<description>The%20Graco%20Clear%20Shot%20Gun%20is%20the%20newest%20gun%20on%20the%20market%20and%20features%20new%20Clear%20Shot%20technology%20that%20keeps%20the%20mix%20chamber%20cleaner.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="60" dealer_only="0" image="info%2FFusionCS_Gopher_093.jpg">
+			<description>The%20Graco%20Clear%20Shot%20Gun%20is%20the%20newest%20gun%20on%20the%20market%20and%20features%20new%20Clear%20Shot%20technology%20that%20keeps%20the%20mix%20chamber%20cleaner.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="61" dealer_only="0" image="info%2FFusionMP_app.jpg">
+			<description>The%20Graco%20Mechanical%20Purge%20Gun%20improves%20mixing%20and%20is%20a%20common%20choice%20for%20difficult%20to%20mix%20coatings.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="62" dealer_only="0" image="info%2FFusionMP_app.jpg">
+			<description>The%20Graco%20Mechanical%20Purge%20Gun%20improves%20mixing%20and%20is%20a%20common%20choice%20for%20difficult%20to%20mix%20coatings.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="63" dealer_only="0" image="info%2FP2_Picture.jpg">
+			<description>The%20Graco%20Probler%20P2%20came%20from%20GlasCraft%20and%20is%20a%20good%20air%20purge%20gun%20for%20both%20foam%20and%20coatings.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="64" dealer_only="0" image="info%2FP2_Picture.jpg">
+			<description>The%20Graco%20Probler%20P2%20came%20from%20GlasCraft%20and%20is%20a%20good%20air%20purge%20gun%20for%20both%20foam%20and%20coatings.%20Available%20in%20either%20round%20or%20flat%20patterns.</description>
+		</item>
+		<item index="65" dealer_only="0" image="info%2FP1070133.jpg">
+			<description>Mobile%20systems%20require%20feed%20pumps%20to%20push%20material%20from%2055%20gallon%20drums%20to%20the%20Reactor%20proportioner.%20Stick%20pumps%20such%20as%20the%20Graco%20T%3A1%20and%20T2%20have%20become%20the%20most%20popular%20choice%20for%20foam%20and%20coating%20contractors.</description>
+		</item>
+		<item index="66" dealer_only="0" image="">
+			<description>Fluid%20and%20air%20pluming%20are%20installed%20for%20quick%20assembly.%20Extra%20charge%20will%20apply%20for%20wall%20mount%20brackets%20if%20you%20are%20using%20Husky%201050%20pumps.</description>
+		</item>
+		<item index="67" dealer_only="0" image="info%2FT1x2_pumps.jpg">
+			<description>Graco%20T%3A1%20Stick%20pumps%20are%20ideal%20for%20foam%20or%20coating%20applications%20with%20lower%20flow%20rate%20Reactors.</description>
+		</item>
+		<item index="68" dealer_only="0" image="info%2F15258.jpg">
+			<description>Graco%20T%3A2%20Stick%20pumps%20are%20ideal%20for%20foam%20or%20coating%20applications%20with%20higher%20flow%20rate%20Reactors.</description>
+		</item>
+		<item index="69" dealer_only="0" image="info%2FHusky_1050.jpg">
+			<description>Graco%20diaphragm%20Husky%20pumps%20mount%20on%20wall%20and%20are%20common%20for%201%2F2%20lb%20foams%20that%20do%20not%20use%20245fa%20blowing%20agents.</description>
+		</item>
+		<item index="70" dealer_only="0" image="info%2Ftriton.jpg">
+			<description>Graco%20Triton%20pumps%20are%20common%20in%20lower%20viscosity%20coatings.</description>
+		</item>
+		<item index="71" dealer_only="0" image="info%2FP1070087.jpg">
+			<description>Circulation%20kits%20are%20vital%20to%20any%20mobile%20spray%20rig.%20The%20manifold%20circulation%20kit%20reduces%20material%20waste%20and%20helps%20keep%20your%20rig%20clean%20and%20safe.%20The%20heated%20hose%20circulation%20kit%20is%20extremely%20important%20if%20your%20rig%20will%20sit%20idle%20for%20periods%20of%20two%20weeks%20or%20more.</description>
+		</item>
+		<item index="72" dealer_only="0" image="">
+			<description>No%20circulation%20kit%20is%20installed.%20Graco%E2%80%99s%20stock%20tubing%20runs%20from%20circulation%20manifold%20to%20the%20floor.%20Customer%20supplies%20waste%20pails.</description>
+		</item>
+		<item index="73" dealer_only="0" image="info%2FP1070068.jpg">
+			<description>Manifold%20circulation%20kit%20includes%20return%20hoses%20from%20manifold%20back%20to%2055%20gallon%20drum%2C%20sst%20return%20tubes%2C%20and%20desiccant%20dryers.</description>
+		</item>
+		<item index="74" dealer_only="0" image="info%2FP1070104.jpg">
+			<description>Addition%20of%20the%20heated%20hose%20circulation%20kit%20allows%20easy%20circulation%20of%20material%20throughout%20heated%20hose%20-%20reducing%20isocyanate%20crystallization.%20Product%20should%20be%20circulated%20after%20being%20static%20in%20lines%20for%20two%20weeks.%20Heated%20hose%20circulation%20kit%20also%20allows%20for%20faster%20heating%20of%20hoses%20when%20using%20coatings%2C%20or%20foam%20without%20245fa%20blowing%20agent.</description>
+		</item>
+		<item index="75" dealer_only="0" image="info%2FTwistork_Agitator-in-Barrel_app.j">
+			<description>Includes%20regulator%20and%20air%20plumbing.%20Agitators%20are%20not%20required%20for%20most%201.8%20lb%20and%20heavier%20foams.%20They%20are%20common%20when%20using%201%2F2%20lb%20foam%20or%20most%20coatings.%20Check%20with%20your%20material%20supplier%20if%20an%20agitator%20is%20required%20for%20the%20resin.</description>
+		</item>
+		<item index="76" dealer_only="0" image="">
+			<description>No%20additional%20information%20available%20for%20this%20selection%20at%20this%20time.</description>
+		</item>
+		<item index="77" dealer_only="0" image="info%2FTwistork_Agitator.jpg">
+			<description>Graco%20Twistork%20agitator%20is%20mounted%20directly%20in%202%20in%20bung%20opening.</description>
+		</item>
+		<item index="78" dealer_only="0" image="info%2FTwistork_Agitator-in-Barrel_app.j">
+			<description>Graco%20Twistork%20agitator%20is%20mounted%20directly%20in%202%20in%20bung%20opening.</description>
+		</item>
+		<item index="79" dealer_only="0" image="info%2F40_kW_Gen.jpg">
+			<description>CJ%20Spray%20configured%20rigs%20use%20generators%20and%20will%20only%20make%20shore%20power%20rigs%20after%20personal%20consulation.%20Generators%20increase%20production%2C%20provide%20clean%20power%20to%20Reactors%2C%20and%20reduce%20personal%20interaction%20with%20dangerous%20electrical%20power.%20The%20right%20generator%20depends%20on%20the%20power%20required%20by%20the%20equipment%20in%20the%20spray%20rig.%20There%20are%20two%20major%20electrical%20components%20in%20each%20rig%3A%20the%20Reactor%20and%20the%20air%20compressor.%20%0A%0AReactors%20have%20electric%20motors%20and%20very%20large%20electric%20heaters%20that%20can%20draw%20a%20lot%20of%20power.%20Electric%20air%20compressors%20also%20draw%20a%20lot%20of%20power%2C%20especially%20at%20start%20up.%20We%20set%20all%20of%20our%20compressors%20to%20run%20continuously%20so%20they%20do%20not%20turn%20on%20or%20off%2C%20which%20provides%20cleaner%20and%20more%20consistent%20power%20to%20the%20Reactor.%20The%20generator%20should%20still%20be%20sized%20to%20handle%20the%20initiall%20start-up%20of%20the%20compressor.%20There%20are%20also%20other%20electrical%20demands%20inside%20the%20trailer%20that%20add%20up%20such%20as%20compressed%20air%20driers%2C%20heater%2C%20lights%2C%20grinders%2C%20and%20air%20conditioners.%20To%20properly%20size%20the%20generator%20add%20up%20the%20electrical%20requirements%20and%20provide%20a%2025%25%20cushion.%20In%20most%20applications%20the%20E20%20Reactor%20requires%20a%2020%20kW%20generator%20and%20everything%20larger.</description>
+		</item>
+		<item index="80" dealer_only="0" image="info%2F17_5_kw_gas_generator.jpg">
+			<description>Gas%20operated%20generators%20are%20low%20cost%2C%20but%20do%20not%20provide%20long%20lasting%20durability.%20They%20also%20have%20low%20power%20output%20making%20them%20limited%20to%20E-20%20and%20A-20%20Reactors.%20The%20gas%20generator%20is%20only%20available%20in%20the%2016%20ft%20trailer%20and%20is%20mounted%20in%20the%20%22dog%20house%22%20on%20our%20EZ%20slide%20system.</description>
+		</item>
+		<item index="81" dealer_only="0" image="info%2F20_kW_Diesel.jpg">
+			<description>Small%20diesel%20powered%20generator%20is%20powerful%2C%20durable%2C%20and%20compact%3B%20making%20it%20capable%20of%20fitting%20in%20the%20%22dog%20house%22%20of%20the%2016%20ft%20trailer.%20Upgrading%20from%20the%20gas%20generator%20to%20this%20diesel%20will%20add%20years%20of%20trouble%20free%20performance%20and%20reliability.</description>
+		</item>
+		<item index="82" dealer_only="0" image="info%2F40_kW_Gen.jpg">
+			<description>John%20Deere%20powered%20diesel%20generator%20provides%20enough%20power%20for%20any%20Graco%20Reactor.%20Has%20optional%20screw%20compressor%20%28see%20air%20compressor%20section%20next%29%20that%20mounts%20directly%20to%20generator%20saving%20space%20and%20power%20draw.</description>
+		</item>
+		<item index="83" dealer_only="0" image="info%2FPC030198.jpg">
+			<description>Like%20sizing%20a%20generator%2C%20the%20right%20compressor%20will%20be%20dependent%20on%20the%20air%20requirement%20%28scfm%29%20of%20the%20tools%20you%20use.%20Mobile%20spray%20rigs%20use%20several%20pieces%20of%20air%20operated%20equipment%2C%20all%20of%20which%20put%20a%20demand%20on%20the%20air%20compressor.%20The%20drum%20pumps%2C%20spray%20guns%2C%20agitators%20%28optional%29%2C%20and%20fresh%20air%20supply%20systems%20%28optional%29%20all%20require%20compressed%20air.%20Other%20tools%20in%20your%20trade%20may%20also%20require%20compressed%20air.%20For%20example%20scarfers%20used%20in%20the%20foam%20industry%20can%20require%20up%20to%2030%20scfm%20of%20air.%20Another%20consideration%20is%20space%20and%20weight.%20%0A%0ACJ%20Spray%20offers%20two%20types%20of%20compressors%3A%20electric%20driven%20piston%20compressors%20and%20a%20belt%20driven%20screw%20compressor%20mounted%20on%20the%20generator.%20Electric%20compressors%20are%20cost%20effective%20and%20are%20available%20on%20vertical%20or%20horizontal%20mounted%20tanks.%20Verticle%20tanks%20are%20used%20in%20our%2016%20ft%2C%2020%20ft%2C%20and%20box%20truck%20models%2C%20and%20the%20horizontal%20tanks%20are%20mounted%20above%20the%20cab%20over%20of%20our%20gooseneck%20trailers.%20Our%20screw%20compressor%20option%20is%20mounted%20on%20our%2040%20kW%20generator%20and%20runs%20directly%20off%20the%20diesel%20engine%2C%20so%20there%20is%20no%20electrical%20requirement.%20In%20most%20applications%20a%20tank%20is%20not%20required%20saving%20value%20weight%20and%20space%20making%20the%20screw%20compressor%20a%20great%20option%20for%2020%20ft%20bumper%20pull%20trailers.</description>
+		</item>
+		<item index="84" dealer_only="0" image="info%2Felectric_compressor_c_aire.jpg">
+			<description>18.1%20scfm%20%40%20120%20psi.%2060%20Gallon%20vertical%20tank.%20110%20Volt%20automatic%20tank%20drain%20included.</description>
+		</item>
+		<item index="85" dealer_only="0" image="info%2Felectric_compressor_c_aire.jpg">
+			<description>17.5%20scfm%20%40%20120%20psi.%2060%20Gallon%20vertical%20tank.%20110%20Volt%20automatic%20tank%20drain%20included.</description>
+		</item>
+		<item index="86" dealer_only="0" image="info%2FSprayer_Pics_023.jpg">
+			<description>17.5%20scfm%20%40%20120%20psi.%2060%20Gallon%20horizontal%20tank%20is%20mounted%20remotely%20in%20cab-over.%20110%20Volt%20automatic%20tank%20drain%20included.</description>
+		</item>
+		<item index="87" dealer_only="0" image="info%2Felectric_compressor_c_aire.jpg">
+			<description>23.5%20scfm%20%40%20120%20psi.%2060%20Gallon%20vertical%20tank.%20110%20Volt%20automatic%20tank%20drain%20included.</description>
+		</item>
+		<item index="88" dealer_only="0" image="info%2FSprayer_Pics_023.jpg">
+			<description>23.5%20scfm%20%40%20120%20psi.%2060%20Gallon%20horizontal%20tank%20is%20mounted%20remotely%20in%20cab-over.%20110%20Volt%20automatic%20tank%20drain%20included.</description>
+		</item>
+		<item index="89" dealer_only="0" image="info%2FDSC_0023.jpg">
+			<description>40%20scfm%20%40%20120%20psi.%20Mounted%20directly%20to%20generator%20running%20off%20crankshaft%20of%20engine%2C%20so%20it%20pulls%20no%20electrical%20power%20from%20generator.%20No%20air%20tank%20is%20required%20due%20to%20high%20output.%20Screw%20compressor%20saves%20room%20and%20reduces%20weight.</description>
+		</item>
+		<item index="90" dealer_only="0" image="info%2Felectric_refridg_air_dryer.jpg">
+			<description>The%20moisture%20sensitivity%20of%20isocyanate%20makes%20clean%2C%20dry%20air%20a%20priority%20for%20any%20mobile%20spray%20rig.</description>
+		</item>
+		<item index="91" dealer_only="0" image="info%2Fdessicant_air_dryer.jpg">
+			<description>Moisture%20trap%2C%20coalescer%2C%20and%20desiccant%20beads%20remove%20moisture%20and%20oil%20from%20compressed%20air.</description>
+		</item>
+		<item index="92" dealer_only="0" image="info%2FSharpe_Dryaire.jpg">
+			<description>110%20Volt%20electric%20air%20dryer%20removes%20moisture%20from%20compressed%20air%20without%20the%20need%20of%20disposable%20desiccant%20beads.</description>
+		</item>
+		<item index="93" dealer_only="0" image="info%2FSharpe_Dryaire.jpg">
+			<description>110%20Volt%20electric%20air%20dryer%20removes%20moisture%20from%20compressed%20air%20without%20the%20need%20of%20disposable%20desiccant%20beads.</description>
+		</item>
+		<item index="94" dealer_only="0" image="info%2Felectric_refridg_air_dryer.jpg">
+			<description>110%20Volt%20electric%20air%20dryer%20removes%20moisture%20from%20compressed%20air%20without%20the%20need%20of%20disposable%20desiccant%20beads.</description>
+		</item>
+		<item index="95" dealer_only="0" image="info%2FP4150091.jpg">
+			<description>Respiratory%20protection%20is%20vital%20while%20spraying.%20Fresh%20air%20breathing%20systems%20offer%20additional%20protection%20compared%20to%20cartridge%20respirators.%20Fresh%20air%20supplied%20systems%20blow%20clean%20air%20out%20around%20cracks%20between%20face%20and%20facemask.%20When%20using%20standard%20cartridge%20respirators%20you%20are%20breathing%20in%20from%20around%20those%20cracks.</description>
+		</item>
+		<item index="96" dealer_only="0" image="">
+			<description>No%20additional%20information%20available%20for%20this%20selection%20at%20this%20time.</description>
+		</item>
+		<item index="97" dealer_only="0" image="info%2Fmartech_fresh_air_supply.jpg">
+			<description>Mounted%20on%20interior%20wall%20of%20trailer%20creates%20OSHA%20approved%20breathable%20air%20from%20air%20compressor%20mounted%20in%20trailer.%20Includes%20carbon%20monoxide%20detector.%20300%20feet%20of%20Grade%20D%20breathable%20air%20line%20and%203M%20full%20face%20mask%20with%20back%20mounted%20%22Y%22%20adapter%20is%20included.%20Hose%20wrap%20is%20mounted%20on%20barn%20door.%20Has%20capability%20of%20running%20several%20masks.</description>
+		</item>
+		<item index="98" dealer_only="0" image="info%2FAllegro.jpg">
+			<description>110%20Volt%20portable%20ambient%20air%20compressor%20comes%20with%20100%20feet%20of%20hose%20and%203M%20full%20face%20mask%20with%20back%20mounted%20%22Y%22%20adapter.%20Can%20run%20two%20masks%20off%20this%20compressor.</description>
+		</item>
+		<item index="99" dealer_only="0" image="info%2Fwall_heater.jpg">
+			<description>Keep%20material%20and%20work%20space%20warm%20with%20heaters.</description>
+		</item>
+		<item index="100" dealer_only="0" image="">
+			<description>No%20additional%20information%20available%20for%20this%20selection%20at%20this%20time.</description>
+		</item>
+		<item index="101" dealer_only="0" image="info%2FElectric-Heater_110.jpg">
+			<description>Runs%20off%20generator%20or%20shore%20power%20hook-up.%20Mounts%20flush%20in%20dividing%20wall.%20Includes%20thermostat.</description>
+		</item>
+		<item index="102" dealer_only="0" image="info%2FWall-Heater_240.jpg">
+			<description>More%20BTUs%2C%20but%20runs%20off%20generator%20only.%20Mounts%20flush%20in%20dividing%20wall.%20Includes%20thermostat.</description>
+		</item>
+		<item index="103" dealer_only="0" image="info%2Fairtronic_heater.jpg">
+			<description>Can%20run%2024%20hours%20a%20day%2C%207%20days%20a%20week.%20Runs%20on%20diesel%20fuel%20and%2012%20volt%20dc%20power.%20Burns%20only%20one%20gallon%20of%20fuel%20per%2016%20hours%2C%20and%20can%20run%20for%2048%20hours%20without%20charge.%20Battery%20will%20charge%20off%20generator%20or%20shore%20power.%20Great%20option%20for%20contractors%20that%20travel%20long%20distances%2C%20do%20a%20lot%20of%20commercial%2Findustrial%20work%2C%20or%20do%20not%20have%20a%20heated%20facility%20to%20park%20in.</description>
+		</item>
+		<item index="104" dealer_only="0" image="info%2Fair_conditioner.jpg">
+			<description>Air%20conditioners%20are%20not%20just%20for%20your%20comfort.%20245fa%20blowing%20agent%20found%20in%20many%20foams%20will%20easily%20froth%20when%20hot.%20Installing%20an%20air%20conditioner%20in%20your%20mobile%20rig%20can%20keep%20your%20material%20cool%20and%20help%20prevent%20frothing%20which%20leads%20to%20equipment%20problems%20and%20lower%20yields%20from%20your%20SPF.%20If%20you%20are%20a%20insulation%20contractor%20in%20hot%20southern%20climates%20an%20air%20conditioner%20is%20a%20must.</description>
+		</item>
+		<item index="105" dealer_only="0" image="">
+			<description>No%20additional%20information%20available%20for%20this%20selection%20at%20this%20time.</description>
+		</item>
+		<item index="106" dealer_only="0" image="info%2Fair_conditioner.jpg">
+			<description>Roof%20mounted%20air%20conditioner%20runs%20on%20110%20Volt%20power%20and%20can%20provide%20some%20heat%20in%20cool%20weather.</description>
+		</item>
+	</info>
+</configurator>

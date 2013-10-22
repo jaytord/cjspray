@@ -103,11 +103,11 @@
 		<!-- B -->
 		<menu id="B" value="B">
 			<button value="B" id="b"><label><![CDATA[Air or Hydraulic Powered]]></label></button>
-			
 			<selection value="A" id="b_a" dealerOnly="false" image="16BumperPull.jpg"><label><![CDATA[16' Bumper Pull]]></label><listprice></listprice><dealerprice>13531</dealerprice><price>15265.38</price></selection>
 			<selection value="B" id="b_b" dealerOnly="false" image="20BumperPull.jpg"><label><![CDATA[20' Bumper Pull]]></label><listprice></listprice><dealerprice>21185</dealerprice><price>23901.28</price></selection>
 			<selection value="C" id="b_c" dealerOnly="false" image="28Gooseneck.jpg"><label><![CDATA[28' Gooseneck]]></label><listprice></listprice><dealerprice>27200</dealerprice><price>30687.18</price></selection>
 			<selection value="D" id="b_d" dealerOnly="false" image="BoxTruck.jpg"><label><![CDATA[Custom Box Truck]]></label><listprice></listprice><dealerprice>12273</dealerprice><price>13846.15</price></selection>
+			<selection value="E" id="b_e" dealerOnly="false" image="AimsTrailer.jpg"><label><![CDATA[AiMS Trailer]]></label><listprice>35191.18</listprice><dealerprice>30679</dealerprice><price>35191.18</price></selection>
 		</menu>
 		<!-- CC -->
 		<menu id="CC" value="CC">
