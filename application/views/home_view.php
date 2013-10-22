@@ -82,7 +82,7 @@
                                     data-price="<?= $choice->price; ?>" 
                                     data-dealer-price="<?= $choice->dealer_price; ?>" >
                                     <div class="thumbnail">
-                                        <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->info_index; ?>/<?php echo $choice->label; ?>"><i class="icon-info-sign icon-white"></i></a>
+                                        <a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $choice->info_index; ?>/<?php echo $choice->label; ?>"><i class="icon-info-sign icon-white"></i></a>
                                         <?php $image_url = base_url().config_item("image_dir_path").urldecode( $choice->image ); ?>
                                         <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
                                         <h3><?php echo urldecode( $choice->label ); ?></h3>
@@ -107,7 +107,7 @@
                                         <div class="btn-group btn-group-vertical" data-toggle="buttons-radio">
                                             <?php foreach($option->choices as $choice): ?>
                                             <div>
-                                                <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->info_index; ?>/<?php echo $choice->label; ?>"><i class="icon-info-sign"></i></a>
+                                                <a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $choice->info_index; ?>/<?php echo $choice->label; ?>"><i class="icon-info-sign"></i></a>
                                                 <button 
                                                     data-id="<?= $choice->id; ?>" 
                                                     data-label="<?= $choice->label; ?>" 
@@ -135,7 +135,7 @@
                                 <?php $option = $options[0]; ?>
                                 <?php foreach($option->choices as $choice): ?>
                                 <div>
-                                    <a class="fancybox fancybox.iframe" href="home/info/<?php echo $choice->info_index; ?>"><i class="icon-info-sign"></i></a>
+                                    <a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $choice->info_index; ?>"><i class="icon-info-sign"></i></a>
                                     <button 
                                         data-id="<?= $choice->id; ?>" 
                                         data-label="<?= $choice->label; ?>" 
