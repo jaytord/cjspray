@@ -21,4 +21,23 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
+
+(function($) {
+    $.extend({
+        strToCommaDelimNumber: function(str) {
+            return (str + "").replace(/\b(\d+)((\.\d+)*)\b/g, function(a, b, c) {
+                return (b.charAt(0) > 0 && !(c || ".").lastIndexOf(".") ? b.replace(/(\d)(?=(\d{3})+$)/g, "$1,") : b) + c;
+            });
+        },
+        sortItemsByAttribute: function( _items, _attr, _int ){
+            _list =  $(_items).parent();
+
+            $(_items).sort( function(a,b){
+                if(_int)
+                    return parseInt( $(a).attr(_attr) ) > parseInt( $(b).attr(_attr) ) ? 1 : -1; 
+                else
+                    return $(a).attr(_attr) > $(b).attr(_attr) ? 1 : -1; 
+            }).appendTo( $(_list) ); 
+        }
+    });
+})(jQuery);

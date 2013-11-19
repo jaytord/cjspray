@@ -20,28 +20,13 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->model("options_model");
-		$this->load->model("option_choices_model");
+		$this->load->model("selections_model");
 
 		$options 		= $this->options_model->get();
 
 		foreach ($options as $key => $value) {
-			$value->choices = $this->option_choices_model->get(array("option_index"=>$value->index));
+			$value->selections = $this->selections_model->get(array("option_index"=>$value->index));
 		}
-
-		// $url = base_url().config_item('data_xml_path');
-		// $ch = curl_init('http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']);
-
-	 	//curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml'));
-	  	//curl_setopt($ch, CURLOPT_HEADER, 0);
-		//curl_setopt($ch, CURLOPT_URL, $url );
-	 	//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	 	//curl_setopt($ch, CURLOPT_TIMEOUT, 10);
-
-		//get the result of http query
-		//$output = curl_exec($ch);
-		//curl_close($ch);
-
-		//$xml = simplexml_load_string($output);
 
 		$this->load->view('home_view',array("options"=>$options));
 	}

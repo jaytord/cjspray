@@ -95,31 +95,31 @@
 			
 			<selection value="0" id="cc_0" dealerOnly="true">		<label><![CDATA[None]]></label>						<dealerprice>0</dealerprice><price>0</price>			<exclude></exclude></selection>
 			
-			<selection value="1" id="cc_1" dealerOnly="false">		<label><![CDATA[A-20, 6.0 kW Heater]]></label>		<dealerprice>7481</dealerprice><price>8015</price>		<exclude></exclude></selection>
+			<selection value="1" id="cc_1" dealerOnly="false">		<label><![CDATA[A-20, 6.0 kW Heater]]></label>		<dealerprice>7481</dealerprice><price>8015</price>		<exclude>B-E</exclude></selection>
 			
-			<selection value="2" id="cc_2" dealerOnly="false">		<label><![CDATA[E-20, 6.5 kW Heater]]></label>		<dealerprice>9168</dealerprice><price>9822</price>		<exclude></exclude></selection>
+			<selection value="2" id="cc_2" dealerOnly="false">		<label><![CDATA[E-20, 6.5 kW Heater]]></label>		<dealerprice>9168</dealerprice><price>9822</price>		<exclude>B-E</exclude></selection>
 				
-			<selection value="3" id="cc_3" dealerOnly="false">		<label><![CDATA[E-30, 10.2 kW Heater]]></label>		<dealerprice>11695</dealerprice><price>12530</price>	<exclude>B-A</exclude></selection>
+			<selection value="3" id="cc_3" dealerOnly="false">		<label><![CDATA[E-30, 10.2 kW Heater]]></label>		<dealerprice>11695</dealerprice><price>12530</price>	<exclude>B-A:B-E</exclude></selection>
 			
-			<selection value="4" id="cc_4" dealerOnly="false">		<label><![CDATA[E-30, 15.3 kW Heater]]></label>		<dealerprice>12535</dealerprice><price>13430</price>	<exclude>B-A</exclude></selection>
+			<selection value="4" id="cc_4" dealerOnly="false">		<label><![CDATA[E-30, 15.3 kW Heater]]></label>		<dealerprice>12535</dealerprice><price>13430</price>	<exclude>B-A:B-E</exclude></selection>
 				
-			<selection value="5" id="cc_5" dealerOnly="false">		<label><![CDATA[H-25, 8.0 kW Heater]]></label>		<dealerprice>13214</dealerprice><price>14157</price>	<exclude>B-A</exclude></selection>
+			<selection value="5" id="cc_5" dealerOnly="false">		<label><![CDATA[H-25, 8.0 kW Heater]]></label>		<dealerprice>13214</dealerprice><price>14157</price>	<exclude>B-A:B-E</exclude></selection>
 
-			<selection value="6" id="cc_6" dealerOnly="false">		<label><![CDATA[H-25, 15.3 kW Heater]]></label>		<dealerprice>14019</dealerprice><price>15020</price>	<exclude>B-A</exclude></selection>
+			<selection value="6" id="cc_6" dealerOnly="false">		<label><![CDATA[H-25, 15.3 kW Heater]]></label>		<dealerprice>14019</dealerprice><price>15020</price>	<exclude>B-A:B-E</exclude></selection>
 					
-			<selection value="7" id="cc_7" dealerOnly="false">		<label><![CDATA[H-40, 12.0 kW Heater]]></label>		<dealerprice>19696</dealerprice><price>21102</price>	<exclude>B-A</exclude></selection>
+			<selection value="7" id="cc_7" dealerOnly="false">		<label><![CDATA[H-40, 12.0 kW Heater]]></label>		<dealerprice>19696</dealerprice><price>21102</price>	<exclude>B-A:B-E</exclude></selection>
 			
-			<selection value="8" id="cc_8" dealerOnly="false">		<label><![CDATA[H-40, 15.3 kW Heater]]></label>		<dealerprice>19696</dealerprice><price>21102</price>	<exclude>B-A</exclude></selection>
+			<selection value="8" id="cc_8" dealerOnly="false">		<label><![CDATA[H-40, 15.3 kW Heater]]></label>		<dealerprice>19696</dealerprice><price>21102</price>	<exclude>B-A:B-E</exclude></selection>
 				
-			<selection value="9" id="cc_9" dealerOnly="false">		<label><![CDATA[H-40, 20.4 kW Heater]]></label>		<dealerprice>19696</dealerprice><price>21102</price>	<exclude>B-A</exclude></selection>
+			<selection value="9" id="cc_9" dealerOnly="false">		<label><![CDATA[H-40, 20.4 kW Heater]]></label>		<dealerprice>19696</dealerprice><price>21102</price>	<exclude>B-A:B-E</exclude></selection>
 			
-			<selection value="10" id="cc_10" dealerOnly="false">	<label><![CDATA[E-XP1, 10.2 kW Heater]]></label>	<dealerprice>9204</dealerprice><price>9861</price>		<exclude>B-A</exclude></selection>
+			<selection value="10" id="cc_10" dealerOnly="false">	<label><![CDATA[E-XP1, 10.2 kW Heater]]></label>	<dealerprice>9204</dealerprice><price>9861</price>		<exclude>B-A:B-E</exclude></selection>
 			
-			<selection value="11" id="cc_11" dealerOnly="false">	<label><![CDATA[E-XP2, 15.3 kW Heater]]></label>	<dealerprice>12739</dealerprice><price>13648</price>	<exclude>B-A</exclude></selection>
+			<selection value="11" id="cc_11" dealerOnly="false">	<label><![CDATA[E-XP2, 15.3 kW Heater]]></label>	<dealerprice>12739</dealerprice><price>13648</price>	<exclude>B-A:B-E</exclude></selection>
 			
-			<selection value="12" id="cc_12" dealerOnly="false">	<label><![CDATA[H-XP2, 15.3 kW Heater]]></label>	<dealerprice>14804</dealerprice><price>15864</price>	<exclude>B-A</exclude></selection>
+			<selection value="12" id="cc_12" dealerOnly="false">	<label><![CDATA[H-XP2, 15.3 kW Heater]]></label>	<dealerprice>14804</dealerprice><price>15864</price>	<exclude>B-A:B-E</exclude></selection>
 			
-			<selection value="13" id="cc_13" dealerOnly="false">	<label><![CDATA[H-XP3, 20.4 kW Heater]]></label>	<dealerprice>19522</dealerprice><price>20916</price>	<exclude>B-A</exclude></selection>
+			<selection value="13" id="cc_13" dealerOnly="false">	<label><![CDATA[H-XP3, 20.4 kW Heater]]></label>	<dealerprice>19522</dealerprice><price>20916</price>	<exclude>B-A:B-E</exclude></selection>
 		</menu>	
 		<!-- D -->
 		<menu id="D" value="D">

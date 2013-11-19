@@ -40,40 +40,25 @@ input{
 .nav-tabs>li>a:hover{
 	background: none;
 }
-.heading-bar{
-	margin: 0;
-	padding:0px 20px;
-	background: #005c90;
+.image-container{
+	position: relative;
+}
+.image-container img{
+	position: absolute;
+	top:0;
+	left:0;
+}
+.image-container img:first-child{
+	position: relative;
+}
+#user-info{
+	display: none;
+}
 
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.4);
-	margin-bottom: 0px !important;
+#dealer-login-form{
+	/*display: none;*/
 }
-.heading-bar h1{
-	line-height: 30px;
-	padding: 0 0 0 0;
-	display: inline-block;
-	margin: 0;
-	font-size: 18px;
-	color: #FFF;
-	font-weight: 100;
-	letter-spacing: .1em;
-}
-.heading-bar a{
-	cursor: pointer;
-	margin:5px 0 0 0;
-	float: right;
-	color: #FFF;
-	font-weight: 400;
-	display: inline-block;
-}
-.heading-bar a:hover{
-	text-decoration: none;
-}
-.heading-bar i{
-	margin: 0 4px 0 0;
-}
+
 #main-container{
 	-webkit-box-shadow: 0 5px 6px rgba(0,0,0,0.2);
 	-moz-box-shadow: 0 5px 6px rgba(0,0,0,0.2);
@@ -174,6 +159,7 @@ input{
 	width: 100%;
 }
 .thumbnail h3{
+	padding-top: 2px;
 	font-size: 20px;
 	line-height: 20px;
 	margin-top:-3px;
@@ -184,15 +170,25 @@ input{
 .accordion-group:hover{
 	border: 1px dotted #BBB;
 }
-.accordion-group.selected 
-{
-	background: url('../img/checkmark.jpg') no-repeat right 8px;
-}
 .accordion-group.selected .selection{
 	color: #999;
+	padding-left: 6px;
 }
 .accordion-heading .accordion-toggle{
 	padding:10px 12px;
+}
+.accordion-heading .accordion-toggle span.checkmark{
+	float: right;
+	margin-top: -3px;
+	width: 16px;
+	height: 16px;
+}
+.accordion-group.selected .accordion-heading .accordion-toggle span.checkmark{
+	background:url('../img/checkmark.jpg') no-repeat;
+	background-position: 0 -16px;
+}
+.accordion-group.selected .accordion-heading .accordion-toggle span.checkmark:hover{
+	background-position: 0 0;
 }
 .accordion-heading{
 	line-height: 12px;
@@ -276,9 +272,6 @@ input{
 	font-size: 13px;
 	color: #666;
 }
-.configuration-content h3 span.price{
-	float: right;
-}
 
 .configuration-content .thumbnail{
 	background: none;
@@ -354,6 +347,81 @@ input{
 
 #full-configuration img{
 	width:100%;
+}
+.heading-bar{
+	margin: 0;
+	padding:0px 20px;
+	background: #005c90;
+
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+	margin-bottom: 0px !important;
+}
+.heading-bar h1{
+	line-height: 30px;
+	padding: 0 0 0 0;
+	display: inline-block;
+	margin: 0;
+	font-size: 18px;
+	color: #FFF;
+	font-weight: 100;
+	letter-spacing: .1em;
+}
+.heading-bar p{
+	margin-top: 4px;
+	float: right;
+}
+.heading-bar p i{
+	margin: 0px 2px 0 0;
+}
+.heading-bar a{
+	cursor: pointer;
+	color: #FFF;
+}
+.heading-bar a:hover{
+	text-decoration: none;
+}
+
+div.config-title h3{
+	display: inline-block;
+}
+
+div.config-title h3.price{
+	float: right;
+}
+div.status
+{
+	margin-bottom: 10px;
+}
+div.status p{
+	background-color: #069034;
+	padding:4px 6px;
+	border-radius: 4px;
+	font-size: 10px;
+	line-height: 10px;
+	color: #fff;
+}
+div.status p#config-incomplete{
+	background: #DD3333;
+}
+div.status p i{
+	margin: 0px 2px 0 0;
+}
+div.status p#config-complete{
+	display: none;
+}
+body.complete div.status p#config-complete{
+	display: inherit;
+}
+body.complete div.status p#config-incomplete{
+	display: none;
+}
+.nav-buttons button.require-complete{
+	display: none;
+}
+body.complete .nav-buttons button.require-complete{
+	display: inline-block;
 }
 
 @media (min-width: 1200px) {

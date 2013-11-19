@@ -10,6 +10,10 @@ class CJS_Model extends CI_Model
 	{
 		$this->load->database();
 	}
+
+	function clear(){
+		$this->db->truncate($this->table);
+	}
 	
 	/** Utility Methods **/
 	function fields(){

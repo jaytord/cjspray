@@ -7,11 +7,11 @@ class Info_Model extends CJS_Model
 		$this->table = "info";
 		$this->pk = "index";
     	$this->fields = array(
-    		'index' 						=> array("type"=>"attribute","shown"=>false,"label"=>"Index"),
-			'dealer_only'					=> array("type"=>"attribute","shown"=>true, "label"=>"Dealer Only"),
-			'description'					=> array("type"=>"child","shown"=>true, "label"=>"Description"),
-			'image'							=> array("type"=>"attribute","shown"=>true, "label"=>"Image"),
-			'title'							=> array("type"=>"child","shown"=>true, "label"=>"Title"),
+    		'index' 						=> array("shown"=>false,"label"=>"Index"),
+    		'id' 							=> array("shown"=>false,"label"=>"Id"),
+			'dealer_only'					=> array("shown"=>true, "label"=>"Dealer Only"),
+			'description'					=> array("shown"=>true, "label"=>"Description"),
+			'image'							=> array("shown"=>true, "label"=>"Image"),
 		);
 	}
 }

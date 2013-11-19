@@ -14,10 +14,9 @@
 | path to your installation.
 |
 */
-$config['base_url']			= '';
-$config['source_xml_path'] 	= 'ref/CJS_MobileRig_Config/bin-debug/assets/xml/mobile_rigs_new.xml';
-$config['data_xml_path'] 	= 'xml/main.xml';
-$config['image_dir_path']	= 'img/';
+$config['base_url']				= '';
+$config['csv_folder'] 			= 'ref/csv/';
+$config['image_dir_path']		= 'img/';
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -226,7 +225,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = 'TK9Bg9GQCk1jzcb83sr35o7h55X89278';
+$config['encryption_key'] = 'LylBKws6dAJRU87LqIwTnNlmOF95Pou4';
 
 /*
 |--------------------------------------------------------------------------
