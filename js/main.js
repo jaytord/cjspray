@@ -44,7 +44,7 @@ main.submitDealerLoginForm = function(){
             if(response.index){
             	main.dealer = response;
             	main.toLoggedInState();
-            }else{
+            }else if(response == "failed"){
             	alert("login failed");
             }
         }

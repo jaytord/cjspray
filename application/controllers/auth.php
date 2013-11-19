@@ -44,7 +44,7 @@ class Auth extends CI_Controller {
 			$success = $pass == $this->encrypt->decode( $user->password, config_item("encryption_key") ) ? true : false;
 
 			echo $this->encrypt->decode( $user->password, config_item("encryption_key");
-				
+
 			if($success){
 				unset($user->password);
 				$this->session->set_userdata($user);
