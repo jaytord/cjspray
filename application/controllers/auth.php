@@ -25,31 +25,37 @@ class Auth extends CI_Controller {
 	}
 
 	//log the user in
-	function login()
+	function login($username)
 	{
-		$post = $this->input->post();
+		//$post = $this->input->post();
 
-		if( empty($post) ){
-			//login form
+		$user = $this->dealer_model->get( array("username"=>$username) );
+		echo $this->encrypt->decode( $user[0]->password, config_item("encryption_key") );
 
-			$this->load->view("login_view");
-		} else{
-			//submit from post
-			$pass = $post["password"];
-			unset($post["password"]);
+		// if( empty($post) ){
+		// 	//login form
 
-			$user = $this->dealer_model->get( $post );
-			$user = $user[0];
+		// 	$this->load->view("login_view");
+		// } else{
+		// 	//submit from post
+		// 	$pass = $post["password"];
+		// 	unset($post["password"]);
 
-			$success = $pass == $this->encrypt->decode( $user->password, config_item("encryption_key") ) ? true : false;
-			if($success){
-				unset($user->password);
-				$this->session->set_userdata($user);
-				echo json_encode($user);
-			} else {
-				echo "failed";
-			}
-		}
+		// 	$user = $this->dealer_model->get( $post );
+		// 	$user = $user[0];
+
+		// 	$success = $pass == $this->encrypt->decode( $user->password, config_item("encryption_key") ) ? true : false;
+
+		// 	echo $this->encrypt->decode( $user->password, config_item("encryption_key");
+
+		// 	if($success){
+		// 		unset($user->password);
+		// 		$this->session->set_userdata($user);
+		// 		echo json_encode($user);
+		// 	} else {
+		// 		echo "failed";
+		// 	}
+		// }
 	}
 
 	//log the user out
