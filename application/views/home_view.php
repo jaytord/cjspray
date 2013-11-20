@@ -194,9 +194,8 @@
                                             <div class="image-container">
                                             </div>
                                             <div class="btn-group nav-buttons">
-                                                <button class="btn require-complete" onClick="main.activateTab('trailers')">Download</button>
-                                                <button class="btn require-complete" onClick="main.activateTab('trailers')">Print</button>
-                                                <button class="btn" onClick="main.activateTab('trailers')">Start Over</button>
+                                                <button class="btn require-complete" onClick="main.download()">Download</button>
+                                                <button class="btn" onClick="main.startOver()">Start Over</button>
                                             </div>
                                         </div>
                                     </div>

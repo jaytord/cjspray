@@ -7,7 +7,7 @@
 #
 # Host: localhost (MySQL 5.5.29)
 # Database: cjspray
-# Generation Time: 2013-11-19 14:52:03 +0000
+# Generation Time: 2013-11-20 01:07:38 +0000
 # ************************************************************
 
 
@@ -18,36 +18,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-
-# Dump of table dealers
-# ------------------------------------------------------------
-
-DROP TABLE IF EXISTS `dealers`;
-
-CREATE TABLE `dealers` (
-  `index` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(100) NOT NULL DEFAULT '',
-  `password` varchar(200) NOT NULL DEFAULT '',
-  `email` varchar(100) NOT NULL,
-  `phone` varchar(12) DEFAULT NULL,
-  `created_on` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
-  `last_login` int(11) unsigned DEFAULT NULL,
-  `active` tinyint(1) unsigned DEFAULT '1',
-  `company_name` varchar(100) DEFAULT NULL,
-  PRIMARY KEY (`index`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-LOCK TABLES `dealers` WRITE;
-/*!40000 ALTER TABLE `dealers` DISABLE KEYS */;
-
-INSERT INTO `dealers` (`index`, `username`, `password`, `email`, `phone`, `created_on`, `last_login`, `active`, `company_name`)
-VALUES
-	(11,'jaytord','z9sK3r0VasvikbiEp6FGczAa2ocRa4coi0CwzoxvmiVXBpz/laH9IwMjW30eehlKfL4Axdqlsq4cj3Q5u8+o8g==','jaytord@mac.com','9172805010','2013-11-17 22:24:16',NULL,1,'Company A'),
-	(12,'demo','fHM9V3/i7o5PJ7XIDGyBOJl5DothcSKbJm3PzbaHVlqE35ls/LAVmab2Nola0Qv9uvLBjpnZAQ6U3gRLHplSmA==','demo@cjspray.com','9172805010','2013-11-19 00:01:18',NULL,1,'Demo Dealer');
-
-/*!40000 ALTER TABLE `dealers` ENABLE KEYS */;
-UNLOCK TABLES;
 
 
 # Dump of table info
@@ -246,11 +216,11 @@ VALUES
 	(13,'1','A','13',NULL,'515662','Band%20Heater%2C%2055%20Gal%2C%20110%20V%2C%20w%2F%20Thermostat','','0',198.00,198.00,198.00,198.00,''),
 	(14,'1','A','14',NULL,'15C381','Dryer%2C%20Desiccand%2C%20Replacement%20Cartridge','','0',41.00,41.00,41.00,41.00,''),
 	(15,'1','A','15',NULL,'289103M','3M%20Chemical%20Sorbent%20Spill%20Response%20Pack%2C%20EA','','0',98.00,98.00,98.00,98.00,''),
-	(16,'2','B','A','2','','16%E2%80%99%20Bumper%20Pull%20','CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13:CC-14:CC-15:CC-16:F-2:F-3:II-4:J-2:J-3:J-4:J-5:J-6:J-7:J-8:KK-5:L-1','0',11907.00,11907.00,11907.00,11907.00,'16BumperPull.jpg'),
-	(17,'2','B','B','3','','20%E2%80%99%20Bumper%20Pull','CC-14:CC-15:CC-16:II-1:II-4:J-2:J-4:J-6:J-8:KK-5','0',18643.00,18643.00,18643.00,18643.00,'20BumperPull.jpg'),
-	(18,'2','B','C','4','','28%E2%80%99%20Gooseneck','CC-14:CC-15:CC-16:II-1:II-4:J-1:J-3:J-5:J-8:KK-5','0',23936.00,23936.00,23936.00,23936.00,'28Gooseneck.jpg'),
-	(19,'2','B','D','5','','Custom%20Box%20Truck','CC-14:CC-15:CC-16:II-1:II-4:J-2:J-4:J-6:J-8:KK-5','0',10800.00,10800.00,10800.00,10800.00,'BoxTruck.jpg'),
-	(20,'2','B','E',NULL,'','AiMS%20Trailer','CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13:F-3:F-4:GG-0:II-1:II-2:II-3:J-1:J-2:J-3:J-4:J-5:J-6:J-7:KK-1:KK-2:KK-3:KK-4','0',23930.00,23930.00,23930.00,23930.00,'AimsTrailer.jpg'),
+	(16,'2','B','A','2','','16%E2%80%99%20Bumper%20Pull%20','CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13:CC-14:CC-15:CC-16:F-2:F-3:II-4:J-2:J-3:J-4:J-5:J-6:J-7:J-8:KK-5:L-1','0',15265.38,13531.00,15265.38,11907.00,'16BumperPull.jpg'),
+	(17,'2','B','B','3','','20%E2%80%99%20Bumper%20Pull','CC-14:CC-15:CC-16:II-1:II-4:J-2:J-4:J-6:J-8:KK-5','0',23901.28,21185.00,23901.28,18643.00,'20BumperPull.jpg'),
+	(18,'2','B','C','4','','28%E2%80%99%20Gooseneck','CC-14:CC-15:CC-16:II-1:II-4:J-1:J-3:J-5:J-8:KK-5','0',30687.18,27200.00,30687.18,23936.00,'28Gooseneck.jpg'),
+	(19,'2','B','D','5','','Custom%20Box%20Truck','CC-14:CC-15:CC-16:II-1:II-4:J-2:J-4:J-6:J-8:KK-5','0',13846.15,12273.00,13846.15,10800.00,'BoxTruck.jpg'),
+	(20,'2','B','E',NULL,'','AiMS%20Trailer','CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13:F-3:F-4:GG-0:II-1:II-2:II-3:J-1:J-2:J-3:J-4:J-5:J-6:J-7:KK-1:KK-2:KK-3:KK-4','0',35191.18,30679.00,35191.18,23930.00,'AimsTrailer.jpg'),
 	(21,'3','CC','0','7','','No%20Reactor%20%28Dealer%20only%29','','0',0.00,0.00,0.00,0.00,''),
 	(22,'3','CC','1','8','AP3831','A-25%3A%206.0%20kW%20Heater','B-E:D-1:D-3:D-5:D-7:D-8:D-9:D-10:D-11:D-12:D-13:D-14:D-15:D-16:D-17:D-18:D-19:D-20:D-21:D-22:D-23:D-24:D-25:D-26:D-27:II-1:II-3','0',12390.00,8673.00,9912.00,7434.00,''),
 	(23,'3','CC','2','13','AP9025','E-20%3A%206.0%20kW%20Heater','B-E:D-1:D-3:D-5:D-7:D-8:D-9:D-10:D-11:D-12:D-13:D-14:D-15:D-16:D-17:D-18:D-19:D-20:D-21:D-22:D-23:D-24:D-25:D-26:D-27','0',16150.00,11305.00,12920.00,9690.00,''),

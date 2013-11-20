@@ -7,7 +7,7 @@ main.configuration_complete = false;
 main.dealer = null;
 
 jQuery( function($){
-	console.log("-- Doc Ready Start --");
+	//console.log("-- Doc Ready Start --");
 
 	$('a[data-toggle="tab"]').on('shown', function (e) {
 		main.current_tab_id 	= String(e.target);
@@ -29,10 +29,47 @@ jQuery( function($){
 	$('#dealer-login-form').submit(main.submitDealerLoginForm);
 	$("#dealer-logout-btn").click(main.dealerLogOut);
 
-	console.log("init, base url : " + base_url + ", total options : " + total_options);
+	//console.log("init, base url : " + base_url + ", total options : " + total_options);
 
 	main.getSession();
 });
+
+main.download = function(){
+	$.ajax({
+        type: 'POST',
+        url: base_url + 'home/createpdf',
+        data: {"images":selections.images},
+        dataType: "text",
+        success: function (response) {
+        	console.log("downloaded pdf file:" + response);
+        }
+    });
+
+    return false;
+}
+
+main.startOver = function(){
+	// main.resetAll();
+	// main.activateTab("trailers");
+	var o = JSON.stringify(selections.options);
+	window.open("home/pdfview?options=" + o);
+}
+
+main.resetAll = function(){
+	$(".btn.active").removeClass("active");
+	selections = {options:{}};
+	main.updateAll();
+}
+
+main.updateAll = function(){
+	main.updateMenuSelections();
+	main.updateImages();
+	main.updatePartNumber();
+	main.updateOptionItems();
+	main.updatePrice();
+	main.updateExcludes();
+	main.checkComplete();
+}
 
 main.submitDealerLoginForm = function(){
 	$.ajax({
@@ -63,7 +100,7 @@ main.getSession = function(){
             	main.dealer = response;
             	main.toLoggedInState();
             }else{
-            	console.log("no session");
+            	//console.log("no session");
             }
         }
     });
@@ -82,12 +119,14 @@ main.dealerLogOut = function(){
     });
 }
 
-main.removeOptionClicked = function(){
+main.removeOptionClicked = function(e){
+	console.log(e.target);
+
 	var _this = $(this);
 	var _option_id = _this.parent().parent().parent().attr("data-id");
 	main.removeSelection(_option_id);
 
-	console.log("remove option clicked");
+	//console.log("remove option clicked");
 }
 
 main.toLoggedInState = function(){
@@ -120,7 +159,9 @@ main.isFinishTabActive = function(){
 	}
 }
 
-main.optionSelected = function(){
+main.optionSelected = function(e){
+	console.log(e.target);
+
 	_this 	= $(this);
 
 	if(_this.parent().hasClass("thumbnail"))
@@ -149,13 +190,10 @@ main.optionSelected = function(){
 		}
 	};
 
-	main.updateImages();
-	main.updateMenuSelections();
-	main.updatePartNumber();
-	main.updateOptionItems();
-	main.updatePrice();
-	main.updateExcludes();
-	main.checkComplete();
+	main.updateAll();
+
+	//close menus
+	$(".accordion-body.collapse.in").collapse("hide");
 
 	//if trailer
 	if(_option_id == "B")
@@ -163,23 +201,27 @@ main.optionSelected = function(){
 }
 
 main.updateImages = function(){
+	selections.images = [];
+
 	$(".image-container").children().remove();
 
 	var trailer = "";
 	$.each(selections.options, function( _i, _v ){
-		var ext = ".png";
+		var ext = "png";
 		var src = "";
 
 		if(_i == "B"){
 			trailer = "B-" + _v.value.id;
-			ext = ".jpg";
+			ext = "jpg";
 			
-			src = base_url + "img/" + trailer + ext;
+			src = base_url + "img/" + trailer + "." + ext;
 		} else {
 			if(trailer != ""){
-				src = base_url + "img/" + trailer + "_" + _i + "-" + _v.value.id + ext;
+				src = base_url + "img/" + trailer + "_" + _i + "-" + _v.value.id + "." + ext;
 			}
 		}
+
+		selections.images.push( {type: ext, filename:src} );
 
 		var _image = new Image();
 		_image.onerror = function(e){
@@ -188,9 +230,11 @@ main.updateImages = function(){
 		_image.onload = function(e){
 			$(".image-container").append(e.target);
 		}
+
 		_image.src = src;
 
 		console.log("image : " + _i + "-" + _v.value.id);
+		console.log(selections.images);
 	});
 }
 
@@ -221,19 +265,14 @@ main.removeSelection = function( _option_id ){
 	if( selections.options[_option_id] && 
 		selections.options[_option_id].value )
 	{
-		console.log("removing option :::: " + _option_id);
+		//console.log("removing option :::: " + _option_id);
 
 		delete selections.options[_option_id];
 
-		console.log(selections.options);
+		////console.log(selections.options);
 
-		main.updateImages();
-		main.updateMenuSelections();
-		main.updatePartNumber();
-		main.updateOptionItems();
-		main.updatePrice();
-		main.updateExcludes();
-		main.checkComplete();
+		
+		main.updateAll();
 	}
 	
 	$("div.accordion-group[data-id='" + _option_id + "'] button.active").removeClass("active");
@@ -323,7 +362,7 @@ main.updatePartNumber = function(){
 	$.sortItemsByAttribute("#mini-configuration .part-number li", "data-index", true);
 	$.sortItemsByAttribute("#full-configuration .part-number li", "data-index", true);
 
-	console.log("total part numbers : " + $("#mini-configuration .part-number li").length );
+	//console.log("total part numbers : " + $("#mini-configuration .part-number li").length );
 }
 
 main.updatePrice = function(){
@@ -368,7 +407,7 @@ main.updateExcludes = function(){
 			if( choice_btn.hasClass("active") )
 				main.removeSelection(choice_option_id);
 
-			console.log( choice_option_id + ":" + choice_id + ":" + choice_btn.hasClass("active") );
+			//console.log( choice_option_id + ":" + choice_id + ":" + choice_btn.hasClass("active") );
 		});
 	});
 }
@@ -386,7 +425,7 @@ main.checkConfigurationSelections = function(){
 main.checkComplete = function(){
 	if( selections.options ){
 		main.configuration_complete = Object.keys(selections.options).length == total_options;
-		console.log( "is configuration complete? " + String( main.configuration_complete ) );
+		//console.log( "is configuration complete? " + String( main.configuration_complete ) );
 
 		if( main.configuration_complete ){
 			if( !$("body").hasClass("complete") ){

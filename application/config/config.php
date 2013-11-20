@@ -17,6 +17,7 @@
 $config['base_url']				= '';
 $config['csv_folder'] 			= 'ref/csv/';
 $config['image_dir_path']		= 'img/';
+$config['rig_image_directory']	= 'downloads/images/';
 /*
 |--------------------------------------------------------------------------
 | Index File

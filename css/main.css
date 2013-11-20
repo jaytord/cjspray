@@ -230,6 +230,12 @@ input{
 	box-shadow: none;
 	text-shadow:none;
 }
+.collapse {
+	-webkit-transition: height .2s ease;
+	-moz-transition: height .2s ease;
+	-o-transition: height .2s ease;
+	transition: height .2s ease;
+}
 
 .btn{
 	background: rgba(240,240,240,1);
@@ -238,6 +244,8 @@ input{
 	-moz-box-shadow: none;
 	box-shadow: none;
 	border:none;
+	padding:0;
+	line-height: 24px;
 }
 .btn-group.nav-buttons .btn{
 	margin-left: 4px !important;
@@ -255,15 +263,16 @@ input{
 }
 .btn-group-vertical div {
 	float: left;
-	width: 50%;
+	width: 100%;
 }
 .btn-group-vertical button{
-	margin-right: 3px;
+	margin-right: 0px;
+	padding-left: 10px;
 }
 .btn-group-vertical div a{
 	position: relative;
 	float: right;
-	padding: 3px 8px 4px 8px;
+	padding: 1px 8px 1px 8px;
 }
 
 .configuration-content ul h4{
@@ -432,9 +441,9 @@ body.complete .nav-buttons button.require-complete{
 		max-width: 1200px;
 	}
 
-	.btn-group-vertical div {
+	/*.btn-group-vertical div {
 		width: 33.333333333333%;
-	}
+	}*/
 }
 
 @media (max-width: 980px) {
