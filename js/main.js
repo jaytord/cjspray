@@ -91,6 +91,7 @@ main.submitPromoCodeForm = function(){
             	if( !$("body").hasClass("promo") )
             		$("body").addClass("promo")
 
+            	main.updatePrice();
             	console.log("validate promo code success");
             }else{
             	alert("validate promo code failed");
