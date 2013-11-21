@@ -42,6 +42,7 @@ input{
 }
 .image-container{
 	position: relative;
+	margin-bottom: 10px;
 }
 .image-container img{
 	position: absolute;
@@ -200,18 +201,16 @@ input{
 	padding:0 8px 0 8px;
 }
 
-.btn-group-vertical .btn,
-.btn-group-vertical{
+.btn-group-vertical .btn{
 	width:100%;
-	border-radius: 0 !important;
 	text-align: left;
 	font-size: 12px;
-	border-right: 1px solid #FFF;
-	border-left: 1px solid #FFF;
-
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	border:none;
+	background: rgba(240,240,240,1);
+	color: #777;
 }
 .btn-group+.btn-group {
 	margin:0;
@@ -230,22 +229,33 @@ input{
 	box-shadow: none;
 	text-shadow:none;
 }
+a.fancybox fancybox.iframe{
+	line-height: 16px;
+}
 .collapse {
 	-webkit-transition: height .2s ease;
 	-moz-transition: height .2s ease;
 	-o-transition: height .2s ease;
 	transition: height .2s ease;
 }
-
-.btn{
-	background: rgba(240,240,240,1);
-	color: #777;
+.finish-nav{
+	text-align: right;
+}
+.btn-group>.btn+.btn {
+	margin-left: 1px;
+}
+.btn-primary{
+	font-weight: 200;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+	background: #004A80;
 	border:none;
-	padding:0;
-	line-height: 24px;
+}
+.btn-primary:hover{
+	background: #e4eeee;
+	color: #333;
+	border:none;
 }
 .btn-group.nav-buttons .btn{
 	margin-left: 4px !important;
@@ -265,14 +275,18 @@ input{
 	float: left;
 	width: 100%;
 }
+.btn-group-vertical .btn:hover{
+	background: #DDD;
+}
 .btn-group-vertical button{
 	margin-right: 0px;
-	padding-left: 10px;
+	padding-left: 11px;
 }
 .btn-group-vertical div a{
 	position: relative;
 	float: right;
-	padding: 1px 8px 1px 8px;
+	line-height: 10px !important;
+	padding: 1px 8px 7px 8px;
 }
 
 .configuration-content ul h4{
@@ -322,6 +336,7 @@ input{
 .configuration-content ul li span.lbl{
 	font-weight: 800;
 }
+
 .configuration-content ul li span.price{
 	color: #000;
 	float: right;
@@ -329,6 +344,41 @@ input{
 #mini-configuration ul li span.price{
 	display: none;
 }
+
+ul.price{
+	padding: 6px 0 4px 0;
+	margin: 0 0 10px 0;
+	background: none;
+	border-radius: 0;
+	border-right: none;
+	border-left: none;
+}
+ul.price li{
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+ul.price li h3, ul.price li h4{
+	color: #777;
+	padding: 0;
+	margin: 0;
+	line-height: 16px;
+	font-size: 16px;
+	display: inherit;
+}
+ul.price li h3 span, ul.price li h4 span{
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	right: 0px;
+}
+
+ul.price li h4{
+	font-size: 14px;
+	color: #999;
+	font-weight: 200;
+}
+
 .configuration-content ul li a{
 	position: absolute;
 	right: 0;
@@ -426,11 +476,34 @@ body.complete div.status p#config-complete{
 body.complete div.status p#config-incomplete{
 	display: none;
 }
-.nav-buttons button.require-complete{
+.require-dealer{
 	display: none;
 }
-body.complete .nav-buttons button.require-complete{
-	display: inline-block;
+body.dealer .require-dealer{
+	display: block;
+}
+body.dealer .hide-on-dealer{
+	display: none;
+}
+#promo-code-field{
+	margin: 0;
+	border-radius: 4px 0 0 4px;
+	border-right: none !important;
+	width: 100px;
+}
+.require-promo{
+	display: none;
+}
+body.promo .require-promo{
+	display: block;
+}
+body.promo .cj-price h3{
+	font-weight: 200;
+	color: #999;
+	font-size: 14px !important;
+}
+.btn:disabled{
+	opacity: .2;
 }
 
 @media (min-width: 1200px) {

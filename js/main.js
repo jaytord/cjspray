@@ -5,6 +5,7 @@ main.price = {};
 
 main.configuration_complete = false;
 main.dealer = null;
+main.promo = {code:"123", discount:.2};
 
 jQuery( function($){
 	//console.log("-- Doc Ready Start --");
@@ -26,12 +27,15 @@ jQuery( function($){
 	$("#trailers li img").click( main.optionSelected );
 	$("#accessories button").click( main.accessorySelected );
 	$("span.checkmark").click( main.removeOptionClicked );
-	$('#dealer-login-form').submit(main.submitDealerLoginForm);
 	$("#dealer-logout-btn").click(main.dealerLogOut);
+
+	$('#dealer-login-form').submit(main.submitDealerLoginForm);
+	$('#promo-code-form').submit(main.submitPromoCodeForm);
 
 	//console.log("init, base url : " + base_url + ", total options : " + total_options);
 
 	main.getSession();
+	main.toInCompleteState();
 });
 
 main.download = function(){
@@ -71,6 +75,39 @@ main.updateAll = function(){
 	main.checkComplete();
 }
 
+main.submitPromoCodeForm = function(){
+	$.ajax({
+        type: 'POST',
+        url: $(this).attr('action'),
+        data: $(this).serialize(),
+        dataType: "json",
+        success: function (response) {
+        	console.log(response);
+
+            if(response.success){
+            	main.promo.code = response.code;
+            	main.promo.discount = response.discount;
+
+            	if( !$("body").hasClass("promo") )
+            		$("body").addClass("promo")
+
+            	console.log("validate promo code success");
+            }else{
+            	alert("validate promo code failed");
+            }
+        },
+        error:function(error){
+        	console.log(error);
+        }
+    });
+
+    return false;
+}
+
+main.applyPromoCode = function(){
+
+}
+
 main.submitDealerLoginForm = function(){
 	$.ajax({
         type: 'POST',
@@ -96,10 +133,11 @@ main.getSession = function(){
         url: base_url + "auth/session",
         dataType: "json",
         success: function (response) {
-            if(response.index){
+            if(response.index && response.index != undefined){
             	main.dealer = response;
             	main.toLoggedInState();
             }else{
+            	main.toLoggedOutState();
             	//console.log("no session");
             }
         }
@@ -134,15 +172,23 @@ main.toLoggedInState = function(){
 	$("#user-info").show();
 	$("#company-name").text( main.dealer.company_name );
 
-	 main.updatePrice();
+	if( !$("body").hasClass("dealer") )
+		$("body").addClass("dealer");
+
+	main.updatePrice();
 }
 
 main.toLoggedOutState = function(){
+	console.log("toLoggedOutState-");
+
 	$("#dealer-login-form").show();
 	$("#user-info").hide();
 	$("#company-name").text("");
 
-	 main.updatePrice();
+	if( $("body").hasClass("dealer") )
+		$("body").removeClass("dealer");
+
+	main.updatePrice();
 }
 
 main.activateTab = function(_id){
@@ -171,7 +217,8 @@ main.optionSelected = function(e){
 	_option_id 		= decodeURIComponent( _this.attr("data-option-id") );
 	_option_label	= decodeURIComponent( _this.attr("data-option-label") );
 	_id 			= decodeURIComponent( _this.attr("data-id") );
-	_price			= Number(_this.attr("data-cj-price"));
+	_cj_price		= Number(_this.attr("data-cj-price"));
+	_list_price		= Number(_this.attr("data-list-price"));
 	_dealer_price	= Number(_this.attr("data-dealer-price"));
 	_label 			= decodeURIComponent( _this.attr("data-label") );
 
@@ -184,7 +231,8 @@ main.optionSelected = function(e){
 		value:
 		{
 			id: _id, 
-			price: _price, 
+			cj_price: _cj_price, 
+			list_price: _list_price, 
 			dealer_price: _dealer_price,
 			label: _label
 		}
@@ -290,8 +338,9 @@ main.accessorySelected = function(){
 				{
 					id: decodeURIComponent( _this.attr("data-id") ),
 					label: decodeURIComponent( _this.attr("data-label") ),
-					price: _this.attr("data-cj-price"), 
-					dealer_price: _this.attr("data-dealer-price"),
+					list_price: Number(_this.attr("data-list-price")), 
+					cj_price: Number(_this.attr("data-cj-price")), 
+					dealer_price: Number(_this.attr("data-dealer-price")),
 				});
 			}
 		});
@@ -307,9 +356,11 @@ main.updateAccessoryItems = function(){
 	$.each(selections.accessories, function( _i, _v ){
 		var ul 	= $(".configuration-content .accessories"),
 		li 		= $("<li/>").attr("data-id", _v.id ),
-		val 	= $("<span/>").text( _v.label );
+		val 	= $("<span/>").text( _v.label ),
+		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.list_price.toFixed(2)) ).addClass("price");
 
 		val.appendTo(li);
+		price.appendTo(li);
 		li.appendTo(ul);
 	});
 }
@@ -322,7 +373,7 @@ main.updateOptionItems = function(){
 		li 		= $("<li/>").attr("data-id", _i ).attr("data-index", _v.index ),
 		label 	= $("<span/>").text( _v.label + ": ").addClass("lbl"),
 		val 	= $("<span/>").text( _v.value.label ),
-		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.value.price) ).addClass("price");
+		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.value.list_price.toFixed(2)) ).addClass("price");
 
 		label.appendTo(li);
 		val.appendTo(li);
@@ -366,27 +417,42 @@ main.updatePartNumber = function(){
 }
 
 main.updatePrice = function(){
-	main.price.retail = 0;
+	main.price.list = 0;
 	main.price.dealer = 0;
+	main.price.cj = 0;
+
 
 	if(selections.options){
 		$.each(selections.options, function( _i, _v ){
-			main.price.retail += Number(_v.value.price);
+			main.price.list += Number(_v.value.list_price);
 			main.price.dealer += Number(_v.value.dealer_price);
+			main.price.cj += Number(_v.value.cj_price);
 		});
 	}
 	
 	if(selections.accessories){
 		$.each(selections.accessories, function( _i, _v ){
-			main.price.retail += Number(_v.price);
+			main.price.list += Number(_v.list_price);
 			main.price.dealer += Number(_v.dealer_price);
+			main.price.cj += Number(_v.cj_price);
 		});
 	}
 
-	main.price.retail = main.price.retail.toFixed(2);
-	main.price.dealer = main.price.dealer.toFixed(2);
+	main.price.list 	= main.price.list.toFixed(2);
+	main.price.dealer 	= main.price.dealer.toFixed(2);
+	main.price.cj 		= main.price.cj.toFixed(2);
 
-	$(".configuration-content div.config-title h3.price").text( "$" + $.strToCommaDelimNumber(main.dealer ? main.price.dealer : main.price.retail) );
+	$(".configuration-content .list-price span").text( "$" + $.strToCommaDelimNumber(main.price.list) );
+	
+	var label = main.dealer ? "Dealer Price" : "CJ Price";
+	var price = main.dealer ? main.price.dealer : main.price.cj;
+	var you_price = price - Math.round(price*main.promo.discount);
+
+	$(".configuration-content .cj-price h3").html( label + "<span></span>");
+	$(".configuration-content .cj-price span").text( "$" + $.strToCommaDelimNumber(price) );
+	$(".configuration-content .promo-code h4").html("Promo Discount : " + String(main.promo.code) + "<span></span>");
+	$(".configuration-content .promo-code h4 span").text( main.promo.discount * 100 + "%");
+	$(".configuration-content .your-price span").text( "$" + $.strToCommaDelimNumber(you_price.toFixed(2)) );
 }
 
 main.updateExcludes = function(){
@@ -422,19 +488,30 @@ main.checkConfigurationSelections = function(){
 	}
 }
 
+main.toCompleteState = function(){
+	if( !$("body").hasClass("complete") ){
+		$("body").addClass("complete");
+	}
+
+	$(".require-complete").attr("disabled",false);
+}
+
+main.toInCompleteState = function(){
+	if( $("body").hasClass("complete") ){
+		$("body").removeClass("complete");
+	}
+
+	$(".require-complete").attr("disabled",true);
+}
+
 main.checkComplete = function(){
 	if( selections.options ){
 		main.configuration_complete = Object.keys(selections.options).length == total_options;
-		//console.log( "is configuration complete? " + String( main.configuration_complete ) );
 
 		if( main.configuration_complete ){
-			if( !$("body").hasClass("complete") ){
-				$("body").addClass("complete");
-			}
+			main.toCompleteState();
 		} else {
-			if( $("body").hasClass("complete") ){
-				$("body").removeClass("complete");
-			}
+			main.toInCompleteState();
 		}
 	}
 }

@@ -43,7 +43,6 @@
                         <span class="icon-bar"></span>
                     </a>
                     <img src="img/logo.png" width="146" height="38"/>
-
                     <div class="nav-collapse collapse">
                         <div id="user-info" class="navbar-form pull-right"><label id="company-name"></label><button id="dealer-logout-btn" class="btn">Sign Out</button></div>
                         <form id="dealer-login-form" class="navbar-form pull-right" action="<?php base_url(); ?>auth/login" method="">
@@ -60,7 +59,6 @@
                 <p><a href="http://www.cjspray.com/pdfs/cjs_mobile_rigs.pdf"><i class="icon-download icon-white"></i>Catalog</a></p>
             </div>
         </div>
-
         <div id="tab-container" class="container-fluid">
             <ul id="pageTabs" class="nav nav-tabs">
                 <li class="active"><a href="#trailers" data-toggle="tab">Trailers</a></li>
@@ -69,7 +67,6 @@
                 <li class=""><a href="#complete" data-toggle="tab">Finish</a></li>
             </ul>
         </div>
-
         <div id="main-container" class="container-fluid no-selections">
             <div class="row-fluid">
                 <div id="main-content" class="span8">
@@ -175,8 +172,12 @@
                                     <div class="row-fluid">
                                         <div class="span6">
                                             <div class="config-title">
-                                                <h3>My Rig</h3>
-                                                <h3 class="price">$</h3>
+                                                <ul class="price">
+                                                    <li class="list-price"><h4>List price<span>$0.00</span></h4></li>
+                                                    <li class="cj-price"><h3>CJ price<span>$0.00</span></h3></li>
+                                                    <li class="promo-code require-promo"><h4>Promo Discount<span>0%</span></h3></li>
+                                                    <li class="your-price require-promo"><h3>Your price<span>$0.00</span></h3></li>
+                                                </ul>
                                             </div>
                                             <div class="status">
                                                 <p id="config-incomplete"><i class="icon-thumbs-down icon-white"></i>Incomplete</span>
@@ -193,10 +194,15 @@
                                         <div class="span6">
                                             <div class="image-container">
                                             </div>
-                                            <div class="btn-group nav-buttons">
-                                                <button class="btn require-complete" onClick="main.download()">Download</button>
+                                            <div id="finish-nav" class="btn-group">
+                                                <form id="promo-code-form" method action="<?php base_url(); ?>promos/validate">
+                                                <input name="code" id="promo-code-field" type="text" placeholder="Promo Code" title="Enter your promo code." required>
+                                                <button id="promo-code-btn" class="btn">Add</button>
+                                                <button class="btn require-complete" onClick="main.download()">Printable PDF</button>
                                                 <button class="btn" onClick="main.startOver()">Start Over</button>
+                                                </form>
                                             </div>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -209,8 +215,12 @@
                 <div id="mini-configuration" class="span4 configuration-content">
                     <div class="thumbnail">
                         <div class="config-title">
-                            <h3>My Rig</h3>
-                            <h3 class="price">$</h3>
+                            <ul class="price">
+                                <li class="list-price"><h4>List price<span>$0.00</span></h4></li>
+                                <li class="cj-price"><h3>CJ price<span>$0.00</span></h3></li>
+                                <li class="promo-code require-promo"><h4>Promo Discount<span>0%</span></h3></li>
+                                <li class="your-price require-promo"><h3>Your price<span>$0.00</span></h3></li>
+                            </ul>
                         </div>
                         <div class="status">
                             <p id="config-incomplete"><i class="icon-thumbs-down icon-white"></i>Incomplete</span>
