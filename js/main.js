@@ -113,8 +113,6 @@ main.submitDealerLoginForm = function(){
         data: $(this).serialize(),
         dataType: "json",
         success: function (response) {
-        	alert(response);
-
             if(response.index){
             	main.dealer = response;
             	main.toLoggedInState();
