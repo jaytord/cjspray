@@ -45,33 +45,21 @@ class Home extends CI_Controller {
 		echo phpinfo();
 	}
 
-	public function pdfview(){
-		//$get = $this->input->get();
-
-		// $options = json_decode( $get["options"], true);
-		// $price = $get["price"];
-		// $dealer = json_decode( $get["dealer"], true );
-		// $accessories = json_decode( $get["accessories"], true );
-
-		$image_url = base_url().config_item("image_dir_path")."B-A.jpg";
-
-		$this->load->view("pdf_view", array(
-			"image_url"=>$image_url
-
-		));
-		// "options"=>$options, 
-			// "price"=>$price, 
-			// "dealer"=>$dealer,
-			// "accessories"=>$accessories,
-	}
-
 	public function createpdf(){
 		$this->load->library("composite_image");
 		$post = $this->input->post();
-
 		$ts = time();
-		$image_url = base_url().$this->composite_image->generate( $post["images"], $ts );
-		unset($post["images"]);
+
+		$post["selections"] 	= json_decode($post["selections"], true);
+		$post["price"] 			= json_decode($post["price"], true );
+		$post["promo"] 			= json_decode($post["promo"], true );
+		$post["dealer"]			= json_decode($post["dealer"], true );
+
+		// echo "dealer".((empty( $post["dealer"] ) == TRUE)? "true" : "false");
+		// print_r( $post["promo"] );
+		// print_r( $post["dealer"] );
+
+		$image_url = base_url().$this->composite_image->generate( $post["selections"]["images"], $ts );
 
 		$filename = 'myrig-'. $ts;
 		$filepath = FCPATH."/downloads/pdfs/$filename.pdf";
@@ -87,7 +75,7 @@ class Home extends CI_Controller {
 			$pdf->WriteHTML($html);$pdf->Output($filepath, 'F');
 		}
 
-		echo base_url()."downloads/pdfs/$filename.pdf";
+		redirect( base_url()."downloads/pdfs/$filename.pdf" );
 	}
 }
 

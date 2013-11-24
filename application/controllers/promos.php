@@ -20,13 +20,23 @@ class Promos extends CI_Controller {
 
 	function validate()
 	{
+		$response = (object) 'promo';
+
 		$post = $this->input->post();
+		$code = $post["code"];
 
-		$result = (object) 'promo';
-		$result->success = true;
-		$result->code = $post["code"];
-		$result->discount = ".4";
 
-		echo json_encode($result);
+		$this->load->model("promocode_model");
+		$result = $this->promocode_model->get( $post );
+
+		if($result){
+			$response = $result[0];
+			$response->success = true;
+		} else {
+			$response->success = false;
+			$response->error = "invalid code";
+		}
+
+		echo json_encode($response);
 	}
 }

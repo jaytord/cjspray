@@ -5,7 +5,7 @@ main.price = {};
 
 main.configuration_complete = false;
 main.dealer = null;
-main.promo = {code:"123", discount:.2};
+main.promo = {code:"", discount:0};
 
 jQuery( function($){
 	//console.log("-- Doc Ready Start --");
@@ -39,30 +39,28 @@ jQuery( function($){
 });
 
 main.download = function(){
-	$.ajax({
-        type: 'POST',
-        url: base_url + 'home/createpdf',
-        data: {"images":selections.images},
-        dataType: "text",
-        success: function (response) {
-        	console.log("downloaded pdf file:" + response);
-        }
-    });
+	var createpdfform = $("form#createpdf");
+	createpdfform.children('input#pdf-selections').eq(0).attr( "value", JSON.stringify(selections) );
+	createpdfform.children('input#pdf-price').eq(0).attr( "value", JSON.stringify(main.price) );
+	createpdfform.children('input#pdf-promo').eq(0).attr( "value", JSON.stringify(main.promo) );
+	createpdfform.children('input#pdf-dealer_name').eq(0).attr( "value", JSON.stringify(main.dealer) );
+	createpdfform.submit();
 
     return false;
 }
 
 main.startOver = function(){
-	// main.resetAll();
-	// main.activateTab("trailers");
-	var o = JSON.stringify(selections.options);
-	window.open("home/pdfview?options=" + o);
+	main.resetAll();
+	main.activateTab("trailers");
+
+    return false;
 }
 
 main.resetAll = function(){
 	$(".btn.active").removeClass("active");
-	selections = {options:{}};
+	selections = {options:{}, accessories:[]};
 	main.updateAll();
+	main.updateAccessoryItems();
 }
 
 main.updateAll = function(){
@@ -92,21 +90,20 @@ main.submitPromoCodeForm = function(){
             		$("body").addClass("promo")
 
             	main.updatePrice();
-            	console.log("validate promo code success");
             }else{
-            	alert("validate promo code failed");
+            	main.invalidPromoCode();
             }
         },
         error:function(error){
-        	console.log(error);
+        	main.invalidPromoCode();
         }
     });
 
     return false;
 }
 
-main.applyPromoCode = function(){
-
+main.invalidPromoCode = function(){
+	alert("invalid promo code");
 }
 
 main.submitDealerLoginForm = function(){
@@ -116,16 +113,25 @@ main.submitDealerLoginForm = function(){
         data: $(this).serialize(),
         dataType: "json",
         success: function (response) {
+        	alert(response);
+
             if(response.index){
             	main.dealer = response;
             	main.toLoggedInState();
             }else if(response == "failed"){
-            	alert("login failed");
+            	main.loginFailed();
             }
+        },
+        error:function(error){
+        	main.loginFailed();
         }
     });
 
     return false;
+}
+
+main.loginFailed = function(){
+	alert("login failed");
 }
 
 main.getSession = function(){
@@ -283,7 +289,7 @@ main.updateImages = function(){
 		_image.src = src;
 
 		console.log("image : " + _i + "-" + _v.value.id);
-		console.log(selections.images);
+		//console.log(selections.images);
 	});
 }
 
@@ -447,13 +453,14 @@ main.updatePrice = function(){
 	
 	var label = main.dealer ? "Dealer Price" : "CJ Price";
 	var price = main.dealer ? main.price.dealer : main.price.cj;
-	var you_price = price - Math.round(price*main.promo.discount);
+
+	main.price.you =  price - Math.round(price*main.promo.discount);
 
 	$(".configuration-content .cj-price h3").html( label + "<span></span>");
 	$(".configuration-content .cj-price span").text( "$" + $.strToCommaDelimNumber(price) );
 	$(".configuration-content .promo-code h4").html("Promo Discount : " + String(main.promo.code) + "<span></span>");
 	$(".configuration-content .promo-code h4 span").text( main.promo.discount * 100 + "%");
-	$(".configuration-content .your-price span").text( "$" + $.strToCommaDelimNumber(you_price.toFixed(2)) );
+	$(".configuration-content .your-price span").text( "$" + $.strToCommaDelimNumber(main.price.you.toFixed(2)) );
 }
 
 main.updateExcludes = function(){
