@@ -76,7 +76,7 @@
 						<h4>List Price</h4>
 					</td>
 					<td class="price">
-						<h4>$<?= number_format($price["list"],2); ?></h4>
+						<h4>$<?= number_format($price["list"], 0); ?></h4>
 					</td>
 				</tr>
 				<tr>
@@ -84,7 +84,7 @@
 						<h3><?= empty($dealer) ? "CJ Price" : "Dealer Price"; ?></h3>
 					</td>
 					<td class="price">
-						<h3><?= number_format( $dealer_cj_price , 2); ?></h3>
+						<h3><?= number_format( $dealer_cj_price , 0); ?></h3>
 					</td>
 				</tr>
 				<?php if( isset($you_price) ) : ?>
@@ -101,7 +101,7 @@
 						<h3>Your Price</h3>
 					</td>
 					<td class="price">
-						<h3>$<?= number_format($you_price,2); ?></h3>
+						<h3>$<?= number_format($you_price, 0); ?></h3>
 					</td>
 				</tr>
 				<?php endif ?>
@@ -113,7 +113,7 @@
 				<?php foreach ($selections["options"] as $key => $value):  ?>
 				<tr>
 					<td><span class="label"><?= $value["label"]; ?> :</span><?= $value["value"]["label"]; ?></td>
-					<td class="price">$<?= number_format($value["value"]["list_price"], 2); ?></td>
+					<td class="price">$<?= number_format($value["value"]["list_price"], 0); ?></td>
 				</tr>
 				<?php endforeach ?>
 			</table>
@@ -133,7 +133,7 @@
 				<?php foreach ($selections["accessories"] as $key => $value): ?>
 				<tr>
 					<td><span class="label"><?= $value["label"]; ?></span></td>
-					<td class="price"><?= number_format($value["list_price"], 2); ?></td>
+					<td class="price">$<?= number_format($value["list_price"], 0); ?></td>
 				</tr>
 				<?php endforeach ?>
 			</table>

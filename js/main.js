@@ -211,8 +211,6 @@ main.isFinishTabActive = function(){
 }
 
 main.optionSelected = function(e){
-	console.log(e.target);
-
 	_this 	= $(this);
 
 	if(_this.parent().hasClass("thumbnail"))
@@ -245,12 +243,12 @@ main.optionSelected = function(e){
 
 	main.updateAll();
 
-	//close menus
-	$(".accordion-body.collapse.in").collapse("hide");
-
 	//if trailer
 	if(_option_id == "B")
 		main.activateTab("options");
+
+	//close menus
+	$(".accordion-body.collapse.in").collapse("hide");
 }
 
 main.updateImages = function(){
@@ -362,7 +360,7 @@ main.updateAccessoryItems = function(){
 		var ul 	= $(".configuration-content .accessories"),
 		li 		= $("<li/>").attr("data-id", _v.id ),
 		val 	= $("<span/>").text( _v.label ),
-		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.list_price.toFixed(2)) ).addClass("price");
+		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.list_price.toFixed(0)) ).addClass("price");
 
 		val.appendTo(li);
 		price.appendTo(li);
@@ -378,7 +376,7 @@ main.updateOptionItems = function(){
 		li 		= $("<li/>").attr("data-id", _i ).attr("data-index", _v.index ),
 		label 	= $("<span/>").text( _v.label + ": ").addClass("lbl"),
 		val 	= $("<span/>").text( _v.value.label ),
-		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.value.list_price.toFixed(2)) ).addClass("price");
+		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.value.list_price.toFixed(0)) ).addClass("price");
 
 		label.appendTo(li);
 		val.appendTo(li);
@@ -443,9 +441,9 @@ main.updatePrice = function(){
 		});
 	}
 
-	main.price.list 	= main.price.list.toFixed(2);
-	main.price.dealer 	= main.price.dealer.toFixed(2);
-	main.price.cj 		= main.price.cj.toFixed(2);
+	main.price.list 	= main.price.list.toFixed(0);
+	main.price.dealer 	= main.price.dealer.toFixed(0);
+	main.price.cj 		= main.price.cj.toFixed(0);
 
 	$(".configuration-content .list-price span").text( "$" + $.strToCommaDelimNumber(main.price.list) );
 	
@@ -458,7 +456,7 @@ main.updatePrice = function(){
 	$(".configuration-content .cj-price span").text( "$" + $.strToCommaDelimNumber(price) );
 	$(".configuration-content .promo-code h4").html("Promo Discount : " + String(main.promo.code) + "<span></span>");
 	$(".configuration-content .promo-code h4 span").text( main.promo.discount * 100 + "%");
-	$(".configuration-content .your-price span").text( "$" + $.strToCommaDelimNumber(main.price.you.toFixed(2)) );
+	$(".configuration-content .your-price span").text( "$" + $.strToCommaDelimNumber(main.price.you.toFixed(0)) );
 }
 
 main.updateExcludes = function(){
