@@ -24,6 +24,9 @@ class Parser extends CI_Controller {
 		$this->load->model("options_model");
 		$this->load->model("selections_model");
 		$this->load->model("info_model");
+		$this->load->model("dealer_model");
+		$this->load->library("encrypt");
+		$this->load->model("promocode_model");
 	}
 
 	public function fixexludes(){
@@ -65,6 +68,75 @@ class Parser extends CI_Controller {
 		}
 	}
 
+	public function promocodes(){
+		$row 				= 0;
+		$_promo_codes 		= array();
+
+		if( ($promo_file = fopen(base_url().config_item('csv_folder')."promo_codes.csv", "r")) !== FALSE ){
+			while( $promo_csv = fgetcsv($promo_file, 2000, "," ) ){
+				if( $row > 0 ) 
+				{
+					$value 				= array();
+					$value['code'] 		= $promo_csv[0];
+					$value['discount'] 	= rawurlencode( $promo_csv[1] );
+					$value['title']		= rawurlencode( $promo_csv[2] );
+
+					array_push($_promo_codes, $value);
+				}
+				$row++;
+			}
+
+			fclose($promo_file);
+		}
+
+		print_r($_promo_codes);
+
+		//clear db records
+		$this->promocode_model->clear();
+
+		//create new records
+		foreach ($_promo_codes as $key => $value) {		
+			$result = $this->promocode_model->add($value);
+		}
+	}
+
+	public function dealers(){
+		$row 				= 0;
+		$_dealers 			= array();
+
+		if( ($dealer_file = fopen(base_url().config_item('csv_folder')."dealers.csv", "r")) !== FALSE ){
+			while( $dealer_csv = fgetcsv($dealer_file, 2000, "," ) ){
+				if( $row > 0 ) 
+				{
+					$value 					= array();
+					$value['username'] 		= $dealer_csv[0];
+					$value['company_name'] 	= rawurlencode( $dealer_csv[1] );
+					$value['email'] 		= rawurlencode( $dealer_csv[2] );
+					$value['phone']		 	= rawurlencode( $dealer_csv[3] );
+					$value['password']		= $dealer_csv[4];
+
+
+					array_push($_dealers, $value);
+				}
+				$row++;
+			}
+
+			fclose($dealer_file);
+		}
+
+		print_r($_dealers);
+
+		//clear db records
+		$this->dealer_model->clear();
+
+		//create new records
+		foreach ($_dealers as $username => $value) {		
+			$password = $this->encrypt->encode($value["password"], config_item("encryption_key"));
+			$value["password"] = $password;
+			$result = $this->dealer_model->add($value);
+		}
+	}
+
 	public function options(){
 		//parse options
 		$row 				= 0;
@@ -102,6 +174,7 @@ class Parser extends CI_Controller {
 					$selection->cj_price		= str_replace(",", "", $selections_csv[7]);
 					$selection->cost_price		= str_replace(",", "", $selections_csv[8]);
 					$selection->image			= $selections_csv[9];
+					$selection->dealer_only		= $selections_csv[10] == "yes" ? 1 : 0;
 
 					$_options[ $selections_csv[0] ]->selections[ $selections_csv[1] ] = $selection;
 				}
@@ -153,7 +226,7 @@ class Parser extends CI_Controller {
 					'part_number'					=> $_selection->part_number,
 					'description'					=> $_selection->description,
 					'exclude'						=> $_selection->exclude,
-					'dealer_only'					=> 0,
+					'dealer_only'					=> $_selection->dealer_only,
 					'list_price'					=> $_selection->list_price,
 					'dealer_price'					=> $_selection->dealer_price,
 					'cj_price'						=> $_selection->cj_price,

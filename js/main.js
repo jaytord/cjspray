@@ -181,6 +181,9 @@ main.toLoggedInState = function(){
 		$("body").addClass("dealer");
 
 	main.updatePrice();
+
+	//enable dealer only buttons
+	main.showDealerOnly();
 }
 
 main.toLoggedOutState = function(){
@@ -194,6 +197,20 @@ main.toLoggedOutState = function(){
 		$("body").removeClass("dealer");
 
 	main.updatePrice();
+
+	//disable dealer only buttons
+	main.hideDealerOnly();
+
+	//remove current dealer only selections
+	main.removeDealerOnlySelections();
+}
+
+main.hideDealerOnly = function(){
+	$("button[data-dealer-only=1]").attr("disabled",true);
+}
+
+main.showDealerOnly = function(){
+	$("button[data-dealer-only=1]").removeAttr("disabled");
 }
 
 main.activateTab = function(_id){
@@ -224,6 +241,7 @@ main.optionSelected = function(e){
 	_list_price		= Number(_this.attr("data-list-price"));
 	_dealer_price	= Number(_this.attr("data-dealer-price"));
 	_label 			= decodeURIComponent( _this.attr("data-label") );
+	_dealer_only	= Number( _this.attr("data-dealer-only") );
 
 	if( !selections.options || selections.options == undefined )
 	 	selections.options = {};
@@ -237,9 +255,12 @@ main.optionSelected = function(e){
 			cj_price: _cj_price, 
 			list_price: _list_price, 
 			dealer_price: _dealer_price,
-			label: _label
+			label: _label,
+			dealer_only:_dealer_only
 		}
 	};
+
+	console.log(selections.options);
 
 	main.updateAll();
 
@@ -313,20 +334,27 @@ main.updateMenuSelections = function(){
 }
 
 main.removeSelection = function( _option_id ){
+	console.log("removing selection : " + _option_id);
+
 	if( selections.options[_option_id] && 
 		selections.options[_option_id].value )
 	{
-		//console.log("removing option :::: " + _option_id);
-
 		delete selections.options[_option_id];
 
-		////console.log(selections.options);
-
-		
 		main.updateAll();
 	}
 	
 	$("div.accordion-group[data-id='" + _option_id + "'] button.active").removeClass("active");
+}
+
+main.removeDealerOnlySelections = function(){
+	if(selections.options)
+	$.each(selections.options, function( _i, _v ){
+		if(_v.value.dealer_only == 1){
+
+			main.removeSelection(_i);
+		}
+	});
 }
 
 main.accessorySelected = function(){

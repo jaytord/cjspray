@@ -132,6 +132,7 @@
                                                     data-cj-price="<?= $selection->cj_price; ?>" 
                                                     data-cost-price="<?= $selection->cost_price; ?>"
                                                     data-dealer-price="<?= $selection->dealer_price; ?>" 
+                                                    data-dealer-only="<?= $selection->dealer_only; ?>"
                                                     type="button" 
                                                     class="btn">
                                                     <?php echo urldecode($selection->description); ?>

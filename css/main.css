@@ -278,6 +278,12 @@ a.fancybox fancybox.iframe{
 .btn-group-vertical .btn:hover{
 	background: #DDD;
 }
+.btn-group-vertical .btn:disabled, .btn-group-vertical .btn:disabled:hover{
+	background: #EEE !important;
+}
+.btn-group-vertical .btn:disabled i{
+	display: none;
+}
 .btn-group-vertical button{
 	margin-right: 0px;
 	padding-left: 11px;
