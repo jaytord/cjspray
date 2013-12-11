@@ -39,11 +39,6 @@ class Home extends CI_Controller {
 
 		$this->load->view("info_view", array('data'=>$info_data));
 	}
-	
-	public function phpinfo()
-	{
-		echo phpinfo();
-	}
 
 	public function createpdf(){
 		$this->load->library("composite_image");
