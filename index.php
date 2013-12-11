@@ -26,7 +26,7 @@ switch ($host) {
 		define('ENVIRONMENT', 'local');
 		break;
 
-	case 'cjspray-configurator.herokuapp.com':
+	case 'staging.click3x.com':
 		define('ENVIRONMENT', 'staging');
 		break;
 
