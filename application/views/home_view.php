@@ -67,12 +67,10 @@
         </div>
         <div id="tab-container" class="container-fluid">
             <ul id="pageTabs" class="nav nav-tabs">
-                <li class="inactive"><a href="javascript:main.previousTab()">Back</a></li>
                 <li class="active"><a href="#trailers" data-toggle="tab">Trailers</a></li>
                 <li class=""><a href="#options" data-toggle="tab">Options</a></li>
                 <li class=""><a href="#accessories" data-toggle="tab">Accessories</a></li>
                 <li class=""><a href="#complete" data-toggle="tab">Finish</a></li>
-                <li class="inactive"><a href="javascript:main.nextTab()">Next</a></li>
             </ul>
         </div>
         <div id="main-container" class="container-fluid no-selections">

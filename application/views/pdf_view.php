@@ -139,5 +139,9 @@
 			</table>
 		</td>
 	</tr>
+	<tr>
+		<td colspan="2"><br /><br /><br /><br /><br /><br /><center>©2014 CJ Spray Inc. — Minneapolis / St. Paul, Minnesota<br />2845 W Service Rd
+Eagan, MN 55121<br />Toll Free: 1-888-CJSPRAY (888-257-7729) Local: 651-455-0880 Fax: 651-450-5671<br />Email: customerservice@cjspray.com</center></td>
+	</tr>
 </table>
 </div>

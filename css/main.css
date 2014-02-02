@@ -100,9 +100,6 @@ input{
 	border:none;
 	padding-left: 20px;
 }
-#pageTabs li a[data-toggle="tab"]{
-	display: none;
-}
 #pageTabs li.inactive a{
 	opacity: .2;
 	cursor: default; !important;

@@ -132,6 +132,14 @@ main.loginFailed = function(){
 	alert("login failed");
 }
 
+main.nextTab = function(){
+	console.log( main.getNextTabId() );
+}
+
+main.previousTab = function(){
+
+}
+
 main.getSession = function(){
 	$.ajax({
         type: 'POST',
@@ -225,6 +233,17 @@ main.isFinishTabActive = function(){
 		if( $("#main-container").hasClass("complete") )
 			$("#main-container").removeClass("complete");
 	}
+}
+
+main.getNextTabId = function(){
+	var nextTabIndex = $("#pageTabs li.active").eq(0).index() + 1;
+
+	if(nextTabIndex >  $("#pageTabs li").length)
+		nextTabIndex = 1;
+
+	console.log( nextTabIndex );
+
+	return $("#pageTabs li").eq(nextTabIndex);
 }
 
 main.optionSelected = function(e){
