@@ -62,15 +62,17 @@
             </div>
             <div class="heading-bar">
                 <h1>Mobile Spray Rigs</h1>
-                <p><a href="http://www.cjspray.com/pdfs/cjs_mobile_rigs.pdf"><i class="icon-download icon-white"></i>Catalog</a></p>
+                <p><a href="http://www.cjspray.com/pdfs/cjs_mobile_rigs.pdf" target="_blank"><i class="icon-download icon-white"></i>Catalog</a></p>
             </div>
         </div>
         <div id="tab-container" class="container-fluid">
             <ul id="pageTabs" class="nav nav-tabs">
+                <li class="inactive"><a href="javascript:main.previousTab()">Back</a></li>
                 <li class="active"><a href="#trailers" data-toggle="tab">Trailers</a></li>
                 <li class=""><a href="#options" data-toggle="tab">Options</a></li>
                 <li class=""><a href="#accessories" data-toggle="tab">Accessories</a></li>
                 <li class=""><a href="#complete" data-toggle="tab">Finish</a></li>
+                <li class="inactive"><a href="javascript:main.nextTab()">Next</a></li>
             </ul>
         </div>
         <div id="main-container" class="container-fluid no-selections">
@@ -95,7 +97,7 @@
                                     data-dealer-price="<?= $selection->dealer_price; ?>" 
                                     data-exclude="<?= $selection->exclude; ?>" >
                                     <div class="thumbnail">
-                                        <a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>/<?php echo $selection->description; ?>"><i class="icon-info-sign icon-white"></i></a>
+                                        <?php if(!empty($selection->info_index)) : ?><a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>/<?php echo $selection->description; ?>"><i class="icon-info-sign icon-white"></i></a><?php endif ?>
                                         <?php $image_url = base_url().config_item("image_dir_path").urldecode( $selection->image ); ?>
                                         <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
                                         <h3><?php echo urldecode( $selection->description ); ?></h3>
@@ -119,8 +121,8 @@
                                     <div id="option<?php echo $option->index?>" class="accordion-body collapse">
                                         <div class="btn-group btn-group-vertical" data-toggle="buttons-radio">
                                             <?php foreach($option->selections as $selection): ?>
-                                            <div class="choice <?= str_replace(":"," ",$selection->exclude); ?>">
-                                                <a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>/<?php echo $selection->description; ?>"><i class="icon-info-sign"></i></a>
+                                            <div class="choice <?= str_replace(":"," ",$selection->exclude); ?>" data-dealer-only="<?= $selection->dealer_only; ?>">
+                                                <?php if(!empty($selection->info_index)) : ?><a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>/<?php echo $selection->description; ?>"><i class="icon-info-sign"></i></a><?php endif ?>
                                                 <button 
                                                     data-id="<?= $selection->id; ?>" 
                                                     data-exclude="<?= $selection->exclude; ?>"
@@ -132,7 +134,6 @@
                                                     data-cj-price="<?= $selection->cj_price; ?>" 
                                                     data-cost-price="<?= $selection->cost_price; ?>"
                                                     data-dealer-price="<?= $selection->dealer_price; ?>" 
-                                                    data-dealer-only="<?= $selection->dealer_only; ?>"
                                                     type="button" 
                                                     class="btn">
                                                     <?php echo urldecode($selection->description); ?>
@@ -152,7 +153,7 @@
                                 <?php $option = $options[0]; ?>
                                 <?php foreach($option->selections as $selection): ?>
                                 <div>
-                                    <a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>"><i class="icon-info-sign"></i></a>
+                                    <?php if(!empty($selection->info_index)) : ?><a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>"><i class="icon-info-sign"></i></a><?php endif ?>
                                     <button 
                                         data-id="<?= $selection->id; ?>" 
                                         data-label="<?= rawurldecode($selection->description)   ; ?>" 

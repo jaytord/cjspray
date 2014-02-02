@@ -35,6 +35,8 @@ class Home extends CI_Controller {
 	{
 		$this->load->model("info_model");
 		$info_data = $this->info_model->get(array("index"=>$index));
+
+		if(!empty($title))
 		$info_data->title  = $title;
 
 		$this->load->view("info_view", array('data'=>$info_data));

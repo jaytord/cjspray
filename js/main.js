@@ -206,11 +206,11 @@ main.toLoggedOutState = function(){
 }
 
 main.hideDealerOnly = function(){
-	$("button[data-dealer-only=1]").attr("disabled",true);
+	$(".btn-group .choice[data-dealer-only=1]").addClass("disabled");
 }
 
 main.showDealerOnly = function(){
-	$("button[data-dealer-only=1]").removeAttr("disabled");
+	$(".btn-group .choice[data-dealer-only=1].disabled").removeClass("disabled");
 }
 
 main.activateTab = function(_id){
@@ -241,7 +241,7 @@ main.optionSelected = function(e){
 	_list_price		= Number(_this.attr("data-list-price"));
 	_dealer_price	= Number(_this.attr("data-dealer-price"));
 	_label 			= decodeURIComponent( _this.attr("data-label") );
-	_dealer_only	= Number( _this.attr("data-dealer-only") );
+	_dealer_only	= Number( _this.parent().attr("data-dealer-only") );
 
 	if( !selections.options || selections.options == undefined )
 	 	selections.options = {};
@@ -259,8 +259,6 @@ main.optionSelected = function(e){
 			dealer_only:_dealer_only
 		}
 	};
-
-	console.log(selections.options);
 
 	main.updateAll();
 
