@@ -131,13 +131,16 @@ class Parser extends CI_Controller {
 
 		//create new records
 		foreach ($_dealers as $username => $value) {	
-			$value["no-encrypt-password"] = $password;	
+			$value["no-encrypt-password"] = $value["password"];	
 			$password = $this->encrypt->encode($value["password"], config_item("encryption_key"));
 			$value["password"] = $password;
+			print_r($value);
+			unset($value["no-encrypt-password"]);
+
 			$result = $this->dealer_model->add($value);
 		}
 
-		print_r($_dealers);
+		
 	}
 
 	public function options(){
