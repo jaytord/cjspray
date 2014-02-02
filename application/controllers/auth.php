@@ -41,7 +41,7 @@ class Auth extends CI_Controller {
 			$user = $this->dealer_model->get( $post );
 			$user = $user[0];
 
-			$success = $pass == $this->encrypt->decode( $user->password, config_item("encryption_key") ) ? true : false;
+			$success = $this->encrypt->sha1( $pass ) == $user->password ? true : false;
 
 			if($success){
 				unset($user->password);
