@@ -34,7 +34,7 @@
             <input id="pdf-selections" type="hidden" name="selections" />
             <input id="pdf-price" type="hidden" name="price" />
             <input id="pdf-promo" type="hidden" name="promo" />
-            <input id="pdf-dealer_name" type="hidden" name="dealer" />
+            <input id="pdf-dealer" type="hidden" name="dealer" />
         </form>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -91,7 +91,7 @@
                                     data-option-label="<?= rawurldecode($option->label); ?>" 
                                     data-list-price="<?= $selection->list_price; ?>" 
                                     data-cj-price="<?= $selection->cj_price; ?>" 
-                                    data-cost-price="<?= $selection->cost_price; ?>"
+                                    data-graco-price="<?= $selection->graco_price; ?>"
                                     data-dealer-price="<?= $selection->dealer_price; ?>" 
                                     data-exclude="<?= $selection->exclude; ?>" >
                                     <div class="thumbnail">
@@ -130,7 +130,7 @@
                                                     data-option-label="<?= rawurldecode($option->label); ?>" 
                                                     data-list-price="<?= $selection->list_price; ?>" 
                                                     data-cj-price="<?= $selection->cj_price; ?>" 
-                                                    data-cost-price="<?= $selection->cost_price; ?>"
+                                                    data-graco-price="<?= $selection->graco_price; ?>"
                                                     data-dealer-price="<?= $selection->dealer_price; ?>" 
                                                     type="button" 
                                                     class="btn">
@@ -160,7 +160,7 @@
                                         data-option-label="<?= rawurldecode($option->label); ?>" 
                                         data-list-price="<?= $selection->list_price; ?>" 
                                         data-cj-price="<?= $selection->cj_price; ?>" 
-                                        data-cost-price="<?= $selection->cost_price; ?>"
+                                        data-graco-price="<?= $selection->graco_price; ?>"
                                         data-dealer-price="<?= $selection->dealer_price; ?>"
                                         type="button" 
                                         class="btn">

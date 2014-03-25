@@ -1,20 +1,14 @@
-USERNAME,COMPANY NAME,EMAIL,PHONE,PASSWORD
-cjsdealer,Dealer,,,cjdealer14
-jaytord,Dealer,,,cjdealer14
-cbryntesen,Dealer,,,cjdealer14
-rhino,Dealer,,,cjdealer14
-primeresins,Dealer,,,cjdealer14
-basf,Dealer,,,cjdealer14
-diamondliners,Dealer,,,cjdealer14
-servicepartners,Dealer,,,cjdealer14
-johnson,Dealer,,,cjdealer14
-mcc,Dealer,,,cjdealer14
-lapolla,Dealer,,,cjdealer14
-spi,Dealer,,,cjdealer14
-swd,Dealer,,,cjdealer14
-linexmx,Dealer,,,cjdealer14
-polysource,Dealer,,,cjdealer14
-swrep,Dealer,,,cjdealer14
-csi,Dealer,,,cjdealer14
-idi,Dealer,,,cjdealer14
-paintpumppros,Dealer,,,cjdealer14
+USERNAME,COMPANY NAME,EMAIL,PHONE,PASSWORD,TYPE,LOGO
+cjsdealer,Dealer,CJ Spray Dealer,,cjdealer14,2,
+jaytord,Dealer,Sherwin Williams,,cjdealer14,2,sherwin.png
+cbryntesen,Dealer,Chris Bryntesen,,cjdealer14,2,
+rhino,Dealer,Rhino,,cjdealer14,2,rhino.png
+basf,Dealer,BASF,,cjdealer14,2,
+diamondliners,Dealer,Diamond Liners,,cjdealer14,2,diamond.png
+johnson,Dealer,Johnson,,cjdealer14,2,
+swd,Dealer,SWD,,cjdealer14,2,swd.png
+polysource,Dealer,Polysource,,cjdealer14,1,polysource.png
+swrep,Dealer,SWREP,,cjdealer14,1,
+csi,Dealer,CSI,,cjdealer14,1,csi.png
+idi,Dealer,IDI,,cjdealer14,1,idi.png
+paintpumppros,Dealer,Paint Pump Pros,,cjdealer14,1,paint_pump_pros.png

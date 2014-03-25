@@ -1,4 +1,4 @@
-OPTION ID,CHOICE ID,PART NUMBER,DESCRIPTION,EXCLUDE,LIST PRICE,DEALER PRICE,CJ PRICE,COST,IMAGE,DEALER ONLY
+OPTION ID,CHOICE ID,PART NUMBER,DESCRIPTION,EXCLUDE,LIST PRICE,DEALER PRICE,CJ PRICE,GRACO PRICE,IMAGE,DEALER ONLY
 A,1,INIPT105,"Gloves, Nitrile, XL - 100 Pack",,14.00,14.00,14.00,14.00,,no
 A,2,AP71010,"Dynasolve CU-6 Gun Cleaner, 1 Gal",,78.00,78.00,78.00,78.00,,no
 A,3,AP71004,"Ecolink Gun Cleaner, 5 Gal",,285.00,285.00,285.00,285.00,,no
@@ -14,99 +14,129 @@ A,12,206996,"Fluid, Graco TSL,1 Gal",,93.00,93.00,93.00,93.00,,no
 A,13,515662,"Band Heater, 55 Gal, 110 V, w/ Thermostat",,198.00,198.00,198.00,198.00,,no
 A,14,15C381,"Dryer, Desiccand, Replacement Cartridge",,41.00,41.00,41.00,41.00,,no
 A,15,289103M,"3M Chemical Sorbent Spill Response Pack, EA",,98.00,98.00,98.00,98.00,,no
-B,A,,16’ Bumper Pull ,CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13,"15,265.38","13,531.00","15,265.38","11,907.00",16BumperPull.jpg,no
-B,B,,20’ Bumper Pull,CC-14:CC-15:CC-16,"23,901.28","21,185.00","23,901.28","18,643.00",20BumperPull.jpg,no
-B,C,,28’ Gooseneck,CC-14:CC-15:CC-16,"30,687.18","27,200.00","30,687.18","23,936.00",28Gooseneck.jpg,no
-B,D,,Custom Box Truck,CC-14:CC-15:CC-16,"13,846.15","12,273.00","13,846.15","10,800.00",BoxTruck.jpg,no
-B,E,,AiMS Trailer,CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13,"35,191.18","30,679.00","35,191.18","23,930.00",AimsTrailer.jpg,no
-CC,0,,No Reactor (Dealer only),,0.00,0.00,0.00,0.00,,yes
-CC,1,AP3831,A-25: 6.0 kW Heater,B-E,"12,390.00","8,673.00","9,912.00","7,434.00",,no
-CC,2,AP9025,E-20: 6.0 kW Heater,B-E,"12,640.00","8,848.00","10,112.00","7,584.00",,no
-CC,3,AP9035,E-30: 10.2 kW Heater,B-A:B-E,"16,800.00","11,760.00","13,440.00","10,080.00",,no
-CC,4,AP9058,E-30: 15.3 kW Heater,B-A:B-E,"20,980.00","14,686.00","16,784.00","12,588.00",,no
-CC,5,AP5401,H-25: 8.0 kW Heater,B-A:B-E,"22,380.00","15,666.00","17,904.00","13,428.00",,no
-CC,6,AP5407,H-25: 15.3 kW Heater,B-A:B-E,"23,320.00","16,324.00","18,656.00","13,992.00",,no
-CC,7,AP3400,H-40: 12.0 kW Heater: 1-ph only,B-A:B-E,"24,690.00","17,283.00","19,752.00","14,814.00",,no
-CC,8,AP3401,H-40: 15.3 kW Heater: 3-ph only,B-A:B-E,"34,300.00","24,010.00","27,440.00","20,580.00",,no
-CC,9,AP3407,H-40: 20.4 kW Heater: 3-ph only,B-A:B-E,"34,300.00","24,010.00","27,440.00","20,580.00",,no
-CC,10,AP9033,E-XP1: 10.2 kW Heater,B-A:B-E:D-0,"34,300.00","24,010.00","27,440.00","20,580.00",,no
-CC,11,AP9036,E-XP2: 15.3 kW Heater,B-A:B-E:D-0,"17,610.00","12,327.00","14,088.00","10,566.00",,no
-CC,12,AP5404,H-XP2: 15.3 kW Heater,B-A:B-E:D-0,"23,500.00","16,450.00","18,800.00","14,100.00",,no
-CC,13,AP3404,H-XP3: 20.4kW Heater: 3-ph only,B-A:B-E:D-0,"26,060.00","18,242.00","20,848.00","15,636.00",,no
-CC,14,,E-30i: Integrated Reactor,B-A:B-B:B-C:B-D:D-0:D-1:D-2:D-3:D-4:D-5:D-6:D-7:D-8:D-9:D-10:D-11:D-12:D-13:D-14:D-15,"34,300.00","23,541.00","26,904.00","20,580.00",,no
-CC,15,,E-30i: High Heat:  Integrated Reactor,B-A:B-B:B-C:B-D:D-0:D-1:D-2:D-3:D-4:D-5:D-6:D-7:D-8:D-9:D-10:D-11:D-12:D-13:D-14:D-15,"50,130.00","35,091.00","40,104.00","30,078.00",,no
-CC,16,,E-XP2i: Integrated Reactor,B-A:B-B:B-C:B-D:D-0:D-1:D-2:D-3:D-4:D-5:D-6:D-7:D-8:D-9:D-10:D-11:D-12:D-13:D-14:D-15,"52,940.00","37,058.00","42,352.00","31,764.00",,no
-D,0,,50 ft Heated Hose: 2:000 psi (Dealer only),CC-10:CC-11:CC-12:CC-13,"1,945.00","1,362.00","1,556.00","1,167.00",,yes
-D,1,,50 ft Heated Hose: 3:500 psi (Dealer only),CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9,"2,610.00","1,827.00","2,088.00","1,566.00",,yes
-D,2,,110 ft: 2:000 psi,CC-10:CC-11:CC-12:CC-13,"4,548.00","3,184.00","3,638.40","2,728.80",,no
-D,3,,110 ft: 3:500 psi,CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9,"6,137.00","4,296.00","4,909.60","3,682.20",,no
-D,4,,160 ft: 2:000 psi,CC-10:CC-11:CC-12:CC-13,"6,493.00","4,545.00","5,194.40","3,895.80",,no
-D,5,,160 ft: 3:500 psi,CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9,"8,747.00","6,123.00","6,997.60","5,248.20",,no
-D,6,,210 ft: 2:000 psi (A-20: E-20: E-XP1 maximum),CC-10:CC-11:CC-12:CC-13,"8,438.00","5,907.00","6,750.40","5,062.80",,no
-D,7,,210 ft: 3:500 psi (A-20: E-20: E-XP1 maximum),CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9,"11,357.00","7,950.00","9,085.60","6,814.20",,no
-D,8,,260 ft: 2:000 psi,CC-1:CC-2:CC-10:CC-11:CC-12:CC-13,"10,383.00","7,268.00","8,306.40","6,229.80",,no
-D,9,,260 ft: 3:500 psi,CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10,"13,967.00","9,777.00","11,173.60","8,380.20",,no
-D,10,,310 ft: 2:000 psi (E-30: H-25: E-XP2: H-XP2 maximum),CC-1:CC-2:CC-10:CC-11:CC-12:CC-13,"12,328.00","8,630.00","9,862.40","7,396.80",,no
-D,11,,310 ft: 3:500 psi (E-30: H-25: E-XP2: H-XP2 maximum),CC-1:CC-2:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10,"16,577.00","11,604.00","13,261.60","9,946.20",,no
-D,12,,360 ft: 2:000 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-11:CC-12:CC-13,"14,273.00","9,991.00","11,418.40","8,563.80",,no
-D,13,,360 ft: 3:500 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12,"19,187.00","13,431.00","15,349.60","11,512.20",,no
-D,14,,410 ft: 2:000 psi (H-40: H-XP3 maximum),CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-11:CC-12:CC-13,"16,218.00","11,353.00","12,974.40","9,730.80",,no
-D,15,,410 ft: 3:500 psi (H-40: H-XP3 maximum),CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12,"13,967.00","9,777.00","11,173.60","8,380.20",,no
-D,16,,50 ft: RTD: Heated Hose: 2000 psi (Dealer only) ,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13,"1,905.00","1,334.00","1,524.00","1,143.00",,yes
-D,17,,50 ft: RTD: Heated Hose: 3500 psi (Dealer only) ,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13,"2,560.00","1,792.00","2,048.00","1,536.00",,yes
-D,18,,110 ft: RTD: 2:000 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-16,"4,468.00","3,128.00","3,574.40","2,680.80",,no
-D,19,,110 ft: RTD: 3:500 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-14:CC-15,"6,037.00","4,226.00","4,829.60","3,622.20",,no
-D,20,,160 ft: RTD: 2:000 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-16,"6,413.00","4,489.00","5,130.40","3,847.80",,no
-D,21,,160 ft: RTD: 3:500 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-14:CC-15,"8,647.00","6,053.00","6,917.60","5,188.20",,no
-D,22,,210 ft: RTD: 2:000 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-16,"8,358.00","5,851.00","6,686.40","5,014.80",,no
-D,23,,210 ft: RTD: 3:500 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-14:CC-15,"11,257.00","7,880.00","9,005.60","6,754.20",,no
-D,24,,260 ft: RTD: 2:000 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-16,"10,303.00","7,212.00","8,242.40","6,181.80",,no
-D,25,,260 ft: RTD: 3:500 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-14:CC-15,"13,867.00","9,707.00","11,093.60","8,320.20",,no
-D,26,,310 ft: RTD: 2:000 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-16,"12,248.00","8,574.00","9,798.40","7,348.80",,no
-D,27,,310 ft: RTD: 3:500 psi,CC-1:CC-2:CC-10:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-11:CC-12:CC-13:CC-14:CC-15,"16,477.00","11,534.00","13,181.60","9,886.20",,no
-EE,0,,None (Dealer only),,0.00,0.00,0.00,0.00,,yes
-EE,1,246101,Fusion Air Purge: one,,"2,280.00","1,596.00","1,824.00","1,368.00",,no
-EE,2,,Fusion Air Purge: two,,"4,560.00","3,192.00","3,648.00","2,736.00",,no
-EE,3,CS01RD,Fusion Clear Shot: one,,"2,560.00","1,792.00","2,048.00","1,536.00",,no
-EE,4,,Fusion Clear Shot: two,,"5,120.00","3,584.00","4,096.00","3,072.00",,no
-EE,5,247061,Fusion Mechanical Purge: one,,"2,750.00","1,925.00","2,200.00","1,650.00",,no
-EE,6,,Fusion Mechanical Purge: two,,"5,500.00","3,850.00","4,400.00","3,300.00",,no
-EE,7,GCP2R1,Probler P2: one,,"2,840.00","1,988.00","2,272.00","1,704.00",,no
-EE,8,,Probler P2: two,,"5,680.00","3,976.00","4,544.00","3,408.00",,no
-F,0,,None (Dealer only),,0.00,0.00,0.00,0.00,,yes
-F,1,,T:1 Feed Pumps,CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-13,"2,300.00","1,610.00","1,840.00","1,380.00",,no
-F,2,295616,T:2 Feed Pumps,B-A,"3,420.00","2,394.00","2,736.00","2,052.00",,no
-F,3,,Husky 1040 Feed Pumps (Open cell foam only),B-A:B-E,"2,780.00","1,946.00","2,224.00","1,668.00",,no
-F,4,,Triton 308 Feed Pumps (Polyurea only),B-E,"1,895.00","1,327.00","1,516.00","1,137.00",,no
-GG,0,,None ,B-E,0.00,0.00,0.00,0.00,,no
-GG,1,,Manifold Circulation Kit only,,643.33,439.00,494.87,366.00,,no
-GG,2,,Manifold AND Heated Hose Circulation Kit,,"1,203.33",820.00,925.64,678.00,,no
-H,0,,None ,,0.00,0.00,0.00,0.00,,no
-H,1,224854,Twistork: Graco: one,,"1,125.00",956.00,"1,012.50",843.75,,no
-H,2,,Twistork: Graco: two,,"2,250.00","1,913.00","2,025.00","1,687.50",,no
-II,1,,17.5 kW 1-ph gas Portable: Generac,B-B:B-C:B-D:CC-1:CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13:B-E,"3,076.92","2,727.00","3,076.92","2,400.00",,no
-II,2,,20 kW 1-ph diesel: Cummins,CC-3:CC-4:CC-5:CC-6:CC-7:CC-8:CC-9:CC-10:CC-11:CC-12:CC-13:B-E,"13,434.62","11,908.00","13,434.62","10,479.00",,no
-II,3,,40 kW 3-ph diesel: Morse,CC-7:CC-1:B-E,"17,170.00","13,977.00","17,170.00","12,300.00",,no
-II,4,,22 kW 1-ph diesel: Perkins (Included w/ Intergrated Reactor),B-A:B-B:B-C:B-D,0.00,0.00,0.00,0.00,,no
-J,1,,3.5 hp electric: 60 gal vertical,B-C:B-E,"1,788.46","1,585.00","1,788.46","1,395.00",,no
-J,2,,3.5 hp electric: 60 gal horizontal (gooseneck only),B-A:B-B:B-D:B-E,"1,788.46","1,585.00","1,788.46","1,395.00",,no
-J,3,,5 hp electric: 60 gal vertical,B-A:B-C:B-E,"2,051.28","1,818.00","2,051.28","1,600.00",,no
-J,4,,5 hp electric: 60 gal horizontal (gooseneck only),B-A:B-B:B-D:B-E,"2,262.82","2,006.00","2,262.82","1,765.00",,no
-J,5,,7.5 hp electric: 60 gal vertical,B-A:B-C:B-E,"3,074.36","2,725.00","3,074.36","2,398.00",,no
-J,6,,7.5 hp electric: 60 gal horizontal (gooseneck only),B-A:B-B:B-D:B-E,"3,202.56","2,839.00","3,202.56","2,498.00",,no
-J,7,,Screw Compressor: mounted on 40kW Generator,B-A:B-E,"6,410.26","5,682.00","6,410.26","5,000.00",,no
-J,8,,5 hp electric Hydrovane compressor,B-A:B-B:B-C:B-D,"4,642.31","4,115.00","4,642.31","3,621.00",,no
-KK,1,,3 Stage Desiccant Dryaire System,J-7:B-E,538.46,477.00,538.46,420.00,,no
-KK,2,,Electric Drier for 3.5 hp compressor,J-3:J-4:J-5:J-6:J-7:B-E,"1,199.19","1,063.00","1,199.19",935.37,,no
-KK,3,,Electric Drier for 5 hp - 7.5 hp compressor,J-1:J-2:J-7:B-E,"1,253.27","1,111.00","1,253.27",977.55,,no
-KK,4,,Electric Drier for Screw Compressor: 225 deg F inlet capable,J-1:J-2:J-3:J-4:J-5:J-6:B-E,"2,948.72","2,614.00","2,948.72","2,300.00",,no
-KK,5,,Electric Drier for Hydrovane Compressor,B-A:B-B:B-C:B-D,"1,538.46","1,364.00","1,538.46","1,200.00",,no
-L,0,,None,,,,,,,no
-L,1,,Marthech Grade D System w/ 300' hose and one mask,B-A,"2,256.41","2,000.00","2,256.41","1,760.00",,no
-L,2,,Allegro dual worker portable w/ 100' hose and one mask,,"1,673.08","1,483.00","1,673.08","1,305.00",,no
-MM,0,,None,,,,,,,no
-MM,1,,110 volt electric,,219.23,194.00,219.23,171.00,,no
-MM,2,,220 volt electric,,408.97,363.00,408.97,319.00,,no
-MM,3,,AirTronic Heat System,,"3,653.85","3,239.00","3,653.85","2,850.00",,no
+B,A,,16’ Bumper Pull,,"15,265.38","13,531.00","15,265.38","13,531.00",16BumperPull.jpg,no
+B,B,,20’ Bumper Pull,,"23,901.28","21,185.00","23,901.28","21,185.00",20BumperPull.jpg,no
+B,C,,28’ Gooseneck,,"30,687.18","27,200.00","30,687.18","27,200.00",28Gooseneck.jpg,no
+B,D,,Custom Box Truck,,"13,846.15","12,273.00","13,846.15","12,273.00",BoxTruck.jpg,no
+B,E,,AiMS Trailer,,"35,191.18","30,679.00","35,191.18","30,679.00",AimsTrailer.jpg,no
+CC,1,AP2614,"A-25, AP: 6.0 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"16,430.00","11,501.00","13,144.00","9,858.00",,no
+CC,2,CS2614,"A-25, CS: 6.0 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"16,700.00","11,690.00",0.00,"10,020.00",,no
+CC,3,P22614,"A-25, P2: 6.0 kW Heater, 50' Hose, 10' Whip & P2 ",,"16,960.00","11,872.00",0.00,"10,176.00",,no
+CC,4,AP9025,"E-20, AP: 6.0 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"20,980.00","14,686.00","10,112.00","12,588.00",,no
+CC,5,CS9025,"E-20, CS: 6.0 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"21,250.00","14,875.00",0.00,"12,750.00",,no
+CC,6,P29025,"E-20, P2: 6.0 kW Heater, 50' Hose, 10' Whip & P2 ",,"21,510.00","15,057.00",0.00,"12,906.00",,no
+CC,7,AP2010,"E-30, R2, AP: 10.2 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"25,180.00","17,626.00","13,440.00","15,108.00",,no
+CC,8,CS2010,"E-30, R2, CS: 10.2 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"25,450.00","17,815.00",0.00,"15,270.00",,no
+CC,9,P22010,"E-30, R2, P2: 10.2 kW Heater, 50' Hose, 10' Whip & P2 ",,"25,710.00","17,997.00",0.00,"15,426.00",,no
+CC,10,AP2011,"E-30, R2, AP: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"26,570.00","18,599.00","16,784.00","15,942.00",,no
+CC,11,CS2011,"E-30, R2 CS: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"26,840.00","18,788.00",0.00,"16,104.00",,no
+CC,12,P22011,"E-30, R2, P2: 15.3 kW Heater, 50' Hose, 10' Whip & P2 ",,"27,100.00","18,970.00",0.00,"16,260.00",,no
+CC,13,AP2110,"E-30, R2 Elite, AP: 10.2 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"27,180.00","19,026.00","13,440.00","16,308.00",,no
+CC,14,CS2110,"E-30, R2 Elite, CS: 10.2 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"27,450.00","19,215.00",0.00,"16,470.00",,no
+CC,15,P22110,"E-30, R2 Elite P2: 10.2 kW Heater, 50' Hose, 10' Whip & P2 ",,"27,710.00","19,397.00",0.00,"16,626.00",,no
+CC,16,AP2111,"E-30, R2 Elite, AP: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"28,570.00","19,999.00","16,784.00","17,142.00",,no
+CC,17,CS2111,"E-30, R2 Elite, CS: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"28,840.00","20,188.00",0.00,"17,304.00",,no
+CC,18,P22111,"E-30, R2 Elite, P2: 15.3 kW Heater, 50' Hose, 10' Whip & P2 ",,"29,100.00","20,370.00",0.00,"17,460.00",,no
+CC,19,AP5401,"H-25, AP: 8.0 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"27,170.00","19,019.00","17,904.00","16,302.00",,no
+CC,20,CS5401,"H-25, CS: 8.0 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"27,440.00","19,208.00",0.00,"16,464.00",,no
+CC,21,P25401,"H-25, P2: 8.0 kW Heater, 50' Hose, 10' Whip & P2 ",,"27,700.00","19,390.00",0.00,"16,620.00",,no
+CC,22,AP5407,"H-25, AP: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"28,480.00","19,936.00","18,656.00","17,088.00",,no
+CC,23,CS5407,"H-25, CS: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion CS",,"28,750.00","20,125.00",0.00,"17,250.00",,no
+CC,24,P25407,"H-25, P2: 15.3 kW Heater, 50' Hose, 10' Whip & P2 ",,"29,010.00","20,307.00",0.00,"17,406.00",,no
+CC,25,AP3400,"H-40, AP: 12.0 kW Heater: 1-ph only, 50' Hose, 10' Whip & Fusion AP",,"37,730.00","26,411.00","19,752.00","22,638.00",,no
+CC,26,P23400,"H-40, P2: 12.0 kW Heater: 1-ph only, 50' Hose, 10' Whip & P2 ",,"38,260.00","26,782.00",0.00,"22,956.00",,no
+CC,27,AP3401,"H-40, AP: 15.3 kW Heater: 3-ph only, 50' Hose, 10' Whip & Fusion AP",,"37,730.00","26,411.00","27,440.00","22,638.00",,no
+CC,28,P23401,"H-40, P2: 15.3 kW Heater: 3-ph only, 50' Hose, 10' Whip & P2 ",,"38,260.00","26,782.00",0.00,"22,956.00",,no
+CC,29,AP3407,"H-40, AP20.4 kW Heater: 3-ph only, 50' Hose, 10' Whip & Fusion AP",,"37,730.00","26,411.00","27,440.00","22,638.00",,no
+CC,30,P23407,"H-40, P220.4 kW Heater: 3-ph only, 50' Hose, 10' Whip & P2 ",,"38,260.00","26,782.00",0.00,"22,956.00",,no
+CC,31,AP9033,"E-XP1, AP: 10.2 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"22,040.00","15,428.00","27,440.00","13,224.00",,no
+CC,32,P29033,"E-XP1, P2: 10.2 kW Heater, 50' Hose, 10' Whip & P2 ",,"22,570.00","15,799.00",0.00,"13,542.00",,no
+CC,33,AP2012,"E-XP2, R2, AP: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"27,900.00","19,530.00","14,088.00","16,740.00",,no
+CC,34,P22012,"E-XP2, R2, P2: 15.3 kW Heater, 50' Hose, 10' Whip & P2 ",,"28,430.00","19,901.00",0.00,"17,058.00",,no
+CC,35,AP2112,"E-XP2, R2 Elite, AP: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"29,900.00","20,930.00",0.00,"17,940.00",,no
+CC,36,P22112,"E-XP2, R2 Elite, P2: 15.3 kW Heater, 50' Hose, 10' Whip & P2 ",,"30,430.00","21,301.00",0.00,"18,258.00",,no
+CC,37,AP5404,"H-XP2, AP: 15.3 kW Heater, 50' Hose, 10' Whip & Fusion AP",,"30,730.00","21,511.00","18,800.00","18,438.00",,no
+CC,38,P25404,"H-XP2, P2: 15.3 kW Heater, 50' Hose, 10' Whip & P2 ",,"31,260.00","21,882.00",0.00,"18,756.00",,no
+CC,39,AP3404,"H-XP3, AP: 20.4kW Heater: 3-ph only, 50' Hose, 10' Whip & Fusion AP",,"38,410.00","26,887.00","20,848.00","23,046.00",,no
+CC,40,P23404,"H-XP3, P2: 20.4kW Heater: 3-ph only, 50' Hose, 10' Whip & P2 ",,"38,940.00","27,258.00",0.00,"23,364.00",,no
+CC,41,AP2079,"E-30i, AP, Elite: Integrated Reactor, 50' Hose, 10' Whip & Fusion AP",,"54,260.00","37,982.00","26,904.00","32,556.00",,no
+CC,42,CS2079,"E-30i, CS, Elite: Integrated Reactor, 50' Hose, 10' Whip & Fusion CS",,"54,530.00","38,171.00",0.00,"32,718.00",,no
+CC,43,P22079,"E-30i, P2, Elite: Integrated Reactor, 50' Hose, 10' Whip & P2 ",,"54,790.00","38,353.00",0.00,"32,874.00",,no
+CC,44,AP2080,"E-30i, AP, Elite, High Heat: Integrated Reactor, 50' Hose, 10' Whip & Fusion AP",,"57,070.00","39,949.00","40,104.00","34,242.00",,no
+CC,45,CS2080,"E-30i, CS, Elite, High Heat: Integrated Reactor, 50' Hose, 10' Whip & Fusion CS",,"57,340.00","40,138.00",0.00,"34,404.00",,no
+CC,46,P22080,"E-30i, P2, Elite, High Heat: Integrated Reactor, 50' Hose, 10' Whip & P2 ",,"57,600.00","40,320.00",0.00,"34,560.00",,no
+CC,47,AP2081,"E-XP2i, AP, Elite: Integrated Reactor, 50' Hose, 10' Whip & Fusion AP",,"58,890.00","41,223.00","42,352.00","35,334.00",,no
+CC,48,P22081,"E-XP2i, P2, Elite: Integrated Reactor, 50' Hose, 10' Whip & P2 ",,"59,420.00","41,594.00",0.00,"35,652.00",,no
+D,1,,110 ft: 2:000 psi,,"1,945.00","1,361.50","3,638.40","1,167.00",,no
+D,2,,110 ft: 3:500 psi,,"2,610.00","1,827.00","4,909.60","1,566.00",,no
+D,3,,160 ft: 2:000 psi,,"3,890.00","2,723.00","5,194.40","2,334.00",,no
+D,4,,160 ft: 3:500 psi,,"5,220.00","3,654.00","6,997.60","3,132.00",,no
+D,5,,210 ft: 2:000 psi,,"5,835.00","4,084.50","6,750.40","3,501.00",,no
+D,6,,210 ft: 3:500 psi,,"7,830.00","5,481.00","9,085.60","4,698.00",,no
+D,7,,260 ft: 2:000 psi,,"7,780.00","5,446.00","8,306.40","4,668.00",,no
+D,8,,260 ft: 3:500 psi,,"10,440.00","7,308.00","11,173.60","6,264.00",,no
+D,9,,310 ft: 2:000 psi,,"9,725.00","6,807.50","9,862.40","5,835.00",,no
+D,10,,310 ft: 3:500 psi,,"13,050.00","9,135.00","13,261.60","7,830.00",,no
+D,11,,360 ft: 2:000 psi,,"11,670.00","8,169.00","11,418.40","7,002.00",,no
+D,12,,360 ft: 3:500 psi,,"15,660.00","10,962.00","15,349.60","9,396.00",,no
+D,13,,410 ft: 2:000 psi,,"13,615.00","9,530.50","12,974.40","8,169.00",,no
+D,14,,410 ft: 3:500 psi,,"18,270.00","12,789.00","11,173.60","10,962.00",,no
+D,17,,110 ft: RTD: 2:000 psi,,"1,945.00","1,361.50","3,574.40","1,167.00",,no
+D,18,,110 ft: RTD: 3:500 psi,,"2,610.00","1,827.00","4,829.60","1,566.00",,no
+D,19,,160 ft: RTD: 2:000 psi,,"3,890.00","2,723.00","5,130.40","2,334.00",,no
+D,20,,160 ft: RTD: 3:500 psi,,"5,220.00","3,654.00","6,917.60","3,132.00",,no
+D,21,,210 ft: RTD: 2:000 psi,,"5,835.00","4,084.50","6,686.40","3,501.00",,no
+D,22,,210 ft: RTD: 3:500 psi,,"7,830.00","5,481.00","9,005.60","4,698.00",,no
+D,23,,260 ft: RTD: 2:000 psi,,"7,780.00","5,446.00","8,242.40","4,668.00",,no
+D,24,,260 ft: RTD: 3:500 psi,,"10,440.00","7,308.00","11,093.60","6,264.00",,no
+D,25,,310 ft: RTD: 2:000 psi,,"9,725.00","6,807.50","9,798.40","5,835.00",,no
+D,26,,310 ft: RTD: 3:500 psi,,"13,050.00","9,135.00","13,181.60","7,830.00",,no
+D,27,,"110 ft: RTD: 2:000 psi, Extreme Cover",,"2,170.00","1,519.00","2,170.00","1,302.00",,no
+D,28,,"110 ft: RTD: 3:500 psi, Extreme Cover",,"2,850.00","1,995.00","2,850.00","1,710.00",,no
+D,29,,"160 ft: RTD: 2:000 psi, Extreme Cover",,"4,340.00","3,038.00","4,340.00","2,604.00",,no
+D,30,,"160 ft: RTD: 3:500 psi, Extreme Cover",,"5,700.00","3,990.00","5,700.00","3,420.00",,no
+D,31,,"210 ft: RTD: 2:000 psi, Extreme Cover",,"6,510.00","4,557.00","6,510.00","3,906.00",,no
+D,32,,"210 ft: RTD: 3:500 psi, Extreme Cover",,"8,550.00","5,985.00","8,550.00","5,130.00",,no
+D,33,,"260 ft: RTD: 2:000 psi, Extreme Cover",,"8,680.00","6,076.00","8,680.00","5,208.00",,no
+D,34,,"260 ft: RTD: 3:500 psi, Extreme Cover",,"11,400.00","7,980.00","11,400.00","6,840.00",,no
+D,35,,"310 ft: RTD: 2:000 psi, Extreme Cover",,"10,850.00","7,595.00","10,850.00","6,510.00",,no
+D,36,,"310 ft: RTD: 3:500 psi, Extreme Cover",,"14,250.00","9,975.00","14,250.00","8,550.00",,no
+EE,1,246101,Extra Fusion Air Purge,,"2,280.00","1,596.00","2,280.00","1,368.00",,no
+EE,3,CS01RD,Extra Fusion Clear Shot,,"2,560.00","1,792.00","2,560.00","1,536.00",,no
+EE,7,GCP2R1,Extra Probler P2,,"2,840.00","1,988.00","2,840.00","1,704.00",,no
+F,1,,T:1 Feed Pumps,,"2,300.00","1,610.00","1,840.00","1,380.00",,no
+F,2,295616,T:2 Feed Pumps,,"3,420.00","2,394.00","2,736.00","2,052.00",,no
+F,3,,Husky 1040 Feed Pumps (Open cell foam only),,"2,780.00","1,946.00","2,224.00","1,668.00",,no
+F,4,,Triton 308 Feed Pumps (Polyurea only),,"1,895.00","1,326.50","1,516.00","1,137.00",,no
+GG,0,,None,,0.00,0.00,0.00,0.00,,no
+GG,1,,Manifold Circulation Kit only,,643.33,439.00,494.87,439.00,,no
+GG,2,,Manifold AND Heated Hose Circulation Kit,,"1,203.33",820.00,925.64,820.00,,no
+H,0,,None,,0.00,0.00,0.00,0.00,,no
+H,1,224854,Twistork: Graco: one,,"1,145.00",801.50,"1,012.50",687.00,,no
+H,2,,Twistork: Graco: two,,"2,290.00","1,603.00","2,025.00","1,374.00",,no
+II,1,,17.5 kW 1-ph Gas Portable,,"3,076.92","2,727.00","3,076.92","2,727.00",,no
+II,2,,20 kW 1-ph Diesel,,"13,434.62","11,908.00","13,434.62","11,908.00",,no
+II,3,,40 kW 3-ph Diesel,,"17,170.00","13,977.00","17,170.00","13,977.00",,no
+II,4,,22 kW 1-ph Diesel: Perkins (Included w/ Intergrated Reactor),,0.00,0.00,0.00,0.00,,no
+J,1,,3.5 hp electric: 60 gal vertical,,"1,788.46","1,585.00","1,788.46","1,585.00",,no
+J,2,,3.5 hp electric: 60 gal horizontal (gooseneck only),,"1,788.46","1,585.00","1,788.46","1,585.00",,no
+J,3,,5 hp electric: 60 gal vertical,,"2,051.28","1,818.00","2,051.28","1,818.00",,no
+J,4,,5 hp electric: 60 gal horizontal (gooseneck only),,"2,262.82","2,006.00","2,262.82","2,006.00",,no
+J,5,,7.5 hp electric: 60 gal vertical,,"3,074.36","2,725.00","3,074.36","2,725.00",,no
+J,6,,7.5 hp electric: 60 gal horizontal (gooseneck only),,"3,202.56","2,839.00","3,202.56","2,839.00",,no
+J,7,,Screw Compressor: mounted on 40kW Generator,,"6,410.26","5,682.00","6,410.26","5,682.00",,no
+J,8,,5 hp electric Hydrovane compressor,,"4,642.31","4,115.00","4,642.31","4,115.00",,no
+KK,1,,3 Stage Desiccant Dryaire System,,538.46,477.00,538.46,477.00,,no
+KK,2,,Electric Drier for 3.5 hp compressor,,"1,199.19","1,063.00","1,199.19","1,063.00",,no
+KK,3,,Electric Drier for 5 hp - 7.5 hp compressor,,"1,253.27","1,111.00","1,253.27","1,111.00",,no
+KK,4,,Electric Drier for Screw Compressor: 225 deg F inlet capable,,"2,948.72","2,614.00","2,948.72","2,614.00",,no
+KK,5,,Electric Drier for Hydrovane Compressor,,"1,538.46","1,364.00","1,538.46","1,364.00",,no
+L,0,,None,,0.00,0.00,0.00,0.00,,no
+L,1,,Marthech Grade D System w/ 300' hose and one mask,,"2,821.00","2,468.00","2,256.41","2,468.00",,no
+L,2,,Allegro dual worker portable w/ 100' hose and one mask,,"1,673.08","1,483.00","1,673.08","1,483.00",,no
+MM,0,,None,,0.00,0.00,0.00,0.00,,no
+MM,1,,110 volt electric,,219.23,194.00,219.23,194.00,,no
+MM,2,,220 volt electric,,408.97,363.00,408.97,363.00,,no
+MM,3,,AirTronic Heat System,,"3,653.85","3,239.00","3,653.85","3,239.00",,no
 N,0,,None,,0.00,0.00,0.00,0.00,,no
-N,1,,110 volt roof mounted AC w/ heat,,833.33,739.00,833.33,650.00,,no
+N,1,,110 volt roof mounted AC w/ heat,,833.33,739.00,833.33,739.00,,no

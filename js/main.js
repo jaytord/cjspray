@@ -43,7 +43,10 @@ main.download = function(){
 	createpdfform.children('input#pdf-selections').eq(0).attr( "value", JSON.stringify(selections) );
 	createpdfform.children('input#pdf-price').eq(0).attr( "value", JSON.stringify(main.price) );
 	createpdfform.children('input#pdf-promo').eq(0).attr( "value", JSON.stringify(main.promo) );
-	createpdfform.children('input#pdf-dealer_name').eq(0).attr( "value", JSON.stringify(main.dealer) );
+	createpdfform.children('input#pdf-dealer').eq(0).attr( "value", JSON.stringify(main.dealer) );
+
+	//console.log(main.dealer);
+
 	createpdfform.submit();
 
     return false;
@@ -259,6 +262,7 @@ main.optionSelected = function(e){
 	_cj_price		= Number(_this.attr("data-cj-price"));
 	_list_price		= Number(_this.attr("data-list-price"));
 	_dealer_price	= Number(_this.attr("data-dealer-price"));
+	_graco_price	= Number(_this.attr("data-graco-price"));
 	_label 			= decodeURIComponent( _this.attr("data-label") );
 	_dealer_only	= Number( _this.parent().attr("data-dealer-only") );
 
@@ -274,6 +278,7 @@ main.optionSelected = function(e){
 			cj_price: _cj_price, 
 			list_price: _list_price, 
 			dealer_price: _dealer_price,
+			graco_price: _graco_price,
 			label: _label,
 			dealer_only:_dealer_only
 		}
@@ -389,6 +394,7 @@ main.accessorySelected = function(){
 					list_price: Number(_this.attr("data-list-price")), 
 					cj_price: Number(_this.attr("data-cj-price")), 
 					dealer_price: Number(_this.attr("data-dealer-price")),
+					graco_price: Number(_this.attr("data-graco-price"))
 				});
 			}
 		});
@@ -468,6 +474,7 @@ main.updatePrice = function(){
 	main.price.list = 0;
 	main.price.dealer = 0;
 	main.price.cj = 0;
+	main.price.graco = 0;
 
 
 	if(selections.options){
@@ -475,6 +482,7 @@ main.updatePrice = function(){
 			main.price.list += Number(_v.value.list_price);
 			main.price.dealer += Number(_v.value.dealer_price);
 			main.price.cj += Number(_v.value.cj_price);
+			main.price.graco += Number(_v.value.graco_price);
 		});
 	}
 	
@@ -483,12 +491,14 @@ main.updatePrice = function(){
 			main.price.list += Number(_v.list_price);
 			main.price.dealer += Number(_v.dealer_price);
 			main.price.cj += Number(_v.cj_price);
+			main.price.graco += Number(_v.graco_price);
 		});
 	}
 
 	main.price.list 	= main.price.list.toFixed(0);
 	main.price.dealer 	= main.price.dealer.toFixed(0);
 	main.price.cj 		= main.price.cj.toFixed(0);
+	main.price.graco	= main.price.graco.toFixed(0);
 
 	$(".configuration-content .list-price span").text( "$" + $.strToCommaDelimNumber(main.price.list) );
 	

@@ -15,7 +15,9 @@ class Dealer_Model extends CJS_Model
 			'created_on'					=> array("type"=>"text", "shown"=>false, "label"=>"Created On"),
 			'last_login'					=> array("type"=>"text", "shown"=>false, "label"=>"Last Login"),
 			'active'						=> array("type"=>"text", "shown"=>false, "label"=>"Active"),
-			'company_name'					=> array("type"=>"text", "shown"=>true, "label"=>"Company Name")
+			'company_name'					=> array("type"=>"text", "shown"=>true, "label"=>"Company Name"),
+			'type_id'						=> array("type"=>"text", "shown"=>false, "label"=>"Type Id"),
+			'logo'							=> array("type"=>"text", "shown"=>true, "label"=>"Logo")
 		);
 	}
 }

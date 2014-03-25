@@ -34,7 +34,7 @@ class Parser extends CI_Controller {
 
 		foreach ($_selections as $_selection) {
 			$_selection_value = $_selection->option_id."-".$_selection->id;
-			echo "CHECKING SELECTION : " . $_selection_value ."<br />";
+			//echo "CHECKING SELECTION : " . $_selection_value ."<br />";
 
 			if( !empty($_selection->exclude) ){
 				$exclude = explode(":", $_selection->exclude);
@@ -43,15 +43,15 @@ class Parser extends CI_Controller {
 					$option_id = substr($exclusion, 0, strpos($exclusion, "-"));
 					$selection_id = substr( $exclusion, strpos($exclusion, "-") + 1 );
 
-					echo "&nbsp&nbsp&nbspexception: ". $option_id.$selection_id."<br />";
+					//echo "&nbsp&nbsp&nbspexception: ". $option_id.$selection_id."<br />";
 
 					$_excluded_row = $this->selections_model->get( array("option_id"=>$option_id,"id"=>$selection_id) );
 					$_excluded_row_exceptions = $_excluded_row[0]->exclude;
 					$_has_exception = strpos( $_excluded_row_exceptions, $_selection_value) > -1;
 
-					echo "&nbsp&nbsp&nbsp".$option_id.$selection_id." exceptions: ". $_excluded_row_exceptions."<br />";
-					echo "&nbsp&nbsp&nbsphas the exception? ". ( $_has_exception ? "yes" : "no");
-					echo "<br/>---<br/>";
+					// echo "&nbsp&nbsp&nbsp".$option_id.$selection_id." exceptions: ". $_excluded_row_exceptions."<br />";
+					// echo "&nbsp&nbsp&nbsphas the exception? ". ( $_has_exception ? "yes" : "no");
+					// echo "<br/>---<br/>";
 
 					if(!$_has_exception){
 						$_excluded_row_exceptions .= (":".$_selection_value);
@@ -114,6 +114,8 @@ class Parser extends CI_Controller {
 					$value['email'] 		= rawurlencode( $dealer_csv[2] );
 					$value['phone']		 	= rawurlencode( $dealer_csv[3] );
 					$value['password']		= $dealer_csv[4];
+					$value['type_id']		= $dealer_csv[5];
+					$value['logo']			= $dealer_csv[6];
 
 
 					array_push($_dealers, $value);
@@ -173,7 +175,7 @@ class Parser extends CI_Controller {
 					$selection->list_price		= str_replace(",", "", $selections_csv[5]);
 					$selection->dealer_price	= str_replace(",", "", $selections_csv[6]);
 					$selection->cj_price		= str_replace(",", "", $selections_csv[7]);
-					$selection->cost_price		= str_replace(",", "", $selections_csv[8]);
+					$selection->graco_price		= str_replace(",", "", $selections_csv[8]);
 					$selection->image			= $selections_csv[9];
 					$selection->dealer_only		= $selections_csv[10] == "yes" ? 1 : 0;
 
@@ -185,14 +187,14 @@ class Parser extends CI_Controller {
 			fclose($selections_file);
 		}
 
-		print_r($_options);
+		//print_r($_options);
 
 		//parse info
 		$row 				= 0;
 		$_info_list 		= array();
 
 		if( ($info_file = fopen(base_url().config_item('csv_folder')."info.csv", "r")) !== FALSE ){
-			while( $info_csv = fgetcsv($info_file, 2000, "," ) ){
+			while( $info_csv = fgetcsv($info_file, 10000, "," ) ){
 				if( $row > 0 ) 
 				{
 					$info 					= (object) 'info';
@@ -231,7 +233,7 @@ class Parser extends CI_Controller {
 					'list_price'					=> $_selection->list_price,
 					'dealer_price'					=> $_selection->dealer_price,
 					'cj_price'						=> $_selection->cj_price,
-					'cost_price'					=> $_selection->cost_price,
+					'graco_price'					=> $_selection->graco_price,
 					'option_index'					=> $option_index,
 					'option_id'						=> $_option_id,
 					'image'							=> $_selection->image
@@ -255,10 +257,15 @@ class Parser extends CI_Controller {
 				$selection_id = substr( $id, strpos($id, "-") + 1 );
 
 				$selection_result = $this->selections_model->get(array("option_id"=>$option_id,"id"=>$selection_id));
-				$selection = $selection_result[0];
-				$selection_index = $selection->index;
 
-				$update_result = $this->selections_model->update( array( "index"=>$selection_index, "info_index"=>$info_index ) );
+				if( count($selection_result) > 0 ){
+					$selection = $selection_result[0];
+					$selection_index = $selection->index;
+
+					$update_result = $this->selections_model->update( array( "index"=>$selection_index, "info_index"=>$info_index ) );
+				} else {
+					echo "missing something here : ". $id. "<br />";
+				}
 			} else {
 				//option
 				$option_result = $this->options_model->get( array( "id"=>$id ) );

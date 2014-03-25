@@ -16,7 +16,7 @@ class Selections_Model extends CJS_Model
 			'list_price'					=> array("shown"=>true,"label"=>"List Price"),
 			'dealer_price'					=> array("shown"=>true,"label"=>"Dealer Price"),
 			'cj_price'						=> array("shown"=>true,"label"=>"CJ Price"),
-			'cost_price'					=> array("shown"=>true,"label"=>"Cost Price"),
+			'graco_price'					=> array("shown"=>true,"label"=>"Graco Price"),
 			'option_index'					=> array("shown"=>true,"label"=>"Option Index"),
 			'option_id'						=> array("shown"=>true,"label"=>"Option Id"),
 			'info_index'					=> array("shown"=>true,"label"=>"Info Index"),

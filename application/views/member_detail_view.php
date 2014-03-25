@@ -1,1 +1,0 @@
-member_detail_view.php
