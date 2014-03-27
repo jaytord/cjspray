@@ -214,10 +214,9 @@
                                             <div class="finish-nav" class="btn-group">
                                                 <form id="promo-code-form" method action="<?php base_url(); ?>promos/validate">
                                                 <input name="code" id="promo-code-field" type="text" placeholder="Promo Code" title="Enter your promo code." required><!--
-                                                --><button id="promo-code-btn" class="btn">Add</button>
+                                                --><button id="promo-code-btn" class="btn">Add</button></form>
                                                 <button class="btn require-complete" onClick="main.download()">Printable PDF</button>
                                                 <button class="btn" onClick="main.startOver(true)">Start Over</button>
-                                                </form>
                                             </div>
                                         </div>
                                     </div>

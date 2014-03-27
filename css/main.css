@@ -516,6 +516,9 @@ body.dealer .hide-on-dealer{
 #promo-code-btn{
 	border-radius: 0 4px 4px 0;
 }
+#promo-code-form{
+	display: inline-block;
+}
 #promo-code-field{
 	margin: 0;
 	border-radius: 4px 0 0 4px;
