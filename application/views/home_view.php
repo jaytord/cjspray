@@ -67,7 +67,7 @@
         </div>
         <div id="tab-container" class="container-fluid">
             <ul id="pageTabs" class="nav nav-tabs">
-                <li><a href="#trailers" data-toggle="tab">Trailers</a></li>
+                <li class="active"><a href="#trailers" data-toggle="tab">Trailers</a></li>
                 <li><a href="#options" data-toggle="tab">Options</a></li>
                 <li><a href="#accessories" data-toggle="tab">Accessories</a></li>
                 <li><a href="#complete" data-toggle="tab">Finish</a></li>
