@@ -265,6 +265,8 @@ a.fancybox fancybox.iframe{
 .finish-nav{
 	text-align: right;
 	padding-bottom: 10px;
+	z-index: 300;
+	position: relative;
 }
 .btn-group>.btn+.btn {
 	margin-left: 1px;
@@ -447,7 +449,6 @@ ul.price li h4{
 .heading-bar h1{
 	line-height: 30px;
 	padding: 0 0 0 0;
-	display: inline-block;
 	margin: 0;
 	font-size: 18px;
 	color: #FFF;
