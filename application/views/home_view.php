@@ -67,10 +67,10 @@
         </div>
         <div id="tab-container" class="container-fluid">
             <ul id="pageTabs" class="nav nav-tabs">
-                <li class="active"><a href="#trailers" data-toggle="tab">Trailers</a></li>
-                <li class=""><a href="#options" data-toggle="tab">Options</a></li>
-                <li class=""><a href="#accessories" data-toggle="tab">Accessories</a></li>
-                <li class=""><a href="#complete" data-toggle="tab">Finish</a></li>
+                <li><a href="#trailers" data-toggle="tab">Trailers</a></li>
+                <li><a href="#options" data-toggle="tab">Options</a></li>
+                <li><a href="#accessories" data-toggle="tab">Accessories</a></li>
+                <li><a href="#complete" data-toggle="tab">Finish</a></li>
             </ul>
         </div>
         <div id="main-container" class="container-fluid no-selections">
@@ -145,6 +145,10 @@
                                 </div>
                             <?php endif; endforeach; ?>
                             </div>
+                            <div class="finish-nav" class="btn-group">
+                                <button class="btn" onClick="main.startOver()">Back to Trailers</button>
+                                <button class="btn require-complete" onClick="main.activateTab('accessories')">Choose Accessories</button>
+                            </div>
                         </div>
 
                         <!-- Accessories -->
@@ -171,6 +175,10 @@
                                     </button>
                                 </div>
                                 <?php endforeach; ?>
+                            </div>
+                            <div class="finish-nav" class="btn-group">
+                                <button class="btn" onClick="main.activateTab('options')">Back to Options</button>
+                                <button class="btn require-complete" onClick="main.activateTab('complete')">Finish and Save</button>
                             </div>
                         </div>
 
@@ -203,20 +211,18 @@
                                         <div class="span6">
                                             <div class="image-container">
                                             </div>
-                                            <div id="finish-nav" class="btn-group">
+                                            <div class="finish-nav" class="btn-group">
                                                 <form id="promo-code-form" method action="<?php base_url(); ?>promos/validate">
-                                                <input name="code" id="promo-code-field" type="text" placeholder="Promo Code" title="Enter your promo code." required>
-                                                <button id="promo-code-btn" class="btn">Add</button>
+                                                <input name="code" id="promo-code-field" type="text" placeholder="Promo Code" title="Enter your promo code." required><!--
+                                                --><button id="promo-code-btn" class="btn">Add</button>
                                                 <button class="btn require-complete" onClick="main.download()">Printable PDF</button>
-                                                <button class="btn" onClick="main.startOver()">Start Over</button>
+                                                <button class="btn" onClick="main.startOver(true)">Start Over</button>
                                                 </form>
                                             </div>
-                                            
                                         </div>
                                     </div>
                                 </div>
                             </div><!-- end config container -->
-                            
                         </div>
                     </div>
                 </div><!-- end page container -->

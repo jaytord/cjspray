@@ -23,7 +23,7 @@ jQuery( function($){
 	$('.fancybox').fancybox();
 
 	//click events
-	$("#options button").click( main.optionSelected );
+	$("#options .accordion-body button").click( main.optionSelected );
 	$("#trailers li img").click( main.optionSelected );
 	$("#accessories button").click( main.accessorySelected );
 	$("span.checkmark").click( main.removeOptionClicked );
@@ -44,8 +44,6 @@ main.download = function(){
 	createpdfform.children('input#pdf-price').eq(0).attr( "value", JSON.stringify(main.price) );
 	createpdfform.children('input#pdf-promo').eq(0).attr( "value", JSON.stringify(main.promo) );
 	createpdfform.children('input#pdf-dealer').eq(0).attr( "value", JSON.stringify(main.dealer) );
-
-	//console.log(main.dealer);
 
 	createpdfform.submit();
 
@@ -135,14 +133,6 @@ main.loginFailed = function(){
 	alert("login failed");
 }
 
-main.nextTab = function(){
-	console.log( main.getNextTabId() );
-}
-
-main.previousTab = function(){
-
-}
-
 main.getSession = function(){
 	$.ajax({
         type: 'POST',
@@ -179,8 +169,6 @@ main.removeOptionClicked = function(e){
 	var _this = $(this);
 	var _option_id = _this.parent().parent().parent().attr("data-id");
 	main.removeSelection(_option_id);
-
-	//console.log("remove option clicked");
 }
 
 main.toLoggedInState = function(){
@@ -240,17 +228,6 @@ main.isFinishTabActive = function(){
 	}
 }
 
-main.getNextTabId = function(){
-	var nextTabIndex = $("#pageTabs li.active").eq(0).index() + 1;
-
-	if(nextTabIndex >  $("#pageTabs li").length)
-		nextTabIndex = 1;
-
-	console.log( nextTabIndex );
-
-	return $("#pageTabs li").eq(nextTabIndex);
-}
-
 main.optionSelected = function(e){
 	_this 	= $(this);
 
@@ -268,8 +245,6 @@ main.optionSelected = function(e){
 	_label 			= decodeURIComponent( _this.attr("data-label") );
 	_dealer_only	= Number( _this.parent().attr("data-dealer-only") );
 	_product_type	= _this.attr("data-product-type");
-
-	console.log(_product_type);
 
 	if( !selections.options || selections.options == undefined )
 	 	selections.options = {};
@@ -429,20 +404,23 @@ main.updateAccessoryItems = function(){
 main.updateOptionItems = function(){
 	$(".configuration-content .items li").remove();
 
-	$.each(selections.options, function( _i, _v ){
-		var ul 	= $(".configuration-content .items"),
-		li 		= $("<li/>").attr("data-id", _i ).attr("data-index", _v.index ),
-		label 	= $("<span/>").text( _v.label + ": ").addClass("lbl"),
-		val 	= $("<span/>").text( _v.value.label ),
-		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber( _v.value[main.dealer ? main.dealer.type_id == "2" ? "graco_price" : "dealer_price" : "list_price" ].toFixed(0) ) ).addClass("price");
+	if(selections.options){
+		$.each(selections.options, function( _i, _v ){
+			var ul 	= $(".configuration-content .items"),
+			li 		= $("<li/>").attr("data-id", _i ).attr("data-index", _v.index ),
+			label 	= $("<span/>").text( _v.label + ": ").addClass("lbl"),
+			val 	= $("<span/>").text( _v.value.label ),
+			price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber( _v.value[main.dealer ? main.dealer.type_id == "2" ? "graco_price" : "dealer_price" : "list_price" ].toFixed(0) ) ).addClass("price");
 
-		label.appendTo(li);
-		val.appendTo(li);
-		price.appendTo(li);
-		li.appendTo(ul);
-	});
+			label.appendTo(li);
+			val.appendTo(li);
+			price.appendTo(li);
+			li.appendTo(ul);
+		});
+		main.checkConfigurationSelections();
+	}
 
-	main.checkConfigurationSelections();
+	
 
 	$.sortItemsByAttribute("#mini-configuration .items li", "data-index", true);
 	$.sortItemsByAttribute("#mini-configuration .items li", "data-index", true);
