@@ -178,6 +178,9 @@ class Parser extends CI_Controller {
 					$selection->graco_price		= str_replace(",", "", $selections_csv[8]);
 					$selection->image			= $selections_csv[9];
 					$selection->dealer_only		= $selections_csv[10] == "yes" ? 1 : 0;
+					$selection->product_type	= intval( $selections_csv[11] );
+
+					echo $selection->product_type;
 
 					$_options[ $selections_csv[0] ]->selections[ $selections_csv[1] ] = $selection;
 				}
@@ -186,8 +189,6 @@ class Parser extends CI_Controller {
 
 			fclose($selections_file);
 		}
-
-		//print_r($_options);
 
 		//parse info
 		$row 				= 0;
@@ -236,7 +237,8 @@ class Parser extends CI_Controller {
 					'graco_price'					=> $_selection->graco_price,
 					'option_index'					=> $option_index,
 					'option_id'						=> $_option_id,
-					'image'							=> $_selection->image
+					'image'							=> $_selection->image,
+					'product_type'					=> $_selection->product_type,
 				));
 			}
 		}

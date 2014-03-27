@@ -52,7 +52,7 @@ class Home extends CI_Controller {
 		$post["promo"] 			= json_decode($post["promo"], true );
 		$post["dealer"]			= json_decode($post["dealer"], true );
 
-		$dealer = empty( $post["dealer"] ) ? "false" : "true";
+		$dealer = empty( $post["dealer"] ) ? false : true;
 
 		$image_url = base_url().$this->composite_image->generate( $post["selections"]["images"], $ts );
 
@@ -70,9 +70,9 @@ class Home extends CI_Controller {
 			//page 1: end user pdf has cjprice plus promo discounted price (you_price);
 			$post["price_label"] = "CJ Price"; 
 			$post["price_value"] = "cj"; 
-			$post["option_price_value"] = "cj_price"; 
+			$post["option_price_value"] = "list_price"; 
 			$post["show_list_price"] = true;
-			$post["show_footer"] = $dealer ? false : true;
+			$post["show_footer"] = $dealer;
 			$enduser_page = $this->load->view('pdf_page_view', $post, true);
 			$pdf->WriteHTML( $enduser_page );
 
@@ -100,7 +100,7 @@ class Home extends CI_Controller {
 					$post["option_price_value"] = "graco_price"; 
 					$post["price_value"] = "graco"; 
 					$post["show_footer"] = false;
-					$graco_page = $this->load->view('pdf_page_view', $post, true);
+					$graco_page = $this->load->view('pdf_graco_page_view', $post, true);
 					$pdf->WriteHTML( $graco_page );
 				}
 			}

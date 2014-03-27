@@ -93,6 +93,7 @@
                                     data-cj-price="<?= $selection->cj_price; ?>" 
                                     data-graco-price="<?= $selection->graco_price; ?>"
                                     data-dealer-price="<?= $selection->dealer_price; ?>" 
+                                    data-product-type="<?= $selection->product_type; ?>" 
                                     data-exclude="<?= $selection->exclude; ?>" >
                                     <div class="thumbnail">
                                         <?php if(!empty($selection->info_index)) : ?><a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>/<?php echo $selection->description; ?>"><i class="icon-info-sign icon-white"></i></a><?php endif ?>
@@ -131,7 +132,8 @@
                                                     data-list-price="<?= $selection->list_price; ?>" 
                                                     data-cj-price="<?= $selection->cj_price; ?>" 
                                                     data-graco-price="<?= $selection->graco_price; ?>"
-                                                    data-dealer-price="<?= $selection->dealer_price; ?>" 
+                                                    data-dealer-price="<?= $selection->dealer_price; ?>"
+                                                    data-product-type="<?= $selection->product_type; ?>" 
                                                     type="button" 
                                                     class="btn">
                                                     <?php echo urldecode($selection->description); ?>
@@ -162,6 +164,7 @@
                                         data-cj-price="<?= $selection->cj_price; ?>" 
                                         data-graco-price="<?= $selection->graco_price; ?>"
                                         data-dealer-price="<?= $selection->dealer_price; ?>"
+                                        data-product-type="<?= $selection->product_type; ?>"
                                         type="button" 
                                         class="btn">
                                         <?php echo rawurldecode($selection->description); ?>

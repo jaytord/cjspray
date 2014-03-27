@@ -20,7 +20,8 @@ class Selections_Model extends CJS_Model
 			'option_index'					=> array("shown"=>true,"label"=>"Option Index"),
 			'option_id'						=> array("shown"=>true,"label"=>"Option Id"),
 			'info_index'					=> array("shown"=>true,"label"=>"Info Index"),
-			'image'							=> array("shown"=>true,"label"=>"Image")
+			'image'							=> array("shown"=>true,"label"=>"Image"),
+			'product_type'					=> array("shown"=>true,"label"=>"Product Type")
 		);
 	}
 }

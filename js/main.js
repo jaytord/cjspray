@@ -192,6 +192,7 @@ main.toLoggedInState = function(){
 		$("body").addClass("dealer");
 
 	main.updatePrice();
+	main.updateOptionItems();
 
 	//enable dealer only buttons
 	main.showDealerOnly();
@@ -208,6 +209,7 @@ main.toLoggedOutState = function(){
 		$("body").removeClass("dealer");
 
 	main.updatePrice();
+	main.updateOptionItems();
 
 	//disable dealer only buttons
 	main.hideDealerOnly();
@@ -265,6 +267,9 @@ main.optionSelected = function(e){
 	_graco_price	= Number(_this.attr("data-graco-price"));
 	_label 			= decodeURIComponent( _this.attr("data-label") );
 	_dealer_only	= Number( _this.parent().attr("data-dealer-only") );
+	_product_type	= _this.attr("data-product-type");
+
+	console.log(_product_type);
 
 	if( !selections.options || selections.options == undefined )
 	 	selections.options = {};
@@ -280,7 +285,8 @@ main.optionSelected = function(e){
 			dealer_price: _dealer_price,
 			graco_price: _graco_price,
 			label: _label,
-			dealer_only:_dealer_only
+			dealer_only:_dealer_only,
+			product_type:_product_type
 		}
 	};
 
@@ -394,7 +400,8 @@ main.accessorySelected = function(){
 					list_price: Number(_this.attr("data-list-price")), 
 					cj_price: Number(_this.attr("data-cj-price")), 
 					dealer_price: Number(_this.attr("data-dealer-price")),
-					graco_price: Number(_this.attr("data-graco-price"))
+					graco_price: Number(_this.attr("data-graco-price")),
+					product_type: Number(_this.attr("data-product-type"))
 				});
 			}
 		});
@@ -427,7 +434,7 @@ main.updateOptionItems = function(){
 		li 		= $("<li/>").attr("data-id", _i ).attr("data-index", _v.index ),
 		label 	= $("<span/>").text( _v.label + ": ").addClass("lbl"),
 		val 	= $("<span/>").text( _v.value.label ),
-		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber(_v.value.list_price.toFixed(0)) ).addClass("price");
+		price 	= $("<span/>").text("$"+ $.strToCommaDelimNumber( _v.value[main.dealer ? main.dealer.type_id == "2" ? "graco_price" : "dealer_price" : "list_price" ].toFixed(0) ) ).addClass("price");
 
 		label.appendTo(li);
 		val.appendTo(li);
@@ -502,10 +509,10 @@ main.updatePrice = function(){
 
 	$(".configuration-content .list-price span").text( "$" + $.strToCommaDelimNumber(main.price.list) );
 	
-	var label = main.dealer ? "Dealer Price" : "CJ Price";
-	var price = main.dealer ? main.price.dealer : main.price.cj;
+	var label = main.dealer ? main.dealer.type_id == "2" ? "Graco Dealer Price" : "Dealer Price" : "CJ Price";
+	var price = main.dealer ? main.dealer.type_id == "2" ? main.price.graco : main.price.dealer : main.price.cj;
 
-	main.price.you =  price - Math.round(price*main.promo.discount);
+	main.price.you =  main.price.cj - Math.round(main.price.cj*main.promo.discount);
 
 	$(".configuration-content .cj-price h3").html( label + "<span></span>");
 	$(".configuration-content .cj-price span").text( "$" + $.strToCommaDelimNumber(price) );
