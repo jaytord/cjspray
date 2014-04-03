@@ -173,8 +173,8 @@ class Parser extends CI_Controller {
 					$selection->description 	= rawurlencode( $selections_csv[3] );
 					$selection->exclude 		= $selections_csv[4];
 					$selection->list_price		= str_replace(",", "", $selections_csv[5]);
-					$selection->dealer_price	= str_replace(",", "", $selections_csv[6]);
-					$selection->cj_price		= str_replace(",", "", $selections_csv[7]);
+					$selection->cj_price		= str_replace(",", "", $selections_csv[6]);
+					$selection->dealer_price	= str_replace(",", "", $selections_csv[7]);
 					$selection->graco_price		= str_replace(",", "", $selections_csv[8]);
 					$selection->image			= $selections_csv[9];
 					$selection->dealer_only		= $selections_csv[10] == "yes" ? 1 : 0;

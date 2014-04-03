@@ -53,16 +53,16 @@
 			</td>
 		</tr>
 		<tr>
-			<td colspan="2" style="padding-top:40px;">
-				<h3>Graco Dealer Price <span style="padding-left:40px;">$<?= number_format( $price["graco"] , 0); ?></span></h3>
+			<td colspan="2" style="padding-top:20px;">
+				<h3>CJ Dealer Price <span style="padding-left:40px;">$<?= number_format( $price["graco"] , 0); ?></span></h3>
 			</td>
 		</tr>
 		<tr>
-			<td style="padding-top:60px; vertical-align:top">
+			<td style="padding-top:20px; vertical-align:top; padding-right:20px;">
 				<table id="options" cellspacing="0" cellpadding="0" border="0" width="100%">
 					<tr>
 						<td class="label">
-							<h3>CJ Spray</h3>
+							<h3>CJ Spray Total</h3>
 						</td>
 						<td class="price">
 							<h3>$<?= number_format( $cj_products_total , 0); ?></h3>
@@ -92,11 +92,12 @@
 					<?php endforeach ?>
 				</table>
 			</td>
-			<td style="padding-top:60px; padding-left:40px; vertical-align:top">
+			<td style="padding-top:20px; padding-left:20px;  border-left:1px solid #666; vertical-align:top">
 				<table id="options" cellspacing="0" cellpadding="0" border="0" width="100%">
 					<tr>
 						<td class="label">
-							<h3>Graco</h3>
+							<h3>Graco Total</h3>
+							<h4>(<?= $dealer["type_id"] == 2 ? "40%" : "30%"; ?> Graco Discount)</h4>
 						</td>
 						<td class="price">
 							<h3>$<?= number_format( $graco_products_total , 0); ?></h3>
@@ -127,6 +128,11 @@
 					</tr>
 					<?php endforeach; ?>
 				</table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" style="padding-top:40px; text-align:center;">
+				<img style="vertical-align:top" src="<?= $image_url; ?>" />
 			</td>
 		</tr>
 	</table>

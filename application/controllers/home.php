@@ -79,28 +79,12 @@ class Home extends CI_Controller {
 			if($dealer){
 				$pdf->WriteHTML( "<pagebreak />");
 
-				if($post['dealer']['type_id'] == 2){
-					//page 3 (graco): graco dealer pdf has dealer price column, and graco price column;
-					$post["dealer"]["logo"] = 'graco.png';
-					$post["price_label"] = "Graco Price"; 
-					$post["option_price_value"] = "graco_price"; 
-					$post["price_value"] = "graco"; 
-					$post["show_footer"] = false;
-					$graco_page = $this->load->view('pdf_graco_page_view', $post, true);
-					$pdf->WriteHTML( $graco_page );
-				} else {
-					//page 2 (dealer): dealer pdf has dealer price;
-					$post["dealer"]["logo"] = '';
-					$post["price_label"] = "Dealer Price"; 
-					$post["price_value"] = "dealer"; 
-					$post["option_price_value"] = "dealer_price"; 
-					$post["show_list_price"] = false;
-					$post["show_footer"] = true;
-					unset( $post["you_price"] );
-
-					$dealer_page = $this->load->view('pdf_page_view', $post, true);
-					$pdf->WriteHTML( $dealer_page );
-				}
+				$post["dealer"]["logo"] = 'graco.png';
+				$post["price_label"] = "Graco Price"; 
+				$post["option_price_value"] = $post["dealer"]["type_id"] == 2 ? "graco_price" : "dealer_price"; 
+				$post["price_value"] = $post["dealer"]["type_id"] == 2 ? "graco" : "dealer"; 
+				$graco_page = $this->load->view('pdf_graco_page_view', $post, true);
+				$pdf->WriteHTML( $graco_page );
 			}
 
 			$pdf->Output( $filepath, 'F' );
