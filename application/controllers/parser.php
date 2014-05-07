@@ -64,7 +64,7 @@ class Parser extends CI_Controller {
 					}
 				}
 			}
-			echo "<br />";
+			//echo "<br />";
 		}
 	}
 
@@ -180,7 +180,7 @@ class Parser extends CI_Controller {
 					$selection->dealer_only		= $selections_csv[10] == "yes" ? 1 : 0;
 					$selection->product_type	= intval( $selections_csv[11] );
 
-					echo $selection->product_type;
+					//echo $selection->product_type;
 
 					$_options[ $selections_csv[0] ]->selections[ $selections_csv[1] ] = $selection;
 				}
