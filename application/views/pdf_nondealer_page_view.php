@@ -1,16 +1,9 @@
 <? $this->load->view("pdf_css_view"); ?>
 
-<? if( !empty($dealer) && !empty($dealer['logo']) ): ?>
-<div id="header" class="dealer-header">
-	<img src="<?= base_url(); ?>img/dealer_logos/<?= $dealer['logo']; ?>">
-	<img style="float:right" src="<?= base_url(); ?>img/logo.png">
-</div>
-<? else : ?>
-<div id="header">
+<div id="non-dealer-header">
 	<img src="<?= base_url(); ?>img/logo.png">
 </div>
 <div id="subhead">Mobile Spray Rigs</div>
-<? endif; ?>
 
 <div id="main">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">

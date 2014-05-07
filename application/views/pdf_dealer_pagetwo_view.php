@@ -40,10 +40,12 @@
 	}
 ?>
 
-<div id="header" class="dealer-header">
-	<img src="<?= base_url(); ?>img/dealer_logos/graco.png">
+<? if( !empty($dealer) && !empty($dealer['logo']) ): ?>
+<div id="header">
+	<img height="100" src="<?= base_url(); ?>img/dealer_logos/<?= $dealer['logo']; ?>">
 	<img style="float:right" src="<?= base_url(); ?>img/logo.png">
 </div>
+<? endif; ?>
 
 <div id="main">
 	<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">

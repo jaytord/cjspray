@@ -13,12 +13,16 @@
 		padding:30px;
 	}
 	div#header{
+		width: 100%;
+		padding:40px 20px 15px 30px;
+	}
+	div#header img{
+		height: 100px;
+	}
+	div#non-dealer-header{
 		border-top:#004A80 12px solid;
 		width: 100%;
 		padding:20px 20px 15px 30px;
-	}
-	div#header.dealer-header{
-		border-top: none !important;
 	}
 	div#subhead{
 		background: #004A80;
