@@ -100,7 +100,6 @@
                                         <?php $image_url = base_url().config_item("image_dir_path").urldecode( $selection->image ); ?>
                                         <img data-src="<?php echo $image_url ?>" src="<?php echo $image_url ?>" alt=""/>
                                         <h3><?php echo urldecode( $selection->description ); ?></h3>
-                                        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo odio dui. </p>
                                     </div>
                                 </li>
                                 <?php endforeach; ?>
