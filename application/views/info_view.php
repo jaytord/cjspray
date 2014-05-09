@@ -26,7 +26,7 @@
                     <p><?php echo rawurldecode($data->description); ?></p>
                 </div>
                 <div class="span4 right-col">
-                    <img src="<?php echo base_url()."img/".rawurldecode($data->image); ?>" />
+                    <?php if( !empty($data->image) ): ?><img src="<?php echo base_url()."img/".rawurldecode($data->image); ?>" /><?php endif; ?>
                 </div>
             </div>
         </div> <!-- / main container -->

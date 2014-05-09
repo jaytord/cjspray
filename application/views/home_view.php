@@ -156,7 +156,7 @@
                                 <?php $option = $options[0]; ?>
                                 <?php foreach($option->selections as $selection): ?>
                                 <div>
-                                    <?php if(!empty($selection->info_index)) : ?><a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>"><i class="icon-info-sign"></i></a><?php endif ?>
+                                    <?php if(!empty($selection->info_index)) : ?><a class="fancybox fancybox.iframe" href="<?php echo base_url(); ?>home/info/<?php echo $selection->info_index; ?>/<?php echo $selection->description; ?>"><i class="icon-info-sign"></i></a><?php endif ?>
                                     <button 
                                         data-id="<?= $selection->id; ?>" 
                                         data-label="<?= rawurldecode($selection->description)   ; ?>" 
