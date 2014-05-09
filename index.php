@@ -30,7 +30,7 @@ switch ($host) {
 		define('ENVIRONMENT', 'staging');
 		break;
 
-	case 'cjspray.com':
+	case 'cjsprayrigs.com':
 		define('ENVIRONMENT', 'production');
 	break;
 }

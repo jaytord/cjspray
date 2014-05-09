@@ -49,9 +49,9 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'buildmyrig';
-$db['default']['password'] = 'buildmyrig1234';
-$db['default']['database'] = 'buildmyrig';
+$db['default']['username'] = 'cjspray';
+$db['default']['password'] = 'cjspray1234';
+$db['default']['database'] = 'cjspray';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
